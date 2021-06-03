@@ -1,9 +1,6 @@
 let skills = document.querySelectorAll(".on");
 const observer = new IntersectionObserver( entries => {
-    console.log(entries);
     entries[0].target.classList.remove('off');
-    // entries[1].target.classList.remove('off');
-    // entries[2].target.classList.remove('off');
     setTimeout(function(){
         entries[1].target.classList.remove('off')
         setTimeout(function(){
@@ -16,3 +13,5 @@ const observer = new IntersectionObserver( entries => {
 Array.from(skills).forEach( element => {
     observer.observe(element);
 })
+
+let hamburger 
