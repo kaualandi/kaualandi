@@ -122,6 +122,13 @@ div.st-content::-webkit-scrollbar-corner {
 .button:focus {
     box-shadow: none;
 }
+.button.disabled {
+    box-shadow: none;
+    cursor: inherit;
+}
+.button:hover {
+    background: var(--background);
+}
 
 /* HEADER */
 header.header-top {
@@ -266,12 +273,17 @@ header.header-top {
     display: inline;
     margin-right: 1em;
 }
+#about .side-b .text-about {
+    display: flex;
+    align-items: center;
+}
 #about .side-b .text-about p {
     display: inline;
 }
 #about .side-b ul.social {
     border: 0;
-    margin-top: 0;
+    margin-top: var(--primary) solid 1px;
+    margin-bottom: var(--primary) solid 1px;
 }
 #about .side-b ul.social li+li {
     margin-left: .4em;
@@ -466,19 +478,43 @@ footer#footer p {
     #about img.profile-pic {
         width: 10em;
     }
-    
+    #about .side-b .sides {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-column-gap: 1%;
+    }
     #portfolio ul {
         margin: auto;
         max-width: 450px;
     }
+    #contact .contact-main form {
+        margin: auto;
+        max-width: 768px;
+    }
 }
 @media screen and (min-width: 1024px) {
+    
     .container {
         display: grid;
         grid-template-columns: 33% 66%;
         grid-column-gap: 1%;
     }
-    #about .side-b h3 {
-        margin-top: 5em;
+    .container .side-a {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .container .side-a h2 {
+        text-align: center;
+    }
+    #about .contact-cv .side-a h3 {
+        margin-bottom: 0;
+    }
+    #portfolio ul {
+        margin-left: 2em;
+        max-width: 450px;
+    }
+    #contact {
+        display: inherit;
     }
 }
