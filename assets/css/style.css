@@ -366,19 +366,23 @@ header.header-top {
     background: #333;
     margin: .3em;
     border-radius: 20px;
-    transition: var(--transition-s);
 }
 #portfolio .skill-bars .bar.on {
     /* background: #333; */
+    transition: background 1s;
     background: var(--primary);
 }
-#portfolio .skill-bars .bar.on + .bar.on {
-    /* background: #444; */
+#portfolio .skill-bars .bar.on+.on {
+    transition: background 1s;
     background: var(--primary);
 }
-#portfolio .skill-bars .bar.on+.bar.on+.bar.on {
-    /* background: #555; */
+#portfolio .skill-bars .bar.on+.on+.on {
+    transition: background 1s;
     background: var(--primary);
+}
+
+#portfolio .skills .skill-bars .bar.on.off {
+    background: #333;
 }
 
 /* CONTACT */
