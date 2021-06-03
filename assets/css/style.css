@@ -126,7 +126,7 @@ div.st-content::-webkit-scrollbar-corner {
     box-shadow: none;
     cursor: inherit;
 }
-.button:hover {
+.button.disabled:hover {
     background: var(--background);
 }
 
