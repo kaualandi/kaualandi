@@ -14,4 +14,12 @@ Array.from(skills).forEach( element => {
     observer.observe(element);
 })
 
-let hamburger 
+let hamburger = document.getElementById('hamburger');
+document.addEventListener('scroll', function(e) {
+    if (window.scrollY > 0) {
+        hamburger.classList.add('min')
+    } 
+    else {
+        hamburger.classList.remove('min')
+    }
+});
