@@ -524,11 +524,11 @@ footer#footer p {
 }
 @media screen and (min-width: 1024px) {
     
-    .container {
+    /* .container {
         display: grid;
         grid-template-columns: 33% 66%;
         grid-column-gap: 1%;
-    }
+    } */
     .container .side-a {
         display: flex;
         align-items: flex-start;
