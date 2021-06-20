@@ -539,7 +539,9 @@ footer#footer p {
         /* margin-left: 2em; */
         max-width: 450px;
     }
-    
+    #about {
+        margin-bottom: 0;
+    }
 
     .containers {
         display: grid;
