@@ -70,7 +70,7 @@
                 </ul>
             </div>
         </header>
-        <div class="containers">
+        <main>
             <section class="container sides" id="about">
                 <div class="side-a">
                     <h2>Sobre Mim</h2>
@@ -127,60 +127,6 @@
                 </div>
             </section>
 
-            <section id="portfolio" class="container sides">
-                <div class="side-a">
-                    <h2>Qualificações</h2>
-                </div>
-                <div class="side-b">
-                    <div id="skills" class="skills off">
-                        <ul>
-                            <li><i class="fab fa-html5"></i> HTML5 ●<em class=""> Avançado</em>
-                                <div class="skill-bars">
-                                    <span class="bar on off off"></span>
-                                    <span class="bar on off"></span>
-                                    <span class="bar on off"></span>
-                                </div>
-                            </li>
-                            <li><i class="fab fa-css3-alt"></i> CSS3 ●<em class=""> Intermediário</em>
-                                <div class="skill-bars">
-                                    <span class="bar on off"></span>
-                                    <span class="bar on off"></span>
-                                    <span class="bar"></span>
-                                </div>
-                            </li>
-                            <li><i class="fab fa-js"></i> Javascript ●<em class=""> Básico</em>
-                                <div class="skill-bars">
-                                    <span class="bar on off"></span>
-                                    <span class="bar"></span>
-                                    <span class="bar"></span>
-                                </div>
-                            </li>
-                            <li><i class="fas fa-file-excel"></i> Excel ●<em class=""> Avançado</em>
-                                <div class="skill-bars">
-                                    <span class="bar on off"></span>
-                                    <span class="bar on off"></span>
-                                    <span class="bar on off"></span>
-                                </div>
-                            </li>
-                            <li><i class="fab fa-git-alt"></i> Git/Github ●<em class=""> Básico</em>
-                                <div class="skill-bars">
-                                    <span class="bar on off"></span>
-                                    <span class="bar"></span>
-                                    <span class="bar"></span>
-                                </div>
-                            </li>
-                            <li><i class="fab fa-php"></i> PHP ●<em class=""> Intermediário</em>
-                                <div class="skill-bars">
-                                    <span class="bar on off"></span>
-                                    <span class="bar on off"></span>
-                                    <span class="bar"></span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-        </div>
             <section style="display: none;" class="container sides" id="projects">
                 <div class="side-a">
                     <h2>Projetos</h2>
@@ -193,96 +139,152 @@
                     </p>
                 </div>
             </section>
-        <div class="containers">
-            <section class="container sides" id="resume">
-                <div class="side-a">
-                    <h2>Cursos</h2>
-                </div>
-                <div class="side-b">
-                    <div class="study-item">
-                        <h3>Serfrontend</h3>
-                        <p class="info"><span class="serif">Web Fundamentos</span> <span>&bull;</span>
-                            Agosto 2020</p>
-                        <p class="study-item-description">54 horas de muito HTML, CSS e Javascript. Daniel
-                            Tapias
-                            Morales me capacitou para fazer páginas estáticas sem uso de frameworks.</p>
-                        <a href="https://www.udemy.com/share/101sRiBkQed11TTX4=/" class="button">Detalhes</a>
-                    </div>
-                    <div class="study-item">
-                        <h3>Hashtag Treinamentos</h3>
-                        <p class="info"><span class="serif">Excel</span> <span>&bull;</span> Março 2021</p>
-                        <p class="study-item-description">Com uma carga horaria de 11,5 horas, aprendi um
-                            pouco de
-                            macros, condicionais, filtros, base de dados, e mais.</p>
-                        <a href="https://www.udemy.com/course/curso-excel-completo/" class="button">Detalhes</a>
-                    </div>
-                    <div class="study-item">
-                        <h3>SatellaSoft</h3>
-                        <p class="info"><span class="serif">PHP</span> <span>&bull;</span> Maio 2021</p>
-                        <p class="study-item-description">Um total de 9,5 horas o Gunnar Correa está me
-                            capacitando
-                            para o intermediário da linguagem.</p>
-                        <a href="https://www.udemy.com/course/php-do-basico-ao-intermediario/" class="button">Detalhes</a>
-                    </div>
-                </div>
-            </section>
-    
-            <section class="container reverse sides" id="works">
-                <div class="side-a">
-                    <h2>Trabalhos</h2>
-                </div>
-                <div class="side-b">
-                    <div class="work-item">
-                        <h3>E. M. Manoel Da Silveira Medeiros Sobrinho</h3>
-                        <p class="info"><span class="serif">Desenvolvedor</span><span> &bull; </span> Agosto 2020 - Dezembro
-                            2020</p>
-                        <p class="study-item-description">Admitido para criação de um site para a escola,
-                            disponível
-                            para 400 alunos na difícil época de pandemia. Link do site <a
-                                href="https://manoelmedeiros2019.com" target="_blank"
-                                rel="noopener noreferrer">manoelmedeiros2019.com</a>.</p>
-                    </div>
-                </div>
-            </section>
-        </div>
-        
-            <section class="container" id="contact">
-                <div class="contact-header">
-                    <div class="icon"><i class="fas fa-envelope"></i></div>
-                    <p>Espero que tenha gostado de me conhecer um pouco, vamos conversar? Apenas preencha o
-                        formulário abaixo que entro em contato assim que possível!</p>
-                </div>
-                <div class="contact-main">
-                    <form action="https://formsubmit.co/kaualandi@hotmail.com" method="POST" id="contactForm">
-                        <div>
-                            <label for="name">Seu Nome <span class="required">*</span></label>
-                            <input type="text" value="" id="name" name="name" required>
-                        </div>
-                        <div>
-                            <label for="email">Seu Email <span class="required">*</span></label>
-                            <input type="text" value="" id="email" name="email">
-                        </div>
-                        <div>
-                            <label for="numero">Seu Número</label>
-                            <input class="mask-phone" type="text" name="telefone" id="telefone" maxlength="15">
-                        </div>
-                        <div>
-                            <label for="_subject">Assunto <span class="required">*</span></label>
-                            <input type="text" id="_subject" name="_subject">
-                        </div>
-                        <div>
-                            <label for="message">Mensagem <span class="required">*</span></label>
-                            <textarea id="message" name="message"></textarea>
-                        </div>
-                        <div class="submit">
-                            <input type="hidden" name="_captcha" value="false">
-                            <input type="hidden" name="_next" value="https://kaualf.netlify.app/"></input>
-                            <button type="submit" class="submit button">Enviar</button>
-                        </div>
-                    </form>
-                </div>
-            </section>
 
+            <div class="containers">
+                <section id="portfolio" class="container sides">
+                    <div class="side-a">
+                        <h2>Qualificações</h2>
+                    </div>
+                    <div class="side-b">
+                        <div id="skills" class="skills">
+                            <ul>
+                                <li><i class="fab fa-html5"></i> HTML5 ●<em class=""> Avançado</em>
+                                    <div class="skill-bars">
+                                        <span class="bar on"></span>
+                                        <span class="bar on"></span>
+                                        <span class="bar on"></span>
+                                    </div>
+                                </li>
+                                <li><i class="fab fa-css3-alt"></i> CSS3 ●<em class=""> Intermediário</em>
+                                    <div class="skill-bars">
+                                        <span class="bar on"></span>
+                                        <span class="bar on"></span>
+                                        <span class="bar"></span>
+                                    </div>
+                                </li>
+                                <li><i class="fab fa-js"></i> Javascript ●<em class=""> Básico</em>
+                                    <div class="skill-bars">
+                                        <span class="bar on"></span>
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                    </div>
+                                </li>
+                                <li><i class="fas fa-file-excel"></i> Excel ●<em class=""> Avançado</em>
+                                    <div class="skill-bars">
+                                        <span class="bar on"></span>
+                                        <span class="bar on"></span>
+                                        <span class="bar on"></span>
+                                    </div>
+                                </li>
+                                <li><i class="fab fa-git-alt"></i> Git/Github ●<em class=""> Básico</em>
+                                    <div class="skill-bars">
+                                        <span class="bar on"></span>
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                    </div>
+                                </li>
+                                <li><i class="fab fa-php"></i> PHP ●<em class=""> Intermediário</em>
+                                    <div class="skill-bars">
+                                        <span class="bar on"></span>
+                                        <span class="bar on"></span>
+                                        <span class="bar"></span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="container sides" id="resume">
+                    <div class="side-a">
+                        <h2>Cursos</h2>
+                    </div>
+                    <div class="side-b">
+                        <div class="study-item">
+                            <h3>Serfrontend</h3>
+                            <p class="info"><span class="serif">Web Fundamentos</span> <span>&bull;</span>
+                                Agosto 2020</p>
+                            <p class="study-item-description">54 horas de muito HTML, CSS e Javascript. Daniel
+                                Tapias
+                                Morales me capacitou para fazer páginas estáticas sem uso de frameworks.</p>
+                            <a href="https://www.udemy.com/share/101sRiBkQed11TTX4=/" class="button">Detalhes</a>
+                        </div>
+                        <div class="study-item">
+                            <h3>Hashtag Treinamentos</h3>
+                            <p class="info"><span class="serif">Excel</span> <span>&bull;</span> Março 2021</p>
+                            <p class="study-item-description">Com uma carga horaria de 11,5 horas, aprendi um
+                                pouco de
+                                macros, condicionais, filtros, base de dados, e mais.</p>
+                            <a href="https://www.udemy.com/course/curso-excel-completo/" class="button">Detalhes</a>
+                        </div>
+                        <div class="study-item">
+                            <h3>SatellaSoft</h3>
+                            <p class="info"><span class="serif">PHP</span> <span>&bull;</span> Maio 2021</p>
+                            <p class="study-item-description">Um total de 9,5 horas o Gunnar Correa está me
+                                capacitando
+                                para o intermediário da linguagem.</p>
+                            <a href="https://www.udemy.com/course/php-do-basico-ao-intermediario/" class="button">Detalhes</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="containers">
+                <section class="container reverse sides" id="works">
+                    <div class="side-a">
+                        <h2>Trabalhos</h2>
+                    </div>
+                    <div class="side-b">
+                        <div class="work-item">
+                            <h3>E. M. Manoel Da Silveira Medeiros Sobrinho</h3>
+                            <p class="info"><span class="serif">Desenvolvedor</span><span> &bull; </span> Agosto 2020 - Dezembro
+                                2020</p>
+                            <p class="study-item-description">Admitido para criação de um site para a escola,
+                                disponível
+                                para 400 alunos na difícil época de pandemia. Link do site <a
+                                    href="https://manoelmedeiros2019.com" target="_blank"
+                                    rel="noopener noreferrer">manoelmedeiros2019.com</a>.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="container" id="contact">
+                    <div class="contact-header">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <p>Espero que tenha gostado de me conhecer um pouco, vamos conversar? Apenas preencha o
+                            formulário abaixo que entro em contato assim que possível!</p>
+                    </div>
+                    <div class="contact-main">
+                        <form action="https://formsubmit.co/kaualandi@hotmail.com" method="POST" id="contactForm">
+                            <div>
+                                <label for="name">Seu Nome <span class="required">*</span></label>
+                                <input type="text" value="" id="name" name="name" required>
+                            </div>
+                            <div>
+                                <label for="email">Seu Email <span class="required">*</span></label>
+                                <input type="text" value="" id="email" name="email">
+                            </div>
+                            <div>
+                                <label for="numero">Seu Número</label>
+                                <input class="mask-phone" type="text" name="telefone" id="telefone" maxlength="15">
+                            </div>
+                            <div>
+                                <label for="_subject">Assunto <span class="required">*</span></label>
+                                <input type="text" id="_subject" name="_subject">
+                            </div>
+                            <div>
+                                <label for="message">Mensagem <span class="required">*</span></label>
+                                <textarea id="message" name="message"></textarea>
+                            </div>
+                            <div class="submit">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_next" value="https://kaualf.netlify.app/"></input>
+                                <button type="submit" class="submit button">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+        
     </main>
     <footer id="footer">
         <div id="go-top">
@@ -308,8 +310,6 @@
         </div>
     </footer>
     </div>
-    
-    <script src="assets/js/animation-skill-bar.js"></script>
     <script src="assets/fw/font.js"></script>
     <script>
         closeNav();
@@ -343,23 +343,6 @@
 
         const titulo = document.querySelector('#typing');
         typeWriter(titulo);
-
-        var owl = $('.owl-carousel');
-        owl.owlCarousel({
-            margin: 10,
-            loop: true,
-            autoplay: true,
-            autoplayTimeout: 2000,
-            autoplayHoverPause: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                550: {
-                    items: 2
-                }
-            }
-        })
     </script>
 </body>
 
