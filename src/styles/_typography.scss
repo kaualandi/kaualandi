@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+.font {
+  font-family: var(--ff);
+  color: var(--text-color);
+}
+
+.f-10 {
+  font-size: 0.625rem !important;
+}
+
+.f-12 {
+  font-size: 0.75rem !important;
+}
+
+.f-14 {
+  font-size: 0.875rem !important;
+}
+
+.f-16 {
+  font-size: 1rem !important;
+}
+
+.f-18 {
+  font-size: 1.125rem !important;
+}
+
+.f-24 {
+  font-size: 1.5rem !important;
+}
+
+h1 {
+  @extend .f-24;
+}
+h2 {
+  @extend .f-18;
+}
+h3 {
+  @extend .f-16;
+}
+h4 {
+  @extend .f-14;
+}
+h5 {
+  @extend .f-12;
+}
+h6 {
+  @extend .f-10;
+}
+p {
+  @extend .f-14;
+}
+a {
+  @extend .f-14;
+}
+button {
+  @extend .f-14;
+}
+span {
+  @extend .f-14;
+}
+label {
+  @extend .f-12;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button,
+span,
+label {
+  @extend .font;
+}
+
+.mat-button {
+  @extend .f-14;
+}

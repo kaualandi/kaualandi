@@ -1,0 +1,24 @@
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="me col-12 col-sm-6">
+        <h3>Kauã Landi</h3>
+        <p>Desenvolvedor FullStack com habilidades técnicas e a experiência necessária para desenvolver soluções web
+          completas e chatbots eficientes e intuitivos.</p>
+      </div>
+      <div class="social col-12 col-sm-6">
+        <h3>Redes sociais</h3>
+        <ul class="socials-list">
+          <li *ngFor="let social of socials" class="socials-item">
+            <a mat-icon-button [href]="social.link" target="_blank" rel="noopener noreferrer">
+              <i [icon]="social.icon"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <p>© {{currentYear}} Kauã Landi. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>

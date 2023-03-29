@@ -1,0 +1,50 @@
+#footer {
+  background-color: var(--title-color);
+  padding: 3rem 0 1.5rem;
+  .container {
+    .row {
+      div {
+        h3 {
+          font-weight: 700;
+          color: var(--bg-navbar);
+        }
+        p {
+          line-height: 1.2rem;
+          color: var(--bg-navbar);
+          margin: 0;
+        }
+        &.social {
+          h3 {
+            text-align: end;
+          }
+          ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            li {
+              a {
+                background-color: transparent;
+                color: var(--bg-navbar);
+                i {
+                  font-size: 1.5rem !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .copy {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--text-color);
+      p {
+        margin: 0;
+        font-size: 0.6rem !important;
+        color: var(--bg-navbar);
+        text-align: center;
+      }
+    }
+  }
+}

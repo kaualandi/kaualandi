@@ -1,0 +1,18 @@
+#contact {
+  background: linear-gradient(
+      to right,
+      rgba(245, 245, 245, 0.8),
+      rgba(245, 245, 245, 0.8)
+    ),
+    url(../../../../assets/img/hero-bg.svg) no-repeat center center/cover;
+  .container {
+    .form_session {
+      max-width: 40rem;
+      margin: 0 auto;
+      background: var(--bg-navbar);
+      padding: 2rem;
+      border-radius: var(--br);
+      box-shadow: var(--bs);
+    }
+  }
+}

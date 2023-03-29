@@ -1,0 +1,56 @@
+@import './animations';
+
+.card_input {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  label {
+    font-size: 1rem;
+  }
+
+  & + .card_input {
+    margin-top: 2rem;
+  }
+
+  input,
+  textarea,
+  select {
+    border: none;
+    border: 1px solid var(--bg-card);
+    background-color: var(--bg-card);
+    border-radius: var(--br);
+    padding: 1rem 1.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+
+    resize: none;
+    &[type='number'] {
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      appearance: textfield;
+    }
+    &[type='number']::-webkit-inner-spin-button,
+    &[type='number']::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+    }
+    &.ng-touched.ng-invalid {
+      border-color: var(--red_color);
+      @include shake;
+    }
+    &[type='file'] {
+      display: none;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+form {
+  .buttons {
+    padding-top: 1.5rem;
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,38 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+@import 'styles/animations';
+@import 'styles/button';
+@import 'styles/input';
+@import 'styles/media';
+@import 'styles/sections';
+@import 'styles/transitions';
+@import 'styles/typography';
+@import 'styles/variables';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.cdk-global-overlay-wrapper,
+.cdk-overlay-container {
+  z-index: 10000000 !important;
+}
+
+.svg-inline--fa {
+  display: inline-block;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}

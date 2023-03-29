@@ -1,0 +1,39 @@
+.fa-spin {
+  --fa-animation-duration: 0.5s;
+}
+
+@mixin move_left_to_right() {
+  animation: move_left_to_right 1s var(--time_c_b);
+
+  @keyframes move_left_to_right {
+    0% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+@mixin shake() {
+  animation: shake 0.2s var(--time_c_b);
+
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+
+    25% {
+      transform: translateX(5px);
+    }
+
+    50% {
+      transform: translateX(-5px);
+    }
+
+    75% {
+      transform: translateX(5px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+}

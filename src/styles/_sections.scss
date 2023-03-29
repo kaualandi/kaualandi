@@ -1,0 +1,50 @@
+section {
+  background-color: var(--bg-color);
+  padding: 5rem 0;
+  .header_section {
+    text-align: center;
+    max-width: 40rem;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    &__title {
+      color: var(--title-color);
+      font-size: 1.8rem !important;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 1rem;
+      &::after {
+        content: '';
+        display: block;
+        width: 1.3rem;
+        height: 0.3rem;
+        border-radius: 0.2rem;
+        background-color: var(--title-color);
+        margin: 1rem auto 0;
+      }
+    }
+    &__subtitle {
+      color: var(--text-color);
+      font-size: 1rem !important;
+      line-height: 1.2rem;
+      font-weight: 300;
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  .article {
+    h3 {
+      color: var(--title-color);
+      font-size: 1.3rem !important;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    p {
+      line-height: 1.2rem;
+      margin: 0;
+    }
+    .buttons {
+      margin-top: 1rem;
+    }
+  }
+}

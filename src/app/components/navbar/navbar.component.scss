@@ -1,0 +1,38 @@
+::ng-deep .navbar {
+  border-radius: 0 0 var(--br) var(--br);
+  background-color: var(--bg-navbar);
+  box-shadow: var(--bs) !important;
+
+  .navbar-brand {
+    height: 60px;
+    width: 100%;
+    h2 {
+      height: 100%;
+      font-family: var(--ff);
+      margin: 0;
+      font-weight: bold;
+      color: var(--title-color);
+      img {
+        margin-right: 1rem;
+        height: 100%;
+      }
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        color: var(--title-color);
+        font-weight: 500;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        transition: var(--ts);
+        border-radius: var(--br);
+
+        &:hover {
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+}

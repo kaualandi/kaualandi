@@ -1,0 +1,11 @@
+<div class="pagination">
+  <div (click)="back && handlePageChange(current - 1)" class="back arrow" [ngClass]="{'active': back}">
+    <i icon="angle_left"></i>
+  </div>
+  <span class="page">
+    {{current}} de {{total}}
+  </span>
+  <div (click)="next && handlePageChange(current + 1)" class="next arrow" [ngClass]="{'active': next}">
+    <i icon="angle_right"></i>
+  </div>
+</div>

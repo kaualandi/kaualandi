@@ -1,0 +1,26 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  .arrow {
+    color: var(--title-color);
+    transition: var(--ts);
+    cursor: auto;
+    &.active {
+      opacity: 1;
+      color: var(--main-color);
+      cursor: pointer;
+      &:hover {
+        color: var(--title-color);
+      }
+    }
+  }
+  .page {
+    color: var(--title-color);
+    font-size: 13px;
+    font-weight: 300;
+    flex: none;
+  }
+}
