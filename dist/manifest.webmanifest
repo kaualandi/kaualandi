@@ -1,8 +1,8 @@
 {
-  "name": "web-boilerplate",
-  "short_name": "web-bp",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Kauã Landi | Dev FullStack",
+  "short_name": "Kauã Landi",
+  "theme_color": "#fafafa",
+  "background_color": "#0b0e20",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
