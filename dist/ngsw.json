@@ -1,0 +1,117 @@
+{
+  "configVersion": 1,
+  "timestamp": 1680178803687,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main.cdd8fdd080f85264.js",
+        "/manifest.webmanifest",
+        "/polyfills.c287558358e2f223.js",
+        "/runtime.45c70897498c43fc.js",
+        "/styles.27c8344aba2e6630.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/01.8c372d2fbbb9a5f6.png",
+        "/02.ab446d23402a7dfd.png",
+        "/03.3a39a5f326050179.png",
+        "/04.2a56bef579ec04c2.png",
+        "/05.aec8ef49f3814909.png",
+        "/06.239391432d1d0f9e.png",
+        "/07.53141ebc230fc685.png",
+        "/08.a41312f83a029ff3.png",
+        "/09.d0d302c4e7db0fc6.png",
+        "/arrow_left.1427f2e59f331c91.svg",
+        "/arrow_right.906838c7467fb39c.svg",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/img/hero-bg.svg",
+        "/assets/img/logo.svg",
+        "/assets/img/projects/fipenator.png",
+        "/assets/img/projects/icaro.png",
+        "/assets/img/projects/lf.png",
+        "/assets/img/projects/memory-game.png",
+        "/hero-bg.3c94fd6e680b2a8b.svg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/01.8c372d2fbbb9a5f6.png": "7c046ea4b1669da4eb81acccd7fc58b00201543d",
+    "/02.ab446d23402a7dfd.png": "9775bb2755b51c9eb03a3057eaf3914dc3149a6b",
+    "/03.3a39a5f326050179.png": "c284f2c9ece402ccc1301b4301252476864235c0",
+    "/04.2a56bef579ec04c2.png": "2816672fcbef8e08b431d600f26b119e2122eaa6",
+    "/05.aec8ef49f3814909.png": "8d9fe47653c2615fd4a1e861e882e2efdb0f34a0",
+    "/06.239391432d1d0f9e.png": "9d566536e859c18075d00e7f8cd6c490d310c089",
+    "/07.53141ebc230fc685.png": "078e49f4fa97e117da76cbef2b492e8cf92d0d45",
+    "/08.a41312f83a029ff3.png": "b3916a95cb81602b7bd41eaefa92eb3a8fd39b70",
+    "/09.d0d302c4e7db0fc6.png": "4d1c1ec2c710745ddcc43fdd0ae41d3095398a77",
+    "/arrow_left.1427f2e59f331c91.svg": "fb5b615955042a7c6aa16b1f0e8dcbdb279a8ac0",
+    "/arrow_right.906838c7467fb39c.svg": "fac5123a15d035a642b74740b89636e2ace09810",
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/img/hero-bg.svg": "daac8858fd4a0ccea44f59dfd079c3c16c263f33",
+    "/assets/img/logo.svg": "63d55c5f723f75a9036ad61651eb0c2794c669f1",
+    "/assets/img/projects/fipenator.png": "17929feeb58ebe30d9336deb8d2a8b84454db31f",
+    "/assets/img/projects/icaro.png": "5b4b466e7b172ccb21b602c6c83e00b722b76822",
+    "/assets/img/projects/lf.png": "015026be117b5769e4ccab03c7d3b5710d0a8ab5",
+    "/assets/img/projects/memory-game.png": "ffa939a823de947477d5774efa368be8db837989",
+    "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/hero-bg.3c94fd6e680b2a8b.svg": "daac8858fd4a0ccea44f59dfd079c3c16c263f33",
+    "/index.html": "b0367cf6a3251d918ef37db785b86a9fdffd022f",
+    "/main.cdd8fdd080f85264.js": "96e38239b6cba2739c47f398f8cc74700caadda5",
+    "/manifest.webmanifest": "0fab9dbf4a6983751b155358002e9a24e2172984",
+    "/polyfills.c287558358e2f223.js": "4f6bdeeb4c615321c0fd8388fba7ad48f0b72f6b",
+    "/runtime.45c70897498c43fc.js": "1466edc2ba1488b9e8847e82fc3bc9df28df5b6d",
+    "/styles.27c8344aba2e6630.css": "4201b6ad991678717b9f6b16d1cb8970eecb2085"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

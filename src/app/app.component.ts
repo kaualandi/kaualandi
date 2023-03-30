@@ -11,5 +11,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.storage.loadCurrentTheme();
+    this.storage.setTheme('light');
   }
 }
