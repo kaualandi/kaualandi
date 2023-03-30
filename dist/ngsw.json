@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1680180742432,
+  "timestamp": 1680180879501,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -88,7 +88,7 @@
     "/assets/img/projects/memory-game.png": "ffa939a823de947477d5774efa368be8db837989",
     "/favicon.ico": "440647c9a4a8599a3917f82dace89c6d3033c9d2",
     "/hero-bg.3c94fd6e680b2a8b.svg": "daac8858fd4a0ccea44f59dfd079c3c16c263f33",
-    "/index.html": "65d45228473a1eeb39403042b7eb904d8f73b2d1",
+    "/index.html": "10d7c3bef4a2a56bfd3983c548e500a0bcd11722",
     "/main.cdd8fdd080f85264.js": "96e38239b6cba2739c47f398f8cc74700caadda5",
     "/manifest.webmanifest": "0fab9dbf4a6983751b155358002e9a24e2172984",
     "/polyfills.c287558358e2f223.js": "4f6bdeeb4c615321c0fd8388fba7ad48f0b72f6b",
