@@ -11,6 +11,7 @@ export class StorageService {
   constructor(private cookieService: CookieService, private router: Router) {}
 
   UserSubject = new Subject<void>();
+  ThemeSubject = new Subject<void>();
   myUser: IUser = {} as IUser;
 
   userTheme: 'light' | 'dark' = 'light';
@@ -99,12 +100,21 @@ export class StorageService {
     this.router.navigate(['/login']);
   }
 
+  watchTheme() {
+    return this.ThemeSubject.asObservable();
+  }
+
+  unwatchTheme() {
+    this.ThemeSubject.unsubscribe();
+  }
+
   toggleUserTheme() {
     if (this.userTheme === 'light') {
       this.setTheme('dark');
     } else {
       this.setTheme('light');
     }
+    this.ThemeSubject.next();
   }
 
   loadCurrentTheme() {
@@ -117,10 +127,14 @@ export class StorageService {
 
     const deviceMode = window.matchMedia('(prefers-color-scheme: dark)');
     if (deviceMode.matches) {
+      console.log('Device is in dark mode');
+
       this.userTheme = 'dark';
       this.setTheme('dark');
       return 'dark';
     }
+    console.log('Device is in light mode');
+
     this.setTheme('light');
     return 'light';
   }

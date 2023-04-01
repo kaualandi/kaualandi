@@ -34,6 +34,20 @@
   }
 }
 
+::ng-deep {
+  .dark {
+    #contact {
+      background: linear-gradient(
+          to right,
+          rgba(10, 10, 10, 0.8),
+          rgba(10, 10, 10, 0.8)
+        ),
+        url(../../../../assets/img/hero-bg-dark.svg) no-repeat center
+          center/cover;
+    }
+  }
+}
+
 @keyframes zoom {
   0% {
     transform: scale(0);

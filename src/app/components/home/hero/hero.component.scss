@@ -92,6 +92,18 @@
   }
 }
 
+::ng-deep .dark {
+  #hero {
+    transition: var(--ts);
+    background: linear-gradient(
+        to right,
+        rgba(10, 10, 10, 0.8),
+        rgba(10, 10, 10, 0.8)
+      ),
+      url(../../../../assets/img/hero-bg-dark.svg) no-repeat center center/cover;
+  }
+}
+
 @keyframes scroll_after {
   0% {
     transform: translateX(-50%) translateY(-50%);

@@ -7,6 +7,9 @@
   <links>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
+        <app-toggle-theme></app-toggle-theme>
+      </li>
+      <li class="nav-item">
         <a class="nav-link waves-{{theme === 'light' ? 'dark' : 'light'}}" mdbWavesEffect (click)="scrollTo('about')">
           Sobre mim
         </a>

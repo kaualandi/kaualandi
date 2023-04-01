@@ -21,6 +21,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
         this.getMe();
       },
     });
+    this.storage.watchTheme().subscribe({
+      next: () => {
+        this.theme = this.storage.theme;
+      },
+    });
   }
 
   ngOnDestroy(): void {

@@ -13,9 +13,33 @@
 
   --bg-card: #e7e7e7;
 
+  --bg-footer: #0b0e20;
+  --footer-color: #ffffff;
+
   --yellow_color: #f2af4c;
   --green_color: #5dc983;
   --red_color: #eb5769;
 
   --ripple-color: #cad6ff2c;
+}
+
+.dark:root {
+  --bs: 0 0 20px 1px #0b0e204b;
+  --time_c_b: 0s ease-in-out;
+
+  --title-color: #d8d8d8;
+  --text-color: #a5a5a5;
+  --bg-color: #0f0f0f;
+  --bg-navbar: #000000;
+
+  --bg-card: #202020;
+
+  --bg-footer: #0b0e20;
+  --footer-color: #d8d8d8;
+
+  --yellow_color: #f2af4c;
+  --green_color: #5dc983;
+  --red_color: #eb5769;
+
+  --ripple-color: #6166772c;
 }

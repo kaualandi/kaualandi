@@ -1,16 +1,16 @@
 #footer {
-  background-color: var(--title-color);
+  background-color: var(--bg-footer);
   padding: 3rem 0 1.5rem;
   .container {
     .row {
       div {
         h3 {
           font-weight: 700;
-          color: var(--bg-navbar);
+          color: var(--footer-color);
         }
         p {
           line-height: 1.2rem;
-          color: var(--bg-navbar);
+          color: var(--footer-color);
           margin: 0;
         }
         &.social {
@@ -24,7 +24,7 @@
             li {
               a {
                 background-color: transparent;
-                color: var(--bg-navbar);
+                color: var(--footer-color);
                 i {
                   font-size: 1.5rem !important;
                 }
@@ -42,7 +42,7 @@
       p {
         margin: 0;
         font-size: 0.6rem !important;
-        color: var(--bg-navbar);
+        color: var(--footer-color);
         text-align: center;
       }
     }

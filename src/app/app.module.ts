@@ -29,6 +29,7 @@ import { AboutComponent } from './components/home/about/about.component';
 import { ProjectsComponent } from './components/home/projects/projects.component';
 import { ContactComponent } from './components/home/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ToggleThemeComponent } from './components/shared/toggle-theme/toggle-theme.component';
 
 registerLocaleData(localePt);
 
@@ -48,6 +49,7 @@ registerLocaleData(localePt);
     ProjectsComponent,
     ContactComponent,
     FooterComponent,
+    ToggleThemeComponent,
   ],
   imports: [
     BrowserModule,
