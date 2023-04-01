@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1680367341424,
+  "timestamp": 1680367961082,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.3039af0b110a3d58.js",
+        "/main.514d50c35be79a05.js",
         "/manifest.webmanifest",
         "/polyfills.c287558358e2f223.js",
         "/runtime.45c70897498c43fc.js",
@@ -88,8 +88,8 @@
     "/assets/img/projects/memory-game.png": "ffa939a823de947477d5774efa368be8db837989",
     "/favicon.ico": "440647c9a4a8599a3917f82dace89c6d3033c9d2",
     "/hero-bg.3c94fd6e680b2a8b.svg": "daac8858fd4a0ccea44f59dfd079c3c16c263f33",
-    "/index.html": "33497d1debadb294eb7ad82a6923c76d5f076542",
-    "/main.3039af0b110a3d58.js": "abbae6b94c2e86e18929bf6db9a9fc3a5f694443",
+    "/index.html": "62635793cded17372a2dbb0cefac768ea237eb0f",
+    "/main.514d50c35be79a05.js": "8be298599684f776708c31262e21bf9121aadeb8",
     "/manifest.webmanifest": "c08ce3cdbc1bd58ceb6ee0354e298b3d799cf71c",
     "/polyfills.c287558358e2f223.js": "4f6bdeeb4c615321c0fd8388fba7ad48f0b72f6b",
     "/runtime.45c70897498c43fc.js": "1466edc2ba1488b9e8847e82fc3bc9df28df5b6d",
