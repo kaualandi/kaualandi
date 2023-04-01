@@ -6,7 +6,7 @@
         alguma de minhas redes sociais. Retornarei ocontato o mais rápido possível.</p>
     </header>
 
-    <form class="form_session" [formGroup]="contactForm">
+    <form class="form_session" [formGroup]="contactForm" (ngSubmit)="handleSubmit()">
       <div class="card_input">
         <label for="name">Nome</label>
         <input type="text" id="name" name="name" formControlName="name" placeholder="Digite seu nome">
@@ -21,7 +21,13 @@
           placeholder="Digite sua mensagem"></textarea>
       </div>
       <div class="buttons">
-        <button mat-raised-button [disabled]="!contactForm.valid" type="submit">Enviar</button>
+        <button mat-raised-button [disabled]="!contactForm.valid" type="submit">
+          Enviar
+          <i *ngIf="!loading && !statusSent" icon="paper_plane"></i>
+          <i *ngIf="loading" icon="loading"></i>
+          <i *ngIf="statusSent === 'ok'" icon="check"></i>
+          <i *ngIf="statusSent === 'error'" icon="xmark"></i>
+        </button>
       </div>
     </form>
   </div>

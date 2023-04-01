@@ -13,6 +13,32 @@
       padding: 2rem;
       border-radius: var(--br);
       box-shadow: var(--bs);
+      .text {
+        transition: var(--ts);
+      }
+      button.mat-button-base {
+        ::ng-deep .mat-button-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          .icon {
+            display: block;
+            transform: scale(0);
+            transition: var(--ts);
+            animation: zoom 0.2s ease-in-out forwards;
+          }
+        }
+      }
     }
+  }
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
   }
 }
