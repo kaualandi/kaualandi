@@ -6,7 +6,7 @@
         alguma de minhas redes sociais. Retornarei ocontato o mais rápido possível.</p>
     </header>
 
-    <form class="form_session" data-netlify="true" [formGroup]="contactForm" (ngSubmit)="handleSubmit()">
+    <form class="form_session" data-netlify="true" netlify [formGroup]="contactForm" (ngSubmit)="handleSubmit()">
       <div class="card_input">
         <label for="name">Nome</label>
         <input type="text" id="name" name="name" formControlName="name" placeholder="Digite seu nome">
