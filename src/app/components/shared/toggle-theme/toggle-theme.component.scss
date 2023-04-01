@@ -1,14 +1,14 @@
 .toggle-theme {
   overflow: hidden;
   position: relative;
-  --hidden-top: 120%;
+  --hidden-top: 150%;
   --visible-top: 50%;
   .icon {
     position: absolute;
     top: var(--hidden-top);
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #fff;
     opacity: 1;
     transition: var(--ts);
@@ -25,6 +25,12 @@
       color: var(--green_color);
       top: var(--hidden-top);
     }
+  }
+
+  &:hover {
+    --hidden-top: 110%;
+    --visible-top: 40%;
+    transform: translateY(0px);
   }
 }
 
