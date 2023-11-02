@@ -15,6 +15,7 @@ import { NgxMaskModule } from 'ngx-mask';
 import { environment } from './../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { InputNumberDirective } from './directives/input-number.directive';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -61,6 +62,7 @@ registerLocaleData(localePt);
     MatSnackBarModule,
     FormsModule,
     ReactiveFormsModule,
+    MatExpansionModule,
     NgxMaskModule.forRoot(),
     MDBBootstrapModule.forRoot(),
     ServiceWorkerModule.register('ngsw-worker.js', {

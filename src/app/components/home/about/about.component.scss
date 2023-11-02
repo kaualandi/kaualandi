@@ -20,6 +20,20 @@
             flex: none;
           }
         }
+
+        .mat-expansion-panel {
+          padding-top: 1rem;
+
+          .mat-expansion-panel-header {
+            padding-left: 0;
+            padding-bottom: 0.5rem;
+          }
+
+          ::ng-deep .mat-expansion-panel-body {
+            padding: 0;
+          }
+        }
+
         & + .article {
           @include media('<tablet') {
             margin-top: 2rem;

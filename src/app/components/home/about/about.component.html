@@ -10,8 +10,8 @@
       <div class="article col-12 col-md-6">
         <h3>Conheça-me!</h3>
         <p>
-          Tenho 17 anos e estou cursando o 3° ano do Ensino Médio. Atualmente, estou trabalhando na <strong>Noclaf
-            Tech</strong> como <strong>Desenvolvedor</strong>.
+          Tenho {{myYearsOld}} anos e estou cursando o 3° ano do Ensino Médio. Atualmente, estou trabalhando na
+          <strong>Noclaf Tech</strong> como <strong>Desenvolvedor</strong>.
           <br><br>
           Sou um <strong>Desenvolvedor Web FullStack</strong> habituado com a criação de websites e aplicações web
           escaláveis e performáticas.
@@ -28,6 +28,19 @@
         <ul class="skills-list">
           <li *ngFor="let skill of skills" class="skill-item">{{skill}}</li>
         </ul>
+
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <p>
+                Extras
+              </p>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <ul class="skills-list">
+            <li *ngFor="let skill of moreSkills" class="skill-item">{{skill}}</li>
+          </ul>
+        </mat-expansion-panel>
       </div>
     </div>
   </div>
