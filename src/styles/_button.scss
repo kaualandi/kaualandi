@@ -1,58 +1,17 @@
-button.mat-button-base,
-a.mat-button-base {
-  background-color: var(--title-color);
-  color: var(--bg-color);
-  width: 200px;
-  padding: 10px;
-  transition: var(--ts);
-  box-shadow: var(--bs);
-  &:hover {
-    transform: translateY(-2px) scale(1);
-    color: var(--bg-color);
-  }
-  &:active {
-    transform: translateY(0px) scale(0.98);
-    box-shadow: none;
-  }
-  .mat-ripple * {
-    background-color: var(--ripple-color);
-  }
-  .mat-button-wrapper {
-    color: inherit;
-    text-transform: uppercase;
-  }
+.mat-mdc-button-base {
+  text-decoration: none;
 
-  &.alt {
-    background-color: var(--bg-navbar);
-    color: var(--title-color);
-    &:hover {
-      color: var(--title-color);
+  &.mdc-button {
+    border-radius: 50px;
+    &.primary {
+      background-color: var(--main-color);
+      color: var(--primary-bg);
     }
-  }
 
-  &.mat-icon-button {
-    box-shadow: none;
-    background-color: var(--bg-color);
-    color: var(--title-color);
-    width: 40px;
-    padding: unset;
-  }
-
-  &:disabled {
-    opacity: 0.5;
-  }
-}
-
-.buttons {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  &.two-alt {
-    a,
-    button {
-      &:nth-child(2) {
-        @extend .alt;
-      }
+    &.mat-button-disabled,
+    &:disabled {
+      color: var(--primary-bg) !important;
+      opacity: 0.5;
     }
   }
 }

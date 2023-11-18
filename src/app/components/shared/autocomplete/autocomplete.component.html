@@ -1,0 +1,15 @@
+<div class="card-input">
+  <label *ngIf="label" for="{{randomNumber}}">{{label}}</label>
+
+  <div [ngClass]="{'input-icon': icon}">
+    <input type="text" id="{{randomNumber}}" placeholder="{{placeholder}}" [formControl]="fc()"
+      [matAutocomplete]="auto">
+    <i *ngIf="icon" [icon]="icon"></i>
+  </div>
+
+  <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+    <mat-option *ngFor="let option of options" [value]="option">
+      {{option?.[displayFnKey]}}
+    </mat-option>
+  </mat-autocomplete>
+</div>

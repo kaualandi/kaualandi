@@ -5,7 +5,7 @@
   gap: 10px;
   width: max-content;
   .arrow {
-    color: var(--title-color);
+    color: var(--text-color);
     transition: var(--ts);
     cursor: auto;
     &.active {
@@ -13,12 +13,12 @@
       color: var(--main-color);
       cursor: pointer;
       &:hover {
-        color: var(--title-color);
+        color: var(--text-color);
       }
     }
   }
   .page {
-    color: var(--title-color);
+    color: var(--text-color);
     font-size: 13px;
     font-weight: 300;
     flex: none;

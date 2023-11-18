@@ -1,0 +1,22 @@
+.skeleton {
+  .s {
+    animation: pulse 3s linear infinite;
+    background-image: linear-gradient(
+      90deg,
+      var(--skeleton-bg) 0px,
+      var(--skeleton-bg-dark) 40px,
+      var(--skeleton-bg) 80px
+    );
+    background-size: 600px;
+    display: block;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background-position: -600px;
+  }
+  100% {
+    background-position: 600px;
+  }
+}

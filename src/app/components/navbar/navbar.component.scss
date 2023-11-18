@@ -1,36 +1,174 @@
-::ng-deep .navbar {
-  border-radius: 0 0 var(--br) var(--br);
-  background-color: var(--bg-navbar);
-  box-shadow: var(--bs) !important;
+@import 'src/styles/media';
 
-  .navbar-brand {
-    height: 60px;
+/*
+  ! Navbar
+  ! Se for usar configurações de CSS simples
+  ? ex: padding, bg e color
+  ! Use as variáveis de ambiente no arquivo:
+  * src/styles/_variables.scss
+
+  ! Obrigado :) - Noclaf Tech
+*/
+
+nav {
+  --navbar_padding: var(--navbar-top-padding);
+  --navbar_bg: var(--navbar-top-bg);
+  --navbar_color: var(--navbar-top-color);
+  z-index: 2;
+
+  transition: var(--ts);
+  width: 100%;
+  padding: var(--navbar_padding);
+  background-color: var(--navbar_bg);
+  position: var(--navbar-position, auto);
+  border-bottom: 1px solid var(--line-color);
+  .content {
+    max-width: var(--navbar-max-width);
+    margin: 0 auto;
     width: 100%;
-    h2 {
-      height: 100%;
-      font-family: var(--ff);
-      margin: 0;
-      font-weight: bold;
-      color: var(--title-color);
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media('<=navbar-collapse') {
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      grid-area: logo;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: var(--navbar_color);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem !important;
+
       img {
-        margin-right: 1rem;
-        height: 100%;
+        padding: 5px;
+        height: var(--navbar-logo-height);
+      }
+    }
+
+    .menu {
+      transition: all 0.2s;
+      grid-area: menu;
+      overflow: hidden;
+      @include media('<=navbar-collapse') {
+        transition: var(--ts);
+        transition-duration: 0.5s;
+        transition-delay: 0.1s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-basis: 100%;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        position: absolute;
+        width: 100%;
+        background-color: var(--navbar_bg);
+        z-index: -1;
+        opacity: 1;
+        &.vertical {
+          top: var(--navbar-height, 0);
+          left: 0;
+          &.hidden {
+            top: -50vh;
+            opacity: 0;
+          }
+        }
+        &.horizontal {
+          justify-content: flex-start;
+          align-items: flex-start;
+          padding-top: var(--navbar-height, 0);
+          height: 100vh;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          &.hidden {
+            left: -100vw;
+            opacity: 0;
+          }
+        }
+        &.hidden {
+          opacity: 0;
+        }
+      }
+      a,
+      button {
+        color: var(--navbar_color);
+        padding-left: 32px;
+        padding-right: 32px;
+        height: calc(var(--navbar-logo-height) - 1px);
+        border-radius: 0;
+        border-left: 1px solid var(--line-color);
+        &:last-child {
+          border-right: 1px solid var(--line-color);
+        }
+        &.active {
+          border-bottom: 2px solid var(--accent-orange);
+          color: var(--white);
+        }
+      }
+    }
+  }
+}
+
+.hamburger {
+  grid-area: hamburger;
+  display: none;
+  z-index: 3;
+  @include media('<=navbar-collapse') {
+    display: block;
+  }
+  button {
+    background-color: transparent;
+    .line {
+      background-color: var(--navbar_color);
+      width: 25px;
+      height: 3px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-left: 7.2px;
+      transition: var(--ts);
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 3px;
+        border-radius: 10px;
+        background-color: var(--navbar_color);
+        transition: var(--ts);
+      }
+      &::before {
+        transform: translateY(-10px);
+      }
+      &::after {
+        transform: translateY(10px);
       }
     }
   }
 
-  .navbar-nav {
-    .nav-item {
-      .nav-link {
-        color: var(--title-color);
-        font-weight: 500;
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-        transition: var(--ts);
-        border-radius: var(--br);
-
-        &:hover {
-          transform: translateY(-2px);
+  &.active {
+    button {
+      .line {
+        background-color: transparent;
+        transform: rotate(180deg);
+        &::before,
+        &::after {
+          background-color: var(--navbar_color);
+          width: 25px;
+        }
+        &::before {
+          transform: rotate(45deg);
+        }
+        &::after {
+          transform: rotate(-45deg);
         }
       }
     }

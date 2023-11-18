@@ -10,9 +10,9 @@ export class PaginationComponent {
   @Input() next = false;
   @Input() current = 1;
   @Input() total = 1;
-  @Output() pageChange = new EventEmitter<number>();
+  @Output() page_change = new EventEmitter<number>();
 
   handlePageChange(page: number) {
-    this.pageChange.emit(page);
+    this.page_change.emit(page);
   }
 }

@@ -1,6 +1,6 @@
 @import './animations';
 
-.card_input {
+.card-input {
   position: relative;
   display: flex;
   width: 100%;
@@ -8,24 +8,36 @@
 
   label {
     font-size: 1rem;
+    padding-left: 5px;
   }
 
-  & + .card_input {
-    margin-top: 2rem;
+  .input-icon {
+    position: relative;
+    width: 100%;
+    input {
+      width: 100%;
+      padding-right: 2rem;
+    }
+    button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0px;
+      color: var(--main-color);
+      cursor: pointer;
+    }
   }
 
   input,
   textarea,
   select {
-    border: none;
-    border: 1px solid var(--bg-card);
-    background-color: var(--bg-card);
-    border-radius: var(--br);
-    padding: 1rem 1.5rem;
+    padding: 12px 16px;
+    border-radius: 50px;
+    border: 1px solid var(--secondary-bg);
+    background-color: var(--secondary-bg);
+    outline: none;
     color: var(--text-color);
-    font-weight: 500;
 
-    resize: none;
     &[type='number'] {
       -webkit-appearance: textfield;
       -moz-appearance: textfield;
@@ -36,21 +48,23 @@
       -webkit-appearance: none;
     }
     &.ng-touched.ng-invalid {
-      border-color: var(--red_color);
+      border-color: var(--red-color);
       @include shake;
     }
     &[type='file'] {
       display: none;
     }
-    &:focus {
-      outline: none;
-    }
+  }
+
+  .mat-button {
+    height: 41px;
+  }
+
+  & + .card-input {
+    margin-top: 1rem;
   }
 }
 
-form {
-  .buttons {
-    padding-top: 1.5rem;
-    justify-content: flex-end;
-  }
+.mat-form-field-infix {
+  display: flex;
 }

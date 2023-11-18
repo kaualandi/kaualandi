@@ -1,11 +1,35 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
 @include mat.core();
+$web-boilerplate-primary: mat.define-palette(mat.$indigo-palette);
+$web-boilerplate-accent: mat.define-palette(
+  mat.$pink-palette,
+  A200,
+  A100,
+  A400
+);
+$web-boilerplate-warn: mat.define-palette(mat.$red-palette);
+$web-boilerplate-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $web-boilerplate-primary,
+      accent: $web-boilerplate-accent,
+      warn: $web-boilerplate-warn,
+    ),
+  )
+);
+@include mat.all-component-themes($web-boilerplate-theme);
 
+@import 'node_modules/angular-notifier/styles';
 @import 'styles/animations';
 @import 'styles/button';
+@import 'styles/dialog';
 @import 'styles/input';
 @import 'styles/media';
-@import 'styles/sections';
+@import 'styles/page';
+@import 'styles/scroll';
+@import 'styles/skeleton';
 @import 'styles/transitions';
 @import 'styles/typography';
 @import 'styles/variables';
@@ -23,6 +47,7 @@ body {
 body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background-color: black;
 }
 
 .cdk-global-overlay-wrapper,

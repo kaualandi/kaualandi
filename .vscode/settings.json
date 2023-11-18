@@ -1,7 +1,6 @@
 {
   "explorer.compactFolders": false,
   "editor.formatOnSave": true,
-  "eslint.packageManager": "npm",
   "[javascript]": {
     "editor.codeActionsOnSave": { "source.fixAll.eslint": true }
   },
@@ -15,7 +14,9 @@
   },
   "editor.tabSize": 2,
   "git.enableSmartCommit": true,
-  "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
-  "window.zoomLevel": 0,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+  },
   "eslint.validate": ["javascript", "typescript"]
 }

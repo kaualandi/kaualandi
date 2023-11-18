@@ -1,50 +1,60 @@
-#footer {
-  background-color: var(--bg-footer);
-  padding: 3rem 0 1.5rem;
-  .container {
-    .row {
-      div {
-        h3 {
-          font-weight: 700;
-          color: var(--footer-color);
-        }
-        p {
-          line-height: 1.2rem;
-          color: var(--footer-color);
-          margin: 0;
-        }
-        &.social {
-          h3 {
-            text-align: end;
-          }
-          ul {
-            list-style: none;
-            display: flex;
-            justify-content: flex-end;
-            li {
-              a {
-                background-color: transparent;
-                color: var(--footer-color);
-                i {
-                  font-size: 1.5rem !important;
-                }
-              }
-            }
-          }
+footer {
+  --navbar_padding: var(--navbar-top-padding);
+  --navbar_bg: var(--navbar-top-bg);
+  --navbar_color: var(--navbar-top-color);
+  z-index: 2;
+
+  transition: var(--ts);
+  width: 100%;
+  padding: var(--navbar_padding);
+  background-color: var(--navbar_bg);
+  position: var(--navbar-position, auto);
+  bottom: 0;
+  border-top: 1px solid var(--line-color);
+
+  .content {
+    max-width: var(--navbar-max-width);
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    overflow: auto;
+
+    .copy {
+      border-right: 1px solid var(--line-color);
+      padding-right: 18px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+    }
+
+    .find-me {
+      display: flex;
+
+      p {
+        display: flex;
+        height: 48px;
+        align-items: center;
+        padding: 0 18px;
+        border-left: 1px solid var(--line-color);
+      }
+
+      a {
+        border-left: 1px solid var(--line-color);
+        border-radius: 0;
+        &:last-child {
+          border-right: 1px solid var(--line-color);
         }
       }
     }
 
-    .copy {
-      margin-top: 3rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--text-color);
-      p {
-        margin: 0;
-        font-size: 0.6rem !important;
-        color: var(--footer-color);
-        text-align: center;
-      }
+    p,
+    a,
+    i {
+      color: var(--secondary-gray);
+      flex: none;
     }
   }
 }

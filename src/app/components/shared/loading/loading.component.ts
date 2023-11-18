@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 @Component({
   selector: 'loading',
-  templateUrl: './loading.component.html',
+  template: '<i icon="loading"></i>',
 })
 export class LoadingComponent {}

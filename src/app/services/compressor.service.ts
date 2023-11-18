@@ -27,13 +27,11 @@ export class CompressorService {
 
           if (width > height) {
             if (width > this.max_width) {
-              // height *= max_width / width;
               height = Math.round((height *= this.max_width / width));
               width = this.max_width;
             }
           } else {
             if (height > this.max_height) {
-              // width *= max_height / height;
               width = Math.round((width *= this.max_height / height));
               height = this.max_height;
             }

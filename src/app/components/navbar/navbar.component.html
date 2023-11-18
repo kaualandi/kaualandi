@@ -1,32 +1,26 @@
-<mdb-navbar SideClass="navbar navbar-expand-sm navbar-{{theme}} fixed-top" [containerInside]="false">
-  <mdb-navbar-brand>
-    <a class="navbar-brand" (click)="scrollTo('hero')">
-      <h2><img src="assets/img/logo.svg" alt="logo">Kauã Landi</h2>
-    </a>
-  </mdb-navbar-brand>
-  <links>
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <app-toggle-theme></app-toggle-theme>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link waves-{{theme === 'light' ? 'dark' : 'light'}}" mdbWavesEffect (click)="scrollTo('about')">
-          Sobre mim
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link waves-{{theme === 'light' ? 'dark' : 'light'}}" mdbWavesEffect
-          (click)="scrollTo('projects')">
-          Projetos
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link waves-{{theme === 'light' ? 'dark' : 'light'}}" mdbWavesEffect (click)="scrollTo('contact')">
-          Contato
-        </a>
-      </li>
-    </ul>
-  </links>
-</mdb-navbar>
+<nav [@offcanvasTopAnimation] #navbar>
+  <div class="content">
 
-<router-outlet></router-outlet>
+    <a class="logo" routerLink="/">
+      <img src="assets/images/logo.svg" alt="logo">
+      kaualandi
+    </a>
+
+    <div class="hamburger" [ngClass]="{ active: !navbar_hidden }">
+      <button aria-label="menu" mat-icon-button (click)="navbar_hidden = !navbar_hidden">
+        <span class="line"></span>
+      </button>
+    </div>
+
+    <div class="menu {{colapse}}" [ngClass]="{ hidden: navbar_hidden }">
+      <a mat-button routerLink="/" routerLinkActive="active">_início</a>
+      <a mat-button routerLink="/about" routerLinkActive="active">_sobre</a>
+      <a mat-button routerLink="/projects" routerLinkActive="active">_projetos</a>
+      <a mat-button routerLink="/contact" routerLinkActive="active">_contato</a>
+    </div>
+  </div>
+</nav>
+
+<div [@routeAnimations]="outlet && outlet.activatedRouteData">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>

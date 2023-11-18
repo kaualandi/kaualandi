@@ -1,4 +1,3 @@
-import { StorageService } from './../../services/storage.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,9 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
-  constructor(private storage: StorageService) {}
+  year = new Date().getFullYear();
 
-  socials = this.storage.socials;
-
-  currentYear = new Date().getFullYear();
+  whatsapp = 'https://wa.me/5521999222644';
+  linkedin = 'https://www.linkedin.com/in/kaualf/';
+  instagram = 'https://www.instagram.com/kauaalandi/';
+  github = 'https://github.com/kaualandi';
 }

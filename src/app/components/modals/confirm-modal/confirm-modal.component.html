@@ -1,0 +1,9 @@
+<h1 matDialogTitle [innerHTML]="data.title"></h1>
+
+<mat-dialog-content [innerHTML]="data.message">
+</mat-dialog-content>
+
+<mat-dialog-actions [attr.align]="'center'">
+  <button class="alt" mat-button [mat-dialog-close]="false">Cancelar</button>
+  <button class="primary" mat-button [mat-dialog-close]="true">Confirmar</button>
+</mat-dialog-actions>

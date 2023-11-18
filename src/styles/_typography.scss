@@ -1,82 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
 
-.font {
-  font-family: var(--ff);
-  color: var(--text-color);
-}
+$base-font-size: 19;
+$min-font-size: 10;
+$max-font-size: 52;
 
-.f-10 {
-  font-size: 0.625rem !important;
-}
+@for $i from $min-font-size through $max-font-size {
+  $class-name: '.fd-#{$i}';
 
-.f-12 {
-  font-size: 0.75rem !important;
-}
-
-.f-14 {
-  font-size: 0.875rem !important;
+  #{$class-name} {
+    font-size: calc($i / $base-font-size * 1rem);
+  }
 }
 
-.f-16 {
-  font-size: 1rem !important;
+.mat-typography {
+  * {
+    font-family: 'Fira Code', monospace !important;
+  }
+  h1 {
+    @extend .fd-24;
+  }
+  h2 {
+    @extend .fd-18;
+  }
+  h3 {
+    @extend .fd-16;
+  }
+  h4 {
+    @extend .fd-14;
+  }
+  h5 {
+    @extend .fd-12;
+  }
+  h6 {
+    @extend .fd-10;
+  }
+  p {
+    @extend .fd-14;
+  }
+  a {
+    @extend .fd-14;
+  }
+  button {
+    @extend .fd-14;
+  }
+  span {
+    @extend .fd-14;
+  }
+  label {
+    @extend .fd-14;
+  }
+  .mat-button {
+    @extend .fd-14;
+  }
+
+  .comment {
+    color: var(--secondary-gray);
+  }
 }
 
-.f-18 {
-  font-size: 1.125rem !important;
-}
+@for $i from $min-font-size through $max-font-size {
+  $class-name: '.f-#{$i}';
 
-.f-24 {
-  font-size: 1.5rem !important;
-}
-
-h1 {
-  @extend .f-24;
-}
-h2 {
-  @extend .f-18;
-}
-h3 {
-  @extend .f-16;
-}
-h4 {
-  @extend .f-14;
-}
-h5 {
-  @extend .f-12;
-}
-h6 {
-  @extend .f-10;
-}
-p {
-  @extend .f-14;
-}
-a {
-  @extend .f-14;
-}
-button {
-  @extend .f-14;
-}
-span {
-  @extend .f-14;
-}
-label {
-  @extend .f-12;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a,
-button,
-span,
-label {
-  @extend .font;
-}
-
-.mat-button {
-  @extend .f-14;
+  #{$class-name} {
+    font-size: calc($i / $base-font-size * 1rem) !important;
+  }
 }
