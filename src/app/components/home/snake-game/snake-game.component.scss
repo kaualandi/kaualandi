@@ -11,4 +11,144 @@
   box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.3) inset;
   backdrop-filter: blur(32px);
   margin: 0 auto;
+  position: relative;
+  padding: 2rem;
+  display: flex;
+
+  --snake-color: var(--accent-green);
+  --snake-color-20: var(--accent-green-20);
+  &.dead {
+    --snake-color: var(--accent-red);
+    --snake-color-20: var(--accent-red-20);
+  }
+
+  .bolts {
+    & > * {
+      position: absolute;
+      &.up {
+        top: 0.5rem;
+      }
+      &.down {
+        bottom: 0.25rem;
+      }
+      &.left {
+        left: 0.5rem;
+      }
+      &.right {
+        right: 0.25rem;
+      }
+    }
+  }
+
+  .game-collumn {
+    .game {
+      border-radius: 8px;
+      background: rgba(1, 22, 39, 0.84);
+      box-shadow: 1px 5px 11px 0px rgba(2, 18, 27, 0.71) inset;
+      width: fit-content;
+      overflow: hidden;
+      position: relative;
+      .cells {
+        display: flex;
+        flex-wrap: wrap;
+        .cell {
+          border: 1px solid transparent;
+        }
+      }
+
+      .actions {
+        .message {
+          background: rgba(1, 22, 39, 0.84);
+          box-shadow: 1px 5px 11px 0px rgba(2, 18, 27, 0.71) inset;
+          width: 100%;
+          text-align: center;
+          padding: 0.8rem 0;
+          h2 {
+            color: var(--snake-color);
+            text-transform: uppercase;
+          }
+        }
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+    }
+
+    .how-to-play {
+      margin-top: 1rem;
+      color: var(--white);
+      border-radius: var(--br);
+      background: rgba(1, 20, 35, 0.19);
+      padding: 0.5rem;
+      .arrows {
+        margin-top: 0.3rem;
+        gap: 0.2rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        span {
+          text-align: center;
+        }
+        button {
+          border: 1px solid var(--line-color);
+          background-color: var(--primary-black);
+          border-radius: var(--br);
+          padding: 0.3rem 0;
+          text-align: center;
+          min-width: inherit;
+
+          &:active {
+            background-color: var(--primary-bg);
+            transform: scale(0.9);
+          }
+
+          i {
+            color: var(--white);
+          }
+        }
+      }
+    }
+  }
+
+  .foods-skip {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .foods-left {
+      p {
+        color: var(--white);
+      }
+
+      .foods {
+        display: grid;
+        margin-top: 1rem;
+        gap: 0.8rem;
+        grid-template-columns: repeat(5, 1fr);
+        .food {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: var(--accent-green);
+          box-shadow: 0 0 0 5px var(--accent-green-20);
+          transition: var(--ts);
+          &.eated {
+            opacity: 0.1;
+          }
+        }
+      }
+    }
+
+    .actions {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
 }

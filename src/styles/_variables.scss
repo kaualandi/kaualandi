@@ -1,19 +1,27 @@
 :root {
   font-size: calc(16px + 0.3125vw);
   --ts: all 0.3s ease-in-out;
-  --br: 0.5rem;
+  --br: 8px;
   --time-c-b: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
   --black: #000000;
   --white: #ffffff;
+  --white-20: #ffffff33;
   --text-color: #e5e9f0;
 
   --primary-bg: #011627;
+  --primary-black: #01080e;
 
   --secondary-gray: #607b96;
   --secondary-blue: #4d5bce;
 
   --accent-orange: #fea55f;
+  --accent-green: #43d9ad;
+  --accent-green-20: #43d9ad33;
+  --accent-red: #e99287;
+  --accent-red-20: #e9928733;
+  --accent-purple: #4d5bce;
+  --accent-purple-20: #4d5bce33;
 
   --line-color: #1e2d3d;
 

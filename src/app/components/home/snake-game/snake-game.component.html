@@ -1,1 +1,58 @@
-<div class="game-frame"></div>
+<div class="game-frame" [ngClass]="{ dead, win }">
+  <div class="bolts">
+    <img class="down left" src="../../../../assets/images/bolts/down-left.svg" alt="">
+    <img class="down right" src="../../../../assets/images/bolts/down-right.svg" alt="">
+    <img class="up left" src="../../../../assets/images/bolts/up-left.svg" alt="">
+    <img class="up right" src="../../../../assets/images/bolts/up-right.svg" alt="">
+  </div>
+
+  <div class="game-collumn">
+    <div class="game">
+      <div class="cells" [ngStyle]="ngStyleCells">
+        <div class="cell" [ngStyle]="ngStyleCell(idx)" *ngFor="let cell of cells; let idx = index;"></div>
+      </div>
+
+      <div class="actions">
+        <div class="message" *ngIf="win || dead">
+          <h2 *ngIf="win">Parabéns!</h2>
+          <h2 *ngIf="dead">Você perdeu!</h2>
+        </div>
+        <button mat-button class="orange" (click)="startGame()" *ngIf="!started">Iniciar</button>
+        <button mat-button class="alt" (click)="startGame()" *ngIf="win || dead">Reiniciar</button>
+      </div>
+    </div>
+
+    <div class="how-to-play">
+      <p>
+        // Use as setas do <br>
+        // teclado para jogar
+      </p>
+      <div class="arrows">
+        <span></span>
+        <button mat-button (click)="changeDirAndGoStep(direnum.UP)"><i icon="arrow_up"></i></button>
+        <span></span>
+        <button mat-button (click)="changeDirAndGoStep(direnum.LEFT)"><i icon="arrow_left"></i></button>
+        <button mat-button (click)="changeDirAndGoStep(direnum.DOWN)"><i icon="arrow_down"></i></button>
+        <button mat-button (click)="changeDirAndGoStep(direnum.RIGHT)"><i icon="arrow_right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="foods-skip">
+    <div class="foods-left">
+      <p>// Comidas restantes</p>
+      <div class="foods">
+        <span class="food" *ngFor="let food of [].constructor(10).reverse(); let idx = index;"
+          [ngClass]="{ 'eated': eated >= 10 - idx }">
+        </span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <a mat-button class="alt" *ngIf="!win" routerLink="/about">Pular</a>
+      <a mat-button class="orange" *ngIf="win" routerLink="/about">Próximo</a>
+
+    </div>
+  </div>
+
+</div>

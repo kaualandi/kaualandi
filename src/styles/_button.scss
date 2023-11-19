@@ -2,10 +2,14 @@
   text-decoration: none;
 
   &.mdc-button {
-    border-radius: 50px;
-    &.primary {
-      background-color: var(--main-color);
-      color: var(--primary-bg);
+    border-radius: var(--br);
+    &.orange {
+      background-color: var(--accent-orange);
+      color: var(--primary-black);
+    }
+    &.alt {
+      border: 1px solid var(--line-color);
+      color: var(--white);
     }
 
     &.mat-button-disabled,
