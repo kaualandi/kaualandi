@@ -13,6 +13,7 @@
   .activity-bar {
     overflow: auto;
     height: 100%;
+    max-height: calc(100vh - 125px);
     border-right: 1px solid var(--line-color);
     .expansion-title {
       .mat-expansion-panel {
@@ -99,6 +100,10 @@
                 }
               }
             }
+
+            & + .mat-expansion-panel {
+              border-top: none;
+            }
           }
         }
 
@@ -140,6 +145,10 @@
         }
       }
     }
+    .file {
+      max-height: calc(100vh - 125px - 1.5rem);
+      overflow: auto;
+    }
   }
 }
 
@@ -147,7 +156,8 @@
   padding: 1rem;
 
   h1,
-  p {
+  p,
+  li {
     color: var(--secondary-gray);
   }
 
@@ -157,5 +167,11 @@
   p {
     line-height: 2;
     margin-bottom: 1rem;
+  }
+  li {
+    margin-left: 1rem;
+    & + li {
+      margin-top: 0.4rem;
+    }
   }
 }

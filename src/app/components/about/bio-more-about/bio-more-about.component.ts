@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-bio-more-about',
   templateUrl: './bio-more-about.component.html',
-  styleUrls: ['./bio-more-about.component.scss'],
 })
 export class BioMoreAboutComponent implements OnInit {
   myYearsOld = 18;

@@ -51,7 +51,9 @@
           <i [icon]="activeFile.icon" *ngIf="activeFile.icon"></i>
           <p [ngClass]="{non: !activeFile.title}">{{activeFile.title || 'Escolha um arquivo'}}</p>
         </div>
-        <router-outlet></router-outlet>
+        <div class="file">
+          <router-outlet></router-outlet>
+        </div>
       </div>
     </div>
   </div>

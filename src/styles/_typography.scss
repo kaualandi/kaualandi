@@ -40,6 +40,9 @@ $max-font-size: 52;
   a {
     @extend .fd-14;
   }
+  li {
+    @extend .fd-14;
+  }
   button {
     @extend .fd-14;
   }

@@ -23,6 +23,31 @@ export const ABOUT_ACTIVITY_BAR: IActivityBar[] = [
           },
         ],
       },
+      {
+        title: 'habilidades',
+        route: '/about/skills',
+        color: 'var(--accent-purple)',
+        files: [
+          {
+            title: 'principais',
+            icon: 'markdown',
+            route: '/about/skills/main',
+            external: false,
+          },
+          {
+            title: 'outras',
+            icon: 'markdown',
+            route: '/about/skills/other',
+            external: false,
+          },
+          {
+            title: 'em breve',
+            icon: 'markdown',
+            route: '/about/skills/soon',
+            external: false,
+          },
+        ],
+      },
     ],
     files: [],
   },
