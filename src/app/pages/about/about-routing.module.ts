@@ -32,6 +32,10 @@ const routes: Routes = [
         path: 'skills/soon',
         component: SkillsSoonComponent,
       },
+      {
+        path: '**',
+        redirectTo: '',
+      },
     ],
   },
 ];

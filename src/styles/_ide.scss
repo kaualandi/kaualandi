@@ -148,6 +148,20 @@
     .file {
       max-height: calc(100vh - 125px - 1.5rem);
       overflow: auto;
+      .no-file {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        height: calc(100vh - 125px - 1.5rem);
+
+        i,
+        p {
+          color: var(--secondary-gray);
+          text-align: center;
+        }
+      }
     }
   }
 }

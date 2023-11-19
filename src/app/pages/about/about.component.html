@@ -53,6 +53,10 @@
         </div>
         <div class="file">
           <router-outlet></router-outlet>
+          <div class="no-file" *ngIf="!activeFile.title">
+            <i icon="no_file" class="f-52"></i>
+            <p class="f-16">A sua esquerda, escolha o arquivo que faça sentido pra você.</p>
+          </div>
         </div>
       </div>
     </div>
