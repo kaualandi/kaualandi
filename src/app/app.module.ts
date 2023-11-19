@@ -10,7 +10,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { NgxMaskModule } from 'ngx-mask';
 import { environment } from './../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
@@ -64,7 +63,6 @@ registerLocaleData(localePt);
     ReactiveFormsModule,
     MatExpansionModule,
     NgxMaskModule.forRoot(),
-    MDBBootstrapModule.forRoot(),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable

@@ -13,11 +13,8 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { filter } from 'rxjs';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare const gtag: (...args: any[]) => void;
-
-interface Event_2 extends Event {
-  urlAfterRedirects: string;
-}
 
 @Component({
   selector: 'app-root',
@@ -69,11 +66,13 @@ export class AppComponent implements OnInit {
     }
 
     if (state && parent) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       data.push(...this.getTitle(state, (state as any).firstChild(parent)));
     }
     return data;
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   navigationInterceptor(event: any): void {
     if (event instanceof NavigationStart) {
       this.loadingDataImg = true;
