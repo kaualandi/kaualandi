@@ -26,6 +26,7 @@
     "@angular/service-worker": "^16.2.0",
     "angular-notifier": "^14.0.0",
     "md5-typescript": "^1.0.5",
+    "mdb-angular-ui-kit": "^5.1.0",
     "medium-zoom": "^1.1.0",
     "ngx-cookie-service": "^16.1.0",
     "ngx-mask": "^16.4.1",

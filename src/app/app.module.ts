@@ -10,7 +10,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { NgxMaskModule } from 'ngx-mask';
+import { provideEnvironmentNgxMask } from 'ngx-mask';
 import { environment } from './../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { InputNumberDirective } from './directives/input-number.directive';
@@ -30,6 +30,21 @@ import { ProjectsComponent } from './components/home/projects/projects.component
 import { ContactComponent } from './components/home/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ToggleThemeComponent } from './components/shared/toggle-theme/toggle-theme.component';
+import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
+import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
+import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
+import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
+import { MdbDropdownModule } from 'mdb-angular-ui-kit/dropdown';
+import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
+import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
+import { MdbPopoverModule } from 'mdb-angular-ui-kit/popover';
+import { MdbRadioModule } from 'mdb-angular-ui-kit/radio';
+import { MdbRangeModule } from 'mdb-angular-ui-kit/range';
+import { MdbRippleModule } from 'mdb-angular-ui-kit/ripple';
+import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
+import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
+import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
+import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 
 registerLocaleData(localePt);
 
@@ -62,13 +77,27 @@ registerLocaleData(localePt);
     FormsModule,
     ReactiveFormsModule,
     MatExpansionModule,
-    NgxMaskModule.forRoot(),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000',
     }),
+    MdbAccordionModule,
+    MdbCarouselModule,
+    MdbCheckboxModule,
+    MdbCollapseModule,
+    MdbDropdownModule,
+    MdbFormsModule,
+    MdbModalModule,
+    MdbPopoverModule,
+    MdbRadioModule,
+    MdbRangeModule,
+    MdbRippleModule,
+    MdbScrollspyModule,
+    MdbTabsModule,
+    MdbTooltipModule,
+    MdbValidationModule,
   ],
   providers: [
     DatePipe,
@@ -78,6 +107,7 @@ registerLocaleData(localePt);
       provide: DEFAULT_CURRENCY_CODE,
       useValue: 'BRL',
     },
+    provideEnvironmentNgxMask(),
   ],
   bootstrap: [AppComponent],
 })

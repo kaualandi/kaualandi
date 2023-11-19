@@ -5,7 +5,6 @@
 
   .navbar-brand {
     height: 60px;
-    width: 100%;
     h2 {
       height: 100%;
       font-family: var(--ff);
@@ -35,4 +34,15 @@
       }
     }
   }
+}
+
+@media (min-width: 576px) {
+  .navbar-expand-sm .navbar-collapse {
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+.navbar-toggler {
+  font-size: 2rem;
 }
