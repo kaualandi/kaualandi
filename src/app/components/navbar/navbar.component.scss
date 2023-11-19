@@ -108,12 +108,17 @@ nav {
         height: calc(var(--navbar-logo-height) - 1px);
         border-radius: 0;
         border-left: 1px solid var(--line-color);
+        border-bottom: 2px solid transparent;
+        transition: var(--ts);
         &:last-child {
           border-right: 1px solid var(--line-color);
         }
-        &.active {
-          border-bottom: 2px solid var(--accent-orange);
+        &:hover {
           color: var(--white);
+        }
+        &.active {
+          color: var(--white);
+          border-bottom-color: var(--accent-orange);
         }
       }
     }

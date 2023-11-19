@@ -1,0 +1,8 @@
+main {
+  overflow: hidden;
+  .content {
+    max-height: calc(100vh - 120px);
+    height: 100%;
+    margin: 0 1rem;
+  }
+}

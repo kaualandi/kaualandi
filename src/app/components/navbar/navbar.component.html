@@ -1,8 +1,6 @@
 <nav [@offcanvasTopAnimation] #navbar>
   <div class="content">
-
     <a class="logo" routerLink="/">
-      <img src="assets/images/logo.svg" alt="logo">
       kaualandi
     </a>
 
@@ -13,7 +11,7 @@
     </div>
 
     <div class="menu {{colapse}}" [ngClass]="{ hidden: navbar_hidden }">
-      <a mat-button routerLink="/" routerLinkActive="active">_início</a>
+      <a mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">_início</a>
       <a mat-button routerLink="/about" routerLinkActive="active">_sobre</a>
       <a mat-button routerLink="/projects" routerLinkActive="active">_projetos</a>
       <a mat-button routerLink="/contact" routerLinkActive="active">_contato</a>

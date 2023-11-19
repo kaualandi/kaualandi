@@ -1,0 +1,48 @@
+<main class="page">
+  <div class="content">
+    <div class="ide">
+      <div class="activity-bar">
+        <div class="expansion-title">
+          <mat-expansion-panel [hideToggle]="true" expanded *ngFor="let item of activityBar" #barSection>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <i icon="angle_right" class="angle"></i>
+                {{item.title}}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <mat-expansion-panel [hideToggle]="true" *ngFor="let folder of item.folders" #folderSection>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <i icon="angle_right" class="angle"></i>
+                  <i icon="folder" [ngStyle]="{ color: folder.color}" class="folder"></i>
+                  <i icon="folder_open" [ngStyle]="{ color: folder.color}" class="folder-open"></i>
+                  {{folder.title}}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+
+              <span *ngFor="let file of folder.files">
+                <a *ngIf="file.external" class="file" href="{{file.route}}" target="_blank">
+                  <i [icon]="file.icon"></i> {{file.title}}
+                </a>
+                <a *ngIf="!file.external" class="file" [routerLink]="file.route">
+                  <i [icon]="file.icon"></i> {{file.title}}
+                </a>
+              </span>
+            </mat-expansion-panel>
+
+            <span *ngFor="let file of item.files">
+              <a *ngIf="file.external" class="file" href="{{file.route}}" target="_blank">
+                <i [icon]="file.icon"></i> {{file.title}}
+              </a>
+              <a *ngIf="!file.external" class="file" [routerLink]="file.route">
+                <i [icon]="file.icon"></i> {{file.title}}
+              </a>
+            </span>
+          </mat-expansion-panel>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<app-footer></app-footer>

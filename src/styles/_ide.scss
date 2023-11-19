@@ -1,0 +1,109 @@
+.ide {
+  --mat-expansion-container-background-color: transparent;
+  --mat-expansion-header-text-color: var(--secondary-gray);
+  --mat-expansion-header-expanded-state-height: 1.5rem;
+  --mat-expansion-header-collapsed-state-height: 1.5rem;
+  border-radius: var(--br);
+  border: 1px solid var(--line-color);
+  width: 100%;
+  height: calc(100vh - 122px);
+  display: grid;
+  grid-template-columns: 250px 1fr;
+
+  .activity-bar {
+    overflow: auto;
+    height: 100%;
+    border-right: 1px solid var(--line-color);
+    .expansion-title {
+      .mat-expansion-panel {
+        border-radius: 0px;
+        box-shadow: none;
+        color: var(--secondary-gray);
+        & + .mat-expansion-panel {
+          border-top: 1px solid var(--line-color);
+        }
+        .mat-expansion-panel-header {
+          padding: 0 0.5rem;
+          border-bottom: 1px solid var(--line-color);
+          border-radius: 0px;
+          &:hover {
+            background-color: var(--white-10);
+          }
+          .mat-expansion-panel-header-title {
+            gap: 0.5rem;
+            i {
+              transition: var(--ts);
+              &.folder-open {
+                display: none;
+              }
+            }
+          }
+        }
+
+        .mat-expansion-panel-body {
+          padding: 0;
+          a {
+            padding: 0.3rem 1rem;
+            display: block;
+            color: var(--secondary-gray);
+            text-decoration: none;
+            &:hover {
+              background-color: var(--white-10);
+            }
+          }
+
+          .mat-expansion-panel {
+            .mat-expansion-panel-header {
+              padding: 0;
+              padding-left: 1rem;
+              border-bottom: none;
+              border-radius: 0;
+              .mat-expansion-panel-header-title {
+                gap: 0.5rem;
+              }
+            }
+            .mat-expansion-panel-body {
+              padding: 0;
+              a {
+                padding-left: 1.8rem;
+              }
+            }
+            &.mat-expanded {
+              .mat-expansion-panel-header-title {
+                i {
+                  &.angle {
+                    transform: rotate(90deg);
+                  }
+                  &.folder {
+                    display: none;
+                  }
+                  &.folder-open {
+                    display: initial;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.mat-expanded {
+          > .mat-expansion-panel-header {
+            .mat-expansion-panel-header-title {
+              i {
+                &.angle {
+                  transform: rotate(90deg);
+                }
+                &.folder {
+                  display: none;
+                }
+                &.folder-open {
+                  display: initial;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
