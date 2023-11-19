@@ -28,6 +28,9 @@ footer {
       height: 48px;
       display: flex;
       align-items: center;
+      p {
+        width: max-content;
+      }
     }
 
     .find-me {
