@@ -50,6 +50,9 @@
             &:hover {
               background-color: var(--white-10);
             }
+            &.active {
+              color: var(--white);
+            }
           }
 
           .mat-expansion-panel {
@@ -60,25 +63,38 @@
               border-radius: 0;
               .mat-expansion-panel-header-title {
                 gap: 0.5rem;
+                a {
+                  &:hover {
+                    background: transparent;
+                  }
+                  i {
+                    display: inline-block;
+                    &.folder-open {
+                      display: none;
+                    }
+                  }
+                }
               }
             }
             .mat-expansion-panel-body {
               padding: 0;
               a {
-                padding-left: 1.8rem;
+                padding-left: 2.8rem;
               }
             }
             &.mat-expanded {
               .mat-expansion-panel-header-title {
-                i {
-                  &.angle {
-                    transform: rotate(90deg);
-                  }
-                  &.folder {
-                    display: none;
-                  }
-                  &.folder-open {
-                    display: initial;
+                a {
+                  i {
+                    &.angle {
+                      transform: rotate(90deg);
+                    }
+                    &.folder {
+                      display: none;
+                    }
+                    &.folder-open {
+                      display: initial;
+                    }
                   }
                 }
               }
@@ -105,5 +121,40 @@
         }
       }
     }
+  }
+
+  .view-file {
+    .file-name {
+      height: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0 0.5rem;
+      border-bottom: 1px solid var(--line-color);
+      p,
+      i {
+        color: var(--secondary-gray);
+        &.non {
+          color: var(--white-10);
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
+
+.ide-page {
+  padding: 1rem;
+
+  h1,
+  p {
+    color: var(--secondary-gray);
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+  p {
+    line-height: 2;
   }
 }

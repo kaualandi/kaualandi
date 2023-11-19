@@ -14,10 +14,12 @@
             <mat-expansion-panel [hideToggle]="true" *ngFor="let folder of item.folders" #folderSection>
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                  <i icon="angle_right" class="angle"></i>
-                  <i icon="folder" [ngStyle]="{ color: folder.color}" class="folder"></i>
-                  <i icon="folder_open" [ngStyle]="{ color: folder.color}" class="folder-open"></i>
-                  {{folder.title}}
+                  <a [routerLink]="folder.route" routerLinkActive="active">
+                    <i icon="angle_right" class="angle"></i> {{' '}}
+                    <i icon="folder" [ngStyle]="{ color: folder.color}" class="folder"></i>
+                    <i icon="folder_open" [ngStyle]="{ color: folder.color}" class="folder-open"></i>
+                    {{folder.title}}
+                  </a>
                 </mat-panel-title>
               </mat-expansion-panel-header>
 
@@ -25,7 +27,8 @@
                 <a *ngIf="file.external" class="file" href="{{file.route}}" target="_blank">
                   <i [icon]="file.icon"></i> {{file.title}}
                 </a>
-                <a *ngIf="!file.external" class="file" [routerLink]="file.route">
+                <a *ngIf="!file.external" class="file" [routerLink]="file.route" routerLinkActive="active"
+                  (click)="activePage(file)">
                   <i [icon]="file.icon"></i> {{file.title}}
                 </a>
               </span>
@@ -41,6 +44,14 @@
             </span>
           </mat-expansion-panel>
         </div>
+      </div>
+
+      <div class="view-file">
+        <div class="file-name">
+          <i [icon]="activeFile.icon" *ngIf="activeFile.icon"></i>
+          <p [ngClass]="{non: !activeFile.title}">{{activeFile.title || 'Escolha um arquivo'}}</p>
+        </div>
+        <router-outlet></router-outlet>
       </div>
     </div>
   </div>

@@ -1,78 +1,48 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ABOUT_ACTIVITY_BAR } from 'src/app/constants/activity-bar-about';
+import { IActivityBarFile } from 'src/app/models/ide';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
 })
-export class AboutComponent {
-  activityBar = [
-    {
-      title: 'informações-pessoais',
-      folders: [
-        {
-          title: 'biografia',
-          route: '/about/biography',
-          color: 'var(--accent-orange)',
-          files: [
-            {
-              title: 'resumo',
-              icon: 'markdown',
-              route: '/about/biography/resume',
-              external: false,
-            },
-          ],
-        },
-      ],
-      files: [],
-    },
-    {
-      title: 'contatos',
-      folder: [],
-      files: [
-        {
-          title: '(21) 99922-2644',
-          icon: 'whatsapp',
-          route: 'https://wa.me/5521999222644',
-          external: true,
-        },
-        {
-          title: '(21) 99922-2644',
-          icon: 'phone',
-          route: 'tel:+55 (21) 99922-2644',
-          external: true,
-        },
-        {
-          title: 'eu@kaualf.com',
-          icon: 'email',
-          route: 'mailto:eu@kaualf.com',
-          external: true,
-        },
-        {
-          title: '/in/kaualf',
-          icon: 'linkedin',
-          route: 'mailto:eu@kaualf.com',
-          external: true,
-        },
-        {
-          title: '/kaualandi',
-          icon: 'github',
-          route: 'github.com/kaualandi',
-          external: true,
-        },
-        {
-          title: '@kauaalandi',
-          icon: 'twitter',
-          route: 'https://twitter.com/kauaalandi',
-          external: true,
-        },
-        {
-          title: '@kauaalandi',
-          icon: 'instagram',
-          route: 'https://instagram.com/kauaalandi',
-          external: true,
-        },
-      ],
-    },
-  ];
+export class AboutComponent implements OnInit {
+  constructor(private router: Router) {}
+
+  activityBar = ABOUT_ACTIVITY_BAR;
+
+  activeFile = {} as IActivityBarFile;
+
+  ngOnInit(): void {
+    this.router.events.subscribe({
+      next: () => {
+        this.findActivePageByRoute();
+      },
+    });
+  }
+
+  activePage(file: IActivityBarFile) {
+    this.activeFile = file;
+  }
+
+  findActivePageByRoute() {
+    const route = this.router.url;
+    this.activityBar.forEach(({ files, folders }) => {
+      files.forEach((file) => {
+        if (file.route === route) {
+          this.activePage(file);
+        }
+      });
+
+      folders.forEach((folder) => {
+        folder.files.forEach((file) => {
+          if (file.route === route) {
+            this.activePage(file);
+          }
+        });
+      });
+    });
+  }
 }
