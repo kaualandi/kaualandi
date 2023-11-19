@@ -67,7 +67,7 @@ nav {
         flex-wrap: wrap;
         position: absolute;
         width: 100%;
-        background-color: var(--navbar_bg);
+        background-color: var(--primary-bg);
         z-index: -1;
         opacity: 1;
         &.vertical {
@@ -81,7 +81,8 @@ nav {
         &.horizontal {
           justify-content: flex-start;
           align-items: flex-start;
-          padding-top: var(--navbar-height, 0);
+          padding-top: 3rem;
+
           height: 100vh;
           top: 0;
           left: 0;
@@ -89,6 +90,10 @@ nav {
           &.hidden {
             left: -100vw;
             opacity: 0;
+          }
+          a,
+          button {
+            width: 100%;
           }
         }
         &.hidden {

@@ -19,7 +19,7 @@ import { StorageService } from './../../services/storage.service';
   animations: [slideInAnimation, offcanvasTopAnimation],
 })
 export class NavbarComponent implements OnInit, OnDestroy {
-  @Input() colapse: 'vertical' | 'horizontal' = 'vertical';
+  @Input() colapse: 'vertical' | 'horizontal' = 'horizontal';
   @ViewChild('navbar') navbar: ElementRef<HTMLElement> | undefined;
 
   constructor(private storage: StorageService) {}
