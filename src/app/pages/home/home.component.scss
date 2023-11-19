@@ -72,13 +72,30 @@ main {
           &:first-child {
             bottom: -10rem;
             right: -10rem;
+            animation: bghero1 5s infinite;
           }
           &:last-child {
             top: -9rem;
             right: 2rem;
+            animation: bghero1 5s infinite;
+            animation-delay: 1s;
           }
         }
       }
     }
+  }
+}
+
+@keyframes bghero1 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(1rem, 1rem) scale(1.4);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1);
   }
 }
