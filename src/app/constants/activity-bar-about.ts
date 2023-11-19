@@ -15,6 +15,12 @@ export const ABOUT_ACTIVITY_BAR: IActivityBar[] = [
             route: '/about/bio/resume',
             external: false,
           },
+          {
+            title: 'conheça-me',
+            icon: 'markdown',
+            route: '/about/bio/know-me',
+            external: false,
+          },
         ],
       },
     ],
