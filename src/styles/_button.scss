@@ -11,6 +11,9 @@
       border: 1px solid var(--line-color);
       color: var(--white);
     }
+    &.gray {
+      background-color: var(--accent-gray);
+    }
 
     &.mat-button-disabled,
     &:disabled {

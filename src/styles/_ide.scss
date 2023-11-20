@@ -43,6 +43,12 @@
 
         .mat-expansion-panel-body {
           padding: 0;
+          .mat-mdc-checkbox {
+            display: block;
+            .mdc-label {
+              color: var(--secondary-gray);
+            }
+          }
           a {
             padding: 0.3rem 1rem;
             display: block;

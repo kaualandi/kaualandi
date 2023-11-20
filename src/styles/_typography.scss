@@ -59,6 +59,9 @@ $max-font-size: 52;
   .comment {
     color: var(--secondary-gray);
   }
+  .blue {
+    color: var(--secondary-blue);
+  }
 }
 
 @for $i from $min-font-size through $max-font-size {

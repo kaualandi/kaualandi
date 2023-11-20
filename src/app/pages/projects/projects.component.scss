@@ -1,0 +1,27 @@
+main {
+  overflow: hidden;
+  .content {
+    max-height: calc(100vh - 120px);
+    height: 100%;
+    margin: 0 1rem;
+    .file-name {
+      overflow: auto;
+      p {
+        flex: none;
+      }
+    }
+    .projects-list {
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+      max-height: calc(100vh - 125px - 1.5rem);
+      overflow: auto;
+      .project {
+        & > p {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}

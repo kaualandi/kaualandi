@@ -1,0 +1,54 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+@include mat.core();
+$web-boilerplate-primary: mat.define-palette(
+  (
+    900: #223140,
+    800: #344658,
+    700: #43596e,
+    600: #536c85,
+    500: #607b96,
+    400: #778ea7,
+    300: #8ea3b9,
+    200: #adbdcf,
+    100: #cad8e6,
+    50: #e8effb,
+    A100: #cad8e6,
+    A200: #adbdcf,
+    A400: #778ea7,
+    A700: #536c85,
+    contrast: (
+      50: rgba(black, 0.87),
+      100: rgba(black, 0.87),
+      200: rgba(black, 0.87),
+      300: rgba(black, 0.87),
+      400: white,
+      500: white,
+      600: white,
+      700: white,
+      800: white,
+      900: white,
+    ),
+  ),
+  600,
+  500,
+  100
+);
+$web-boilerplate-accent: mat.define-palette(
+  mat.$pink-palette,
+  A200,
+  A100,
+  A400
+);
+$web-boilerplate-warn: mat.define-palette(mat.$red-palette);
+$web-boilerplate-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $web-boilerplate-primary,
+      accent: $web-boilerplate-accent,
+      warn: $web-boilerplate-warn,
+    ),
+  )
+);
+@include mat.all-component-themes($web-boilerplate-theme);

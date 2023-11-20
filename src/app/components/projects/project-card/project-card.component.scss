@@ -1,0 +1,34 @@
+.project-card {
+  padding: 1rem;
+  border-radius: calc(var(--br) * 2);
+  border: 1px solid var(--line-color);
+  background: var(--secondary-bg);
+
+  p,
+  span {
+    color: var(--secondary-gray);
+  }
+
+  .tag {
+    color: var(--primary-bg);
+    background-color: var(--accent-green);
+    padding: 0 0.2rem;
+    width: fit-content;
+    flex: none;
+    border-radius: 2px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 0.5rem auto;
+  }
+  .date {
+    text-align: end;
+    margin-top: 0.5rem;
+    display: block;
+  }
+
+  .actions {
+    margin-top: 0.8rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+}
