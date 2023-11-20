@@ -14,6 +14,7 @@ export class SkillsMainComponent {
     'Design Responsivo',
     'SEO',
     'PHP',
+    'Prisma ORM',
     'Node.js',
     'Express',
     'MongoDB',

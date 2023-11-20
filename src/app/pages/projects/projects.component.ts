@@ -12,6 +12,7 @@ export class ProjectsComponent implements OnInit {
   constructor(private projectsService: ProjectsService) {}
 
   repos: IRepo[] = [];
+  reposBackup: IRepo[] = [];
   selectedTechs: string[] = [];
   tecnologies = [
     'angular',
@@ -23,6 +24,7 @@ export class ProjectsComponent implements OnInit {
     'express',
     'mongodb',
     'chatbot',
+    'prisma',
     'php',
   ];
 
@@ -32,7 +34,8 @@ export class ProjectsComponent implements OnInit {
 
   getRepos() {
     this.projectsService.getRepos().subscribe((repos) => {
-      this.repos = repos.filter((repo) => !repo.fork);
+      this.reposBackup = repos.filter((repo) => !repo.fork);
+      this.reloadFilters();
     });
   }
 
@@ -44,5 +47,19 @@ export class ProjectsComponent implements OnInit {
         (selectedTech) => selectedTech !== tech
       );
     }
+
+    this.reloadFilters();
+  }
+
+  reloadFilters() {
+    this.repos = this.reposBackup.filter((repo) => {
+      if (this.selectedTechs.length > 0) {
+        return this.selectedTechs.some((tech) =>
+          repo.topics.includes(tech.toLowerCase())
+        );
+      } else {
+        return true;
+      }
+    });
   }
 }
