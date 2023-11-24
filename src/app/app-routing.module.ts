@@ -27,6 +27,11 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'contact',
+        loadChildren: () =>
+          import('./pages/contact/contact.module').then((m) => m.ContactModule),
+      },
+      {
         path: '**',
         redirectTo: '',
       },

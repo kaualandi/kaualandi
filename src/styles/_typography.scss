@@ -62,6 +62,16 @@ $max-font-size: 52;
   .blue {
     color: var(--secondary-blue);
   }
+
+  .code-blue {
+    color: var(--blue-color);
+  }
+  .code-purple {
+    color: var(--purple-color);
+  }
+  .code-orange {
+    color: var(--orange-color);
+  }
 }
 
 @for $i from $min-font-size through $max-font-size {

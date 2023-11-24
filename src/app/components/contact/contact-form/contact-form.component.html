@@ -1,0 +1,40 @@
+<section class="ide-page">
+  <div class="content">
+    <div class="form-container">
+      <form (ngSubmit)="handleFormSubmit()" [formGroup]="form">
+        <div class="card-input">
+          <label for="name">_nome</label>
+          <input type="text" id="name" formControlName="name" />
+        </div>
+
+        <div class="card-input">
+          <label for="email">_email</label>
+          <input type="email" id="email" formControlName="email" />
+        </div>
+
+        <div class="card-input">
+          <label for="phone">_celular</label>
+          <input type="text" id="phone" formControlName="phone" mask="(00) 00000-0000" />
+        </div>
+
+        <div class="card-input">
+          <label for="message">_mensagem</label>
+          <textarea id="message" formControlName="message" rows="7"></textarea>
+        </div>
+
+        <div class="card-input">
+          <button mat-button type="submit" class="gray">enviar-mensagem</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="code-result-container">
+      <div class="lines">
+        <p class="line" *ngFor="let line of lines; let i = index">
+          <span class="line-number">{{i + 1}}</span>
+          <span class="code" [innerHTML]="transform(line)"></span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

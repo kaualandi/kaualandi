@@ -76,13 +76,13 @@ export const ABOUT_ACTIVITY_BAR: IActivityBar[] = [
       {
         title: '/in/kaualf',
         icon: 'linkedin',
-        route: 'mailto:eu@kaualf.com',
+        route: 'https://www.linkedin.com/in/kaualandi/',
         external: true,
       },
       {
         title: '/kaualandi',
         icon: 'github',
-        route: 'github.com/kaualandi',
+        route: 'https://github.com/kaualandi',
         external: true,
       },
       {

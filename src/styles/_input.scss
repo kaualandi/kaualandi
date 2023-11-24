@@ -9,6 +9,8 @@
   label {
     font-size: 1rem;
     padding-left: 5px;
+    color: var(--secondary-gray);
+    margin-bottom: 5px;
   }
 
   .input-icon {
@@ -32,11 +34,18 @@
   textarea,
   select {
     padding: 12px 16px;
-    border-radius: 50px;
-    border: 1px solid var(--secondary-bg);
+    border-radius: var(--br);
+    border: 1px solid var(--line-color);
     background-color: var(--secondary-bg);
     outline: none;
-    color: var(--text-color);
+    color: var(--secondary-gray);
+    resize: none;
+    transition: var(--ts);
+    box-shadow: 0px 0px 0px 0px #607b964d;
+
+    &:focus {
+      box-shadow: 0px 0px 0px 2px #607b964d;
+    }
 
     &[type='number'] {
       -webkit-appearance: textfield;

@@ -10,10 +10,11 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from './../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 
+import { NotifierModule } from 'angular-notifier';
+import { provideEnvironmentNgxMask } from 'ngx-mask';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SharedModule } from './components/shared/shared.module';
-import { NotifierModule } from 'angular-notifier';
 import { configNotifier } from './models/utils';
 
 registerLocaleData(localePt);
@@ -47,6 +48,7 @@ registerLocaleData(localePt);
       provide: MatDialogRef,
       useValue: {},
     },
+    provideEnvironmentNgxMask(),
   ],
   bootstrap: [AppComponent],
 })

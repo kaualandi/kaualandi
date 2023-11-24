@@ -1,0 +1,58 @@
+.ide-page {
+  height: 100%;
+  padding: 0;
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    max-height: calc(100vh - 125px - 1.5rem);
+    .form-container {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      border-right: 1px solid var(--line-color);
+      overflow: auto;
+
+      form {
+        max-width: 370px;
+        width: 100%;
+        .card-input {
+          button {
+            width: fit-content;
+            padding-left: 1rem;
+            padding-right: 1rem;
+          }
+        }
+      }
+    }
+
+    .code-result-container {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      overflow: auto;
+
+      .lines {
+        .line {
+          margin: 0;
+          display: flex;
+
+          .line-number {
+            margin-right: 1rem;
+            width: 1rem;
+            text-align: end;
+            display: inline-block;
+            flex: none;
+          }
+          .code {
+            line-break: anywhere;
+          }
+        }
+      }
+    }
+  }
+}
