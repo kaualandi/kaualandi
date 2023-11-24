@@ -2,7 +2,7 @@
   font-size: calc(16px + 0.3125vw);
   --ts: all 0.3s ease-in-out;
   --br: 8px;
-  --time-c-b: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --time-c-b: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
   --black: #000000;
   --white: #ffffff;
@@ -11,6 +11,7 @@
 
   --primary-bg: #011627;
   --primary-black: #01080e;
+  --primary-black-20: #01080e46;
 
   --secondary-gray: #607b96;
   --secondary-blue: #4d5bce;

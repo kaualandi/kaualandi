@@ -14,6 +14,7 @@ export class ProjectsComponent implements OnInit {
   repos: IRepo[] = [];
   reposBackup: IRepo[] = [];
   selectedTechs: string[] = [];
+  hidden = true;
   tecnologies = [
     'angular',
     'react',

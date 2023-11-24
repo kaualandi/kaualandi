@@ -1,3 +1,5 @@
+@import 'media';
+
 .ide {
   --mat-expansion-container-background-color: transparent;
   --mat-expansion-header-text-color: var(--secondary-gray);
@@ -8,13 +10,33 @@
   width: 100%;
   height: calc(100vh - 122px);
   display: grid;
-  grid-template-columns: 250px 1fr;
+  grid-template-columns: minmax(250px, 16%) 1fr;
+  position: relative;
+
+  @include media('<=tablet') {
+    display: block;
+  }
 
   .activity-bar {
     overflow: auto;
     height: 100%;
     max-height: calc(100vh - 125px);
     border-right: 1px solid var(--line-color);
+    z-index: 2;
+
+    @include media('<=tablet') {
+      background-color: var(--primary-black-20);
+      backdrop-filter: blur(10px);
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 1s var(--time-c-b);
+      border-radius: var(--br) 0 0 var(--br);
+      &.hidden {
+        transform: translateX(calc(-100% - 1.1rem));
+      }
+    }
+
     .expansion-title {
       .mat-expansion-panel {
         border-radius: 0px;
@@ -135,12 +157,20 @@
   }
 
   .view-file {
+    .file-name-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
     .file-name {
       height: 1.5rem;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 0.5rem;
-      padding: 0 0.5rem;
+      padding-left: 0.5rem;
       border-bottom: 1px solid var(--line-color);
       p,
       i {
@@ -148,6 +178,24 @@
         &.non {
           color: var(--white-10);
           font-style: italic;
+        }
+      }
+
+      .expand-toggle {
+        display: none;
+        background-color: var(--primary-black-20);
+        backdrop-filter: blur(10px);
+        transition: all 1s var(--time-c-b);
+        color: var(--secondary-gray);
+        height: 25px;
+        width: 25px;
+        padding: 0 !important;
+        &.hidden {
+          transform: rotate(180deg);
+        }
+
+        @include media('<=tablet') {
+          display: block;
         }
       }
     }

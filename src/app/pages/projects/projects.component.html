@@ -1,7 +1,7 @@
 <main class="page">
   <div class="content">
     <div class="ide">
-      <div class="activity-bar">
+      <div class="activity-bar" [ngClass]="{ hidden }">
         <div class="expansion-title">
           <mat-expansion-panel [hideToggle]="true" expanded>
             <mat-expansion-panel-header>
@@ -18,7 +18,12 @@
 
       <div class="view-file">
         <div class="file-name">
-          <p>{{selectedTechs.join('; ') || 'Todas'}}</p>
+          <div class="file-name-content">
+            <p>{{selectedTechs.join('; ') || 'Todas'}}</p>
+          </div>
+          <button class="expand-toggle" mat-icon-button (click)="hidden = !hidden" [ngClass]="{ hidden }">
+            <i icon="angle_left"></i>
+          </button>
         </div>
         <div class="projects-list">
           <div class="project" *ngFor="let repo of repos; let idx = index">

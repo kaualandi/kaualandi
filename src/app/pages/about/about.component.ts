@@ -12,8 +12,8 @@ export class AboutComponent implements OnInit {
   constructor(private router: Router) {}
 
   activityBar = ABOUT_ACTIVITY_BAR;
-
   activeFile = {} as IActivityBarFile;
+  hidden = true;
 
   ngOnInit(): void {
     this.router.events.subscribe({

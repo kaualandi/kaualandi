@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 import { ThemeService } from './services/theme.service';
 
 @Component({
@@ -11,5 +12,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.theme.loadCurrentTheme();
+    AOS.init();
   }
 }
