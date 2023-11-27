@@ -27,6 +27,8 @@ export class ProjectsComponent implements OnInit {
     'chatbot',
     'prisma',
     'php',
+    'python',
+    'django'
   ];
 
   ngOnInit(): void {
