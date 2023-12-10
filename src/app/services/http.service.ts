@@ -54,10 +54,10 @@ export class HttpService {
     if (error.error instanceof ErrorEvent) {
       errorMessage = error.error.message;
     } else {
-      errorMessage = error.error.detail;
+      errorMessage = error.error.detail || 'Não foi possível completar a ação';
     }
 
-    this.notifier.notify('error', errorMessage)
+    this.notifier.notify('error', errorMessage);
     return throwError(() => error);
   };
 

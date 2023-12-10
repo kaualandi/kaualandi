@@ -14,6 +14,7 @@ export class ContactComponent implements OnInit {
   activityBar = CONTACT_ACTIVITY_BAR;
   activeFile = {} as IActivityBarFile;
   hidden = true;
+  thanks = false;
 
   ngOnInit(): void {
     this.router.events.subscribe({

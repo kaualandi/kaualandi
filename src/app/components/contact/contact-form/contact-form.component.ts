@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { IContactData } from 'src/app/models/contact';
+import { ContactService } from 'src/app/services/contact.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -7,13 +9,20 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./contact-form.component.scss'],
 })
 export class ContactFormComponent implements OnInit {
-  constructor(private fb: FormBuilder) {}
+  @Output() sended = new EventEmitter();
+
+  constructor(
+    private fb: FormBuilder,
+    private contactService: ContactService
+  ) {}
+
+  loading = false;
 
   form = this.fb.group({
-    name: [''],
-    email: [''],
-    phone: [''],
-    message: [''],
+    name: ['', [Validators.required]],
+    email: ['', [Validators.required, Validators.email]],
+    phone: ['', [Validators.required]],
+    message: ['', [Validators.required]],
   });
 
   lines = [
@@ -41,7 +50,55 @@ export class ContactFormComponent implements OnInit {
     });
   }
 
-  handleFormSubmit() {}
+  handleFormSubmit() {
+    if (this.form.invalid) {
+      this.form.markAllAsTouched();
+      return;
+    }
+
+    this.loading = true;
+    const form = this.form.value;
+
+    const data: IContactData = {
+      name: 'Portfólio para devs',
+      subject: 'Nova mensagem para contato',
+      infors: [
+        {
+          label: 'Nome',
+          value: form.name as string,
+        },
+        {
+          label: 'Email',
+          value: form.email as string,
+        },
+        {
+          label: 'Telefone',
+          value: form.phone as string,
+        },
+        {
+          label: 'Mensagem',
+          value: form.message as string,
+        },
+      ],
+    };
+
+    this.contactService.sendEmail(data).subscribe({
+      next: () => {
+        this.loading = false;
+        this.sended.emit();
+        this.form.patchValue({
+          name: '',
+          email: '',
+          phone: '',
+          message: '',
+        });
+        this.form.markAsUntouched();
+      },
+      error: () => {
+        this.loading = false;
+      },
+    });
+  }
 
   transform(value: string): string {
     value = value.split('"').join('&#39;');
@@ -54,7 +111,6 @@ export class ContactFormComponent implements OnInit {
     value = value.split('</o>').join('</span>');
     value = value.split('<p>').join('<span class="code-purple">');
     value = value.split('</p>').join('</span>');
-    console.log(value);
 
     return value;
   }

@@ -49,14 +49,23 @@
       <div class="view-file">
         <div class="file-name">
           <div class="file-name-content">
-            <p>Contato</p>
+            <p>contato</p>
           </div>
           <button class="expand-toggle" mat-icon-button (click)="hidden = !hidden" [ngClass]="{ hidden }">
             <i icon="angle_left"></i>
           </button>
         </div>
-        <div class="page">
-          <app-contact-form></app-contact-form>
+        <div class="page" [ngClass]="{ thanks }">
+          <app-contact-form (sended)="thanks = true"></app-contact-form>
+          <div class="thanks-page">
+            <div class="content">
+              <h1 class="f-40">Obrigado! 🤘</h1>
+              <p class="f-18">Já recebi sua mensagem. Te responderei muito em breve!</p>
+              <button mat-button class="gray" (click)="thanks = false">
+                enviar-outra-mensagem
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

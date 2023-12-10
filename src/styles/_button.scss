@@ -3,6 +3,7 @@
 
   &.mdc-button {
     border-radius: var(--br);
+    padding: 0 1rem;
     &.orange {
       background-color: var(--accent-orange);
       color: var(--primary-black);

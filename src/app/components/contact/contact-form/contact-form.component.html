@@ -23,7 +23,12 @@
         </div>
 
         <div class="card-input">
-          <button mat-button type="submit" class="gray">enviar-mensagem</button>
+          <button mat-button type="submit" class="gray">
+            <span *ngIf="!loading">enviar-mensagem</span>
+            <span *ngIf="loading">enviando-mensagem
+              <loading />
+            </span>
+          </button>
         </div>
       </form>
     </div>

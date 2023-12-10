@@ -15,8 +15,16 @@
   "editor.tabSize": 2,
   "git.enableSmartCommit": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.organizeImports": true
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
   },
-  "eslint.validate": ["javascript", "typescript"]
+  "eslint.validate": [
+    "javascript",
+    "typescript"
+  ],
+  "[javascript][typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  }
 }
