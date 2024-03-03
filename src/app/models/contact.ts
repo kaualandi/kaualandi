@@ -1,10 +1,7 @@
-export interface IContactDataInfor {
-  label: string;
-  value: string;
-}
-
 export interface IContactData {
-  subject: string;
+  company: number;
   name: string;
-  infors: IContactDataInfor[];
+  email: string;
+  title: string;
+  text: string;
 }

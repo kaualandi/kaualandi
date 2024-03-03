@@ -59,28 +59,13 @@ export class ContactFormComponent implements OnInit {
     this.loading = true;
     const form = this.form.value;
 
-    const data: IContactData = {
-      name: 'Portfólio para devs',
-      subject: 'Nova mensagem para contato',
-      infors: [
-        {
-          label: 'Nome',
-          value: form.name as string,
-        },
-        {
-          label: 'Email',
-          value: form.email as string,
-        },
-        {
-          label: 'Telefone',
-          value: form.phone as string,
-        },
-        {
-          label: 'Mensagem',
-          value: form.message as string,
-        },
-      ],
-    };
+    const data = {
+      company: 3,
+      name: form.name,
+      email: form.email,
+      title: form.phone,
+      text: form.message,
+    } as IContactData;
 
     this.contactService.sendEmail(data).subscribe({
       next: () => {

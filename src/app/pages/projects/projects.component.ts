@@ -28,7 +28,7 @@ export class ProjectsComponent implements OnInit {
     'prisma',
     'php',
     'python',
-    'django'
+    'django',
   ];
 
   ngOnInit(): void {
@@ -37,7 +37,9 @@ export class ProjectsComponent implements OnInit {
 
   getRepos() {
     this.projectsService.getRepos().subscribe((repos) => {
-      this.reposBackup = repos.filter((repo) => !repo.fork);
+      this.reposBackup = repos.filter(
+        (repo) => !repo.fork && !repo.topics.includes('hidden')
+      );
       this.reloadFilters();
     });
   }

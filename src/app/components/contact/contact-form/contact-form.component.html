@@ -14,7 +14,13 @@
 
         <div class="card-input">
           <label for="phone">_celular</label>
-          <input type="text" id="phone" formControlName="phone" mask="(00) 00000-0000" />
+          <input
+            type="text"
+            id="phone"
+            formControlName="phone"
+            mask="(00) 00000-0000"
+            [dropSpecialCharacters]="false"
+          />
         </div>
 
         <div class="card-input">
@@ -25,7 +31,8 @@
         <div class="card-input">
           <button mat-button type="submit" class="gray">
             <span *ngIf="!loading">enviar-mensagem</span>
-            <span *ngIf="loading">enviando-mensagem
+            <span *ngIf="loading"
+              >enviando-mensagem
               <loading />
             </span>
           </button>
@@ -36,7 +43,7 @@
     <div class="code-result-container">
       <div class="lines">
         <p class="line" *ngFor="let line of lines; let i = index">
-          <span class="line-number">{{i + 1}}</span>
+          <span class="line-number">{{ i + 1 }}</span>
           <span class="code" [innerHTML]="transform(line)"></span>
         </p>
       </div>
