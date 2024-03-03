@@ -74,7 +74,7 @@ export const ABOUT_ACTIVITY_BAR: IActivityBar[] = [
         external: true,
       },
       {
-        title: '/in/kaualf',
+        title: '/in/kaualandi',
         icon: 'linkedin',
         route: 'https://www.linkedin.com/in/kaualandi/',
         external: true,

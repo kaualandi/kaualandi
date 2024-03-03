@@ -30,7 +30,7 @@ export const CONTACT_ACTIVITY_BAR: IActivityBar[] = [
     folders: [],
     files: [
       {
-        title: '/in/kaualf',
+        title: '/in/kaualandi',
         icon: 'linkedin',
         route: 'https://www.linkedin.com/in/kaualandi/',
         external: true,

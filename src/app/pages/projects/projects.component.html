@@ -10,8 +10,12 @@
                 tecnologias
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <mat-checkbox color="primary" *ngFor="let tech of tecnologies"
-              (change)="handleChangeFilterTechStatus(tech, $event)">{{tech}}</mat-checkbox>
+            <mat-checkbox
+              color="primary"
+              *ngFor="let tech of tecnologies"
+              (change)="handleChangeFilterTechStatus(tech, $event)"
+              >{{ tech }}</mat-checkbox
+            >
           </mat-expansion-panel>
         </div>
       </div>
@@ -19,15 +23,24 @@
       <div class="view-file">
         <div class="file-name">
           <div class="file-name-content">
-            <p>{{selectedTechs.join('; ') || 'Todas'}}</p>
+            <p>{{ selectedTechs.join('; ') || 'Todos' }}</p>
           </div>
-          <button class="expand-toggle" mat-icon-button (click)="hidden = !hidden" [ngClass]="{ hidden }">
+          <button
+            title="expand"
+            class="expand-toggle"
+            mat-icon-button
+            (click)="hidden = !hidden"
+            [ngClass]="{ hidden }"
+          >
             <i icon="angle_left"></i>
           </button>
         </div>
         <div class="projects-list">
           <div class="project" *ngFor="let repo of repos; let idx = index">
-            <p class="title blue"><b>Projeto {{idx+1}}</b> <span class="comment"> // {{repo.name}}</span></p>
+            <p class="title blue">
+              <b>Projeto {{ idx + 1 }}</b>
+              <span class="comment"> // {{ repo.name }}</span>
+            </p>
             <app-project-card [repo]="repo"></app-project-card>
           </div>
         </div>
