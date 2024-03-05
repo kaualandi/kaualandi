@@ -2,7 +2,8 @@
   height: 100vh;
   min-height: 25rem;
   max-height: 80rem;
-  background: linear-gradient(
+  background:
+    linear-gradient(
       to right,
       rgba(245, 245, 245, 0.8),
       rgba(245, 245, 245, 0.8)
@@ -43,6 +44,7 @@
       .socials-list {
         list-style: none;
         margin: 0;
+        padding: 0;
         .socials-item {
           .mat-icon-button {
             background-color: var(--bg-navbar);
@@ -95,11 +97,8 @@
 ::ng-deep .dark {
   #hero {
     transition: var(--ts);
-    background: linear-gradient(
-        to right,
-        rgba(10, 10, 10, 0.8),
-        rgba(10, 10, 10, 0.8)
-      ),
+    background:
+      linear-gradient(to right, rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)),
       url(../../../../assets/img/hero-bg-dark.svg) no-repeat center center/cover;
   }
 }

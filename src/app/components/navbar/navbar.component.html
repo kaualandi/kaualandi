@@ -1,32 +1,52 @@
-<nav class="navbar navbar-expand-sm navbar-{{theme}} fixed-top">
+<nav class="navbar navbar-expand-md navbar-{{ theme }} fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" (click)="scrollTo('hero')">
-      <h2><img src="assets/img/logo.svg" alt="logo">Kauã Landi</h2>
+      <h2><img src="assets/img/logo.svg" alt="logo" />Kauã Landi</h2>
     </a>
-    <button mat-icon-button class="navbar-toggler" type="button" (click)="basicNav.toggle()" aria-expanded="false"
-      aria-label="Toggle navigation">
+    <button
+      mat-icon-button
+      class="navbar-toggler"
+      type="button"
+      (click)="basicNav.toggle()"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <i icon="menu"></i>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav" mdbCollapse #basicNav="mdbCollapse">
-
+    <div
+      class="collapse navbar-collapse"
+      id="navbarNav"
+      mdbCollapse
+      #basicNav="mdbCollapse"
+    >
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <app-toggle-theme></app-toggle-theme>
         </li>
         <li class="nav-item">
-          <a class="nav-link waves-{{theme === 'light' ? 'dark' : 'light'}}" mdbWavesEffect (click)="scrollTo('about')">
+          <a
+            class="nav-link waves-{{ theme === 'light' ? 'dark' : 'light' }}"
+            mdbWavesEffect
+            (click)="scrollTo('about')"
+          >
             Sobre mim
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link waves-{{theme === 'light' ? 'dark' : 'light'}}" mdbWavesEffect
-            (click)="scrollTo('projects')">
+          <a
+            class="nav-link waves-{{ theme === 'light' ? 'dark' : 'light' }}"
+            mdbWavesEffect
+            (click)="scrollTo('projects')"
+          >
             Projetos
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link waves-{{theme === 'light' ? 'dark' : 'light'}}" mdbWavesEffect
-            (click)="scrollTo('contact')">
+          <a
+            class="nav-link waves-{{ theme === 'light' ? 'dark' : 'light' }}"
+            mdbWavesEffect
+            (click)="scrollTo('contact')"
+          >
             Contato
           </a>
         </li>
