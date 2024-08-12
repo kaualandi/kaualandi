@@ -6,7 +6,20 @@
     "start": "ng serve --open",
     "build": "ng build && node compress.js",
     "build:prod": "ng build --configuration production && node compress.js",
-    "compress": "node compress.js"
+    "compress": "node compress.js",
+    "prepare": "husky",
+    "commit": "git-cz",
+    "lint": "ng lint",
+    "clear": "rm -rf node_modules && rm package-lock.json && rm -rf .angular && npm install",
+    "s3": "aws s3 cp dist s3://nos-web-dev --recursive",
+    "s3:prod": "aws s3 cp dist s3://nos-web --recursive",
+    "build:s3": "ng build && npm run s3",
+    "build:prod:s3": "ng build --configuration production && npm run s3:prod",
+    "cloudfront": "aws cloudfront create-invalidation --distribution-id EIOMDEPYL80AO --paths '/*'",
+    "post-release": "ts-node ./version.ts && git c \"chore(env): update enviroment versions\" && git push --tags",
+    "release:ma": "standard-version --release-as major && npm run post-release",
+    "release:mi": "standard-version --release-as minor && npm run post-release",
+    "release:p": "standard-version --release-as patch && npm run post-release"
   },
   "private": true,
   "dependencies": {
@@ -23,7 +36,15 @@
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/platform-server": "^17.3.0",
     "@angular/router": "^17.3.0",
+    "@angular/service-worker": "^17.3.0",
     "@angular/ssr": "^17.3.8",
+    "@ngx-translate/core": "^15.0.0",
+    "@ngx-translate/http-loader": "^8.0.0",
+    "@types/aos": "^3.0.7",
+    "@zxcvbn-ts/core": "^3.0.4",
+    "@zxcvbn-ts/language-common": "^3.0.4",
+    "@zxcvbn-ts/language-pt-br": "^3.0.2",
+    "aos": "^2.3.4",
     "express": "^4.18.2",
     "firebase": "^10.12.5",
     "md5-typescript": "^1.0.5",
@@ -33,7 +54,6 @@
     "ngx-mask": "^17.1.8",
     "ngx-toastr": "^17.0.2",
     "rxjs": "~7.8.0",
-    "swiper": "^8.4.7",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },
@@ -41,15 +61,26 @@
     "@angular-devkit/build-angular": "^17.3.8",
     "@angular/cli": "^17.3.8",
     "@angular/compiler-cli": "^17.3.0",
+    "@commitlint/cli": "^19.4.0",
+    "@commitlint/config-conventional": "^19.2.2",
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.4",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "standard-version": "^9.5.0",
     "typescript": "~5.4.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
