@@ -3,11 +3,27 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "boilerplate-web-angular-17": {
+    "boilerplate-web-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
         }
       },
       "root": "",
@@ -17,7 +33,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/boilerplate-web-angular-17",
+            "outputPath": "dist/boilerplate-web-angular",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -30,7 +46,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -50,10 +67,16 @@
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumError": "1mb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.production.ts"
+                }
+              ]
             },
             "development": {
               "optimization": false,
@@ -61,16 +84,16 @@
               "sourceMap": true
             }
           },
-          "defaultConfiguration": "production"
+          "defaultConfiguration": "development"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "boilerplate-web-angular-17:build:production"
+              "buildTarget": "boilerplate-web-angular:build:production"
             },
             "development": {
-              "buildTarget": "boilerplate-web-angular-17:build:development"
+              "buildTarget": "boilerplate-web-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +101,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "boilerplate-web-angular-17:build"
+            "buildTarget": "boilerplate-web-angular:build"
           }
         },
         "test": {
@@ -102,5 +125,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "f104159d-5c00-4ee4-a2f7-379d49db1280"
   }
 }
