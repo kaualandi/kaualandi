@@ -8,7 +8,8 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss",
-          "skipTests": true
+          "skipTests": true,
+          "changeDetection": "OnPush"
         },
         "@schematics/angular:class": {
           "skipTests": true
@@ -36,9 +37,7 @@
             "outputPath": "dist/boilerplate-web-angular",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -46,10 +45,7 @@
               "src/assets",
               "src/manifest.webmanifest"
             ],
-            "styles": [
-              "src/styles.scss",
-              "node_modules/ngx-toastr/toastr.css"
-            ],
+            "styles": ["src/styles.scss", "node_modules/ngx-toastr/toastr.css"],
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
@@ -109,10 +105,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -120,16 +113,21 @@
               "src/assets",
               "src/manifest.webmanifest"
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "styles": ["src/styles.scss"],
             "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
         }
       }
     }
   },
   "cli": {
-    "analytics": "f104159d-5c00-4ee4-a2f7-379d49db1280"
+    "analytics": "f104159d-5c00-4ee4-a2f7-379d49db1280",
+    "schematicCollections": ["@angular-eslint/schematics"]
   }
 }
