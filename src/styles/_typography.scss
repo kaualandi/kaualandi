@@ -1,0 +1,80 @@
+@function calc-responsive($value1, $width1, $value2, $width2) {
+  $x1: $width1;
+  $x2: $width2;
+  $y1: $value1;
+  $y2: $value2;
+  $a: calc(($y2 - $y1) / ($x2 - $x1));
+  $b: calc(($x2 * $y1 - $x1 * $y2) / ($x2 - $x1));
+  @return calc(#{$a * 100vw} + #{$b * 1px});
+}
+
+$base-font-size: 19;
+$min-font-size: 10;
+$max-font-size: 52;
+
+// ! AS CLASSES .fd-x NÃO DEVEM SER USADOS,
+// ! SERVEM APENAS PARA NORMALIZAR O ANGULAR MATERIAL.
+@for $i from $min-font-size through $max-font-size {
+  $class-name: '.fd-#{$i}';
+
+  #{$class-name} {
+    font-size: calc-responsive($i, 320, $i + 2, 1920);
+  }
+}
+
+.mat-typography {
+  h1 {
+    @extend .fd-24;
+  }
+  h2 {
+    @extend .fd-18;
+  }
+  h3 {
+    @extend .fd-16;
+  }
+  h4 {
+    @extend .fd-14;
+  }
+  h5 {
+    @extend .fd-12;
+  }
+  h6 {
+    @extend .fd-10;
+  }
+  ul,
+  ol {
+    padding-left: 1rem;
+  }
+
+  p,
+  a,
+  li,
+  button,
+  span,
+  label,
+  input,
+  tt,
+  pre,
+  blockquote,
+  .mat-mdc-button,
+  .mat-mdc-select-value,
+  .mat-mdc-select-placeholder,
+  .mat-mdc-option .mdc-list-item__primary-text {
+    @extend .fd-14;
+  }
+  .two-lines {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+}
+
+@for $i from $min-font-size through $max-font-size {
+  $class-name: '.f-#{$i}';
+
+  #{$class-name} {
+    font-size: calc-responsive($i, 320, $i + 2, 1920) !important;
+  }
+}

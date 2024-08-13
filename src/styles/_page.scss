@@ -1,0 +1,30 @@
+@import 'media';
+
+main.page {
+  min-height: calc(100vh);
+  background-color: var(--primary-bg);
+  padding: 1rem;
+
+  .container {
+    & > header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      h1,
+      p {
+        margin: 0;
+      }
+      p {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

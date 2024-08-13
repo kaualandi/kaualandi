@@ -1,0 +1,95 @@
+.fa-spin {
+  --fa-animation-duration: 0.5s;
+}
+
+@keyframes pulse-notification {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@mixin move-left-to-right() {
+  animation: move-left-to-right 1.5s var(--elastic);
+
+  @keyframes move-left-to-right {
+    0% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+@mixin up_down() {
+  animation: up_down infinite 1.2s var(--elastic);
+  @keyframes up_down {
+    0% {
+      transform: translateY(0px);
+    }
+
+    35% {
+      transform: translateY(-12px) rotate(0deg);
+    }
+
+    55% {
+      transform: translateY(2px) rotate(720deg);
+    }
+
+    100% {
+      transform: translateY(0px) rotate(720deg);
+    }
+  }
+}
+
+@mixin blink-smooth() {
+  animation: blink-smooth 1s infinite var(--elastic);
+
+  @keyframes blink-smooth {
+    0% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin shake() {
+  animation: shake 0.2s var(--elastic);
+
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+
+    25% {
+      transform: translateX(5px);
+    }
+
+    50% {
+      transform: translateX(-5px);
+    }
+
+    75% {
+      transform: translateX(5px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+@mixin fade-in() {
+  opacity: 0;
+  animation: fade-in 0.5s ease-in-out forwards;
+  @keyframes fade-in {
+    100% {
+      opacity: 1;
+    }
+  }
+}
