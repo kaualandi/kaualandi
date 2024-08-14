@@ -1,3 +1,4 @@
 export const environment = {
-  base_url: '',
+  production: false,
+  base_url: 'http://api-dev.noclaf.com/',
 };

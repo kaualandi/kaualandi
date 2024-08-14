@@ -29,7 +29,10 @@
     <router-outlet #outlet="outlet" />
   </div>
 }
-
-@if (error && !loading) {
+@if (error) {
   <page-error [code]="error" />
+}
+
+@if (loading) {
+  <page-loading />
 }

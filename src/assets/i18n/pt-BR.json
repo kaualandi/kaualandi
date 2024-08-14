@@ -2,10 +2,29 @@
   "navbar": {
     "home": "Início",
     "about": "Sobre",
-    "contact": "Contato"
+    "contact": "Contato",
+    "login": "Entrar"
   },
   "languages": {
     "pt-BR": "Português",
     "en": "Inglês"
+  },
+  "errors": {
+    "error": "Erro",
+    "500": "Erro interno em nossos servidores",
+    "404": "Está pagina que está tentando acessar não existe, foi removida ou está temporariamente indisponível",
+    "403": "Você não tem permissão para acessar esta pagina",
+    "401": "Você não está autenticado",
+    "400": "Seu pedido não pode ser processado",
+    "default": "Um erro inesperado aconteceu",
+    "form": {
+      "required": "Campo obrigatório",
+      "email": "E-mail inválido",
+      "mask": "Valor inválido",
+      "cpf": "CPF inválido",
+      "cnpj": "CNPJ inválido",
+      "diff_password": "As senhas não conferem",
+      "poor_password": "Senha fraca"
+    }
   }
 }

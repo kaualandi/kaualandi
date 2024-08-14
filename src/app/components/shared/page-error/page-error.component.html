@@ -1,1 +1,20 @@
-<p>page-error works!</p>
+<section>
+  <div class="img">
+    <i icon="error"></i>
+  </div>
+  <h2>{{ 'errors.error' | translate }} {{ code }}</h2>
+  <p>{{ 'errors.' + translated | translate }}</p>
+  <div class="buttons center">
+    @if (code !== 401) {
+      <a mat-button class="primary" routerLink="/">
+        {{ 'navbar.home' | translate }}
+      </a>
+    }
+    @if (code === 401) {
+      <a mat-button routerLink="/login">
+        {{ 'navbar.login' | translate }}
+      </a>
+    }
+    <a mat-button routerLink="/help">Ajuda</a>
+  </div>
+</section>

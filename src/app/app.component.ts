@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { environment } from '@env';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,8 @@ import { RouterModule } from '@angular/router';
   styleUrl: './app.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {}
+export class AppComponent {
+  public constructor() {
+    console.log(`${environment.production ? 'Prod' : 'Dev'} mode`);
+  }
+}

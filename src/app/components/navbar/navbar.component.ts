@@ -12,16 +12,16 @@ import {
   offcanvasTopAnimation,
   slideInAnimation,
 } from '@app/animations/route-animation';
+import { tap } from 'rxjs';
 import { AuthService } from '../../services/auth.service';
 import { StorageService } from '../../services/storage.service';
 import { LangSelectComponent } from '../shared/lang-select/lang-select.component';
-import { PageErrorComponent } from '../shared/page-error/page-error.component';
 import { SharedModule } from '../shared/shared.module';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [SharedModule, LangSelectComponent, PageErrorComponent],
+  imports: [SharedModule, LangSelectComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
   animations: [slideInAnimation, offcanvasTopAnimation],
@@ -40,9 +40,7 @@ export class NavbarComponent implements OnInit {
 
   public ngOnInit(): void {
     this.onWindowScroll();
-    this.loading = true;
-
-    // this.getMe();
+    this.getMe();
 
     this.user$.subscribe({
       next: () => {
@@ -52,21 +50,29 @@ export class NavbarComponent implements OnInit {
   }
 
   private getMe() {
-    this.error = 0;
-    this.authService.getMe().subscribe({
-      next: () => {
-        this.loading = false;
-      },
-      error: () => {
-        // ! ⬆ Adicione o parametro error aqui para que o erro seja capturado
-        // this.error = error.status; // ! Descomente esta linha para que o erro seja exibido
-        this.loading = false;
-      },
-    });
+    this.authService
+      .getMe()
+      .pipe(
+        tap(() => {
+          this.loading = true;
+        })
+      )
+      .subscribe({
+        next: () => {
+          this.loading = false;
+        },
+        error: (error) => {
+          this.error = error?.status || 500;
+          console.log(this.error);
+          if (this.error === 401) {
+            this.authService.logout();
+          }
+          this.loading = false;
+        },
+      });
   }
 
   public toggleNavbarVisibility() {
-    console.log('toggleNavbarVisibility');
     this.navbar_hidden = !this.navbar_hidden;
   }
 

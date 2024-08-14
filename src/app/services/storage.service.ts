@@ -1,4 +1,4 @@
-import { inject, Injectable } from '@angular/core';
+import { inject, Injectable, PLATFORM_ID } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { Subject } from 'rxjs';
 import { IUser } from '../models/user';
@@ -8,6 +8,7 @@ import { IUser } from '../models/user';
 })
 export class StorageService {
   private cookieService = inject(CookieService);
+  private platformId = inject(PLATFORM_ID);
 
   private UserSubject = new Subject<void>();
   private myUser: IUser = {} as IUser;
