@@ -1,0 +1,159 @@
+@import '../../../styles/media';
+
+/*
+  ! Navbar
+  ! Se for usar configurações de CSS simples
+  ? ex: padding, bg e color
+  ! Use as variáveis de ambiente no arquivo:
+  * src/styles/_variables.scss
+
+  ! Obrigado :) - Noclaf Tech
+*/
+
+nav {
+  z-index: 2;
+
+  transition: var(--ts);
+  width: 100%;
+  padding: 0.5rem;
+  background-color: var(--secondary-bg);
+  .content {
+    max-width: var(--container);
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media('<=navbar-collapse') {
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      grid-area: logo;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.2rem !important;
+      color: var(--text-color);
+
+      img {
+        height: 2rem;
+      }
+    }
+
+    .menu {
+      transition: all 0.2s;
+      grid-area: menu;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      @include media('<=navbar-collapse') {
+        transition: var(--ts);
+        transition-duration: 0.5s;
+        transition-delay: 0.1s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-basis: 100%;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        position: absolute;
+        width: 100%;
+        background-color: var(--secondary-bg);
+        z-index: -1;
+        opacity: 1;
+        &.vertical {
+          z-index: 0;
+          top: 0;
+          left: 0;
+          padding: 1rem;
+          &.hidden {
+            top: -50vh;
+            opacity: 0;
+          }
+        }
+        &.horizontal {
+          justify-content: flex-start;
+          align-items: flex-start;
+          padding-top: 0;
+          height: 100vh;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          &.hidden {
+            left: -100vw;
+            opacity: 0;
+          }
+        }
+        &.hidden {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+.hamburger {
+  grid-area: hamburger;
+  display: none;
+  z-index: 3;
+  @include media('<=navbar-collapse') {
+    display: block;
+  }
+  button {
+    background-color: transparent;
+    padding: 14px;
+    .line {
+      background-color: var(--text-color);
+      width: 20px;
+      height: 2px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: var(--ts);
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        border-radius: 10px;
+        background-color: var(--text-color);
+        transition: var(--ts);
+      }
+      &::before {
+        transform: translateY(-8px);
+      }
+      &::after {
+        transform: translateY(8px);
+      }
+    }
+  }
+
+  &.active {
+    button {
+      .line {
+        background-color: transparent;
+        transform: rotate(180deg);
+        &::before,
+        &::after {
+          background-color: var(--text-color);
+          width: 25px;
+        }
+        &::before {
+          transform: rotate(45deg);
+        }
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}

@@ -1,1 +1,35 @@
-<p>navbar works!</p>
+<nav [@offcanvasTopAnimation] #navbar [ngClass]="{ scroll }">
+  <div class="content">
+    <a class="logo" routerLink="/">
+      <img src="../../../assets/images/logo.png" alt="logo" />
+      Boilerplate
+    </a>
+
+    <div class="hamburger" [ngClass]="{ active: !navbar_hidden }">
+      <button
+        aria-label="menu"
+        mat-icon-button
+        (click)="toggleNavbarVisibility()"
+      >
+        <span class="line"></span>
+      </button>
+    </div>
+
+    <div class="menu vertical" [ngClass]="{ hidden: navbar_hidden }">
+      <a mat-button routerLink="/">{{ 'navbar.home' | translate }}</a>
+      <a mat-button routerLink="/about">{{ 'navbar.about' | translate }}</a>
+      <a mat-button routerLink="/contact">{{ 'navbar.contact' | translate }}</a>
+      <lang-select />
+    </div>
+  </div>
+</nav>
+
+@if (!loading && !error) {
+  <div [@routeAnimations]="outlet && outlet.activatedRouteData">
+    <router-outlet #outlet="outlet" />
+  </div>
+}
+
+@if (error && !loading) {
+  <page-error [code]="error" />
+}

@@ -1,0 +1,31 @@
+<div class="lang-select">
+  <button
+    type="button"
+    title="Mudar idioma"
+    mat-icon-button
+    [matMenuTriggerFor]="menuRef"
+    [matTooltip]="'languages.' + selected | translate"
+    matTooltipPosition="after"
+  >
+    <img
+      src="assets/images/flags/{{ selected }}.svg"
+      alt="{{ 'languages.' + selected | translate }}"
+    />
+  </button>
+
+  <mat-menu #menuRef="matMenu" class="lang-menu">
+    @for (lang of langs; track lang) {
+      <button
+        mat-menu-item
+        (click)="selectLang(lang)"
+        [matTooltip]="'languages.' + lang | translate"
+        matTooltipPosition="after"
+      >
+        <img
+          src="assets/images/flags/{{ lang }}.svg"
+          alt="{{ 'languages.' + lang | translate }}"
+        />
+      </button>
+    }
+  </mat-menu>
+</div>

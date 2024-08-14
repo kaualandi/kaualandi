@@ -23,6 +23,7 @@ $max-font-size: 52;
 }
 
 .mat-typography {
+  --mdc-plain-tooltip-supporting-text-size: 0.65rem;
   h1 {
     @extend .fd-24;
   }
@@ -55,11 +56,7 @@ $max-font-size: 52;
   input,
   tt,
   pre,
-  blockquote,
-  .mat-mdc-button,
-  .mat-mdc-select-value,
-  .mat-mdc-select-placeholder,
-  .mat-mdc-option .mdc-list-item__primary-text {
+  blockquote {
     @extend .fd-14;
   }
   .two-lines {

@@ -8,8 +8,7 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss",
-          "skipTests": true,
-          "changeDetection": "OnPush"
+          "skipTests": true
         },
         "@schematics/angular:class": {
           "skipTests": true
@@ -45,7 +44,7 @@
               "src/assets",
               "src/manifest.webmanifest"
             ],
-            "styles": ["src/styles.scss", "node_modules/ngx-toastr/toastr.css"],
+            "styles": ["src/styles.scss"],
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
@@ -64,22 +63,22 @@
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
-                  "maximumError": "1mb"
+                  "maximumError": "4kb"
                 }
               ],
               "outputHashing": "all",
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.production.ts"
-                }
-              ],
               "serviceWorker": "ngsw-config.json"
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.production.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "development"
@@ -127,7 +126,7 @@
     }
   },
   "cli": {
-    "analytics": "f104159d-5c00-4ee4-a2f7-379d49db1280",
+    "analytics": "7b84f366-922a-440f-8d10-b340f9d9e8a3",
     "schematicCollections": ["@angular-eslint/schematics"]
   }
 }

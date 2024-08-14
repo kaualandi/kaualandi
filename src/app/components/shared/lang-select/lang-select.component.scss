@@ -1,0 +1,36 @@
+.lang-select {
+  display: inline-block;
+  button {
+    img {
+      border-radius: 2px;
+    }
+  }
+}
+
+::ng-deep {
+  .lang-menu {
+    --mat-menu-container-color: transparent;
+    box-shadow: none !important;
+    min-width: auto !important;
+    max-width: fit-content !important;
+    .mat-mdc-menu-content {
+      min-width: auto;
+      max-width: fit-content;
+      padding: 0 0.45rem;
+      .mat-mdc-menu-item {
+        padding: 0;
+        min-height: auto;
+        .mat-mdc-menu-item-text {
+          line-height: 0;
+          img {
+            border-radius: 2px;
+          }
+        }
+
+        & + .mat-mdc-menu-item {
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+}
