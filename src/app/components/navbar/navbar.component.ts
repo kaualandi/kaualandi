@@ -39,6 +39,7 @@ export class NavbarComponent implements OnInit {
   private user$ = this.storage.watchUser().pipe(takeUntilDestroyed());
 
   public ngOnInit(): void {
+    if (isPlatformServer(this.plataformId)) return;
     this.onWindowScroll();
     this.getMe();
 
@@ -78,7 +79,6 @@ export class NavbarComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event'])
   private onWindowScroll() {
-    if (isPlatformServer(this.plataformId)) return;
     const scroll = window.scrollY;
     this.scroll = scroll > 200;
   }
