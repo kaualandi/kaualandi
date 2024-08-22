@@ -7,12 +7,6 @@ export const routes: Routes = [
       import('./components/navbar/navbar.component').then(
         (m) => m.NavbarComponent
       ),
-    children: [
-      {
-        path: '',
-        loadComponent: () =>
-          import('./pages/home/home.component').then((m) => m.HomeComponent),
-      },
-    ],
+    children: [],
   },
 ];

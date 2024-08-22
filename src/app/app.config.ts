@@ -20,26 +20,15 @@ import {
   DateAdapter,
   MAT_DATE_FORMATS,
   MAT_DATE_LOCALE,
-  MAT_RIPPLE_GLOBAL_OPTIONS,
 } from '@angular/material/core';
-import {
-  MAT_PAGINATOR_DEFAULT_OPTIONS,
-  MatPaginatorIntl,
-} from '@angular/material/paginator';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideServiceWorker } from '@angular/service-worker';
-import {
-  TranslateLoader,
-  TranslateModule,
-  TranslateParser,
-  TranslateService,
-} from '@ngx-translate/core';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { provideEnvironmentNgxMask, provideNgxMask } from 'ngx-mask';
 import { provideToastr } from 'ngx-toastr';
 import { routes } from './app.routes';
-import { NgxMatPaginatorIntl } from './intl/paginator';
 
 registerLocaleData(localePt);
 
@@ -77,16 +66,6 @@ export const appConfig: ApplicationConfig = {
     provideToastr({
       progressBar: true,
     }),
-    importProvidersFrom(
-      TranslateModule.forRoot({
-        defaultLanguage: 'pt-BR',
-        loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient],
-        },
-      })
-    ),
     {
       provide: IMAGE_CONFIG,
       useValue: {
@@ -107,22 +86,16 @@ export const appConfig: ApplicationConfig = {
       provide: DEFAULT_CURRENCY_CODE,
       useValue: 'BRL',
     },
-    {
-      provide: MAT_RIPPLE_GLOBAL_OPTIONS,
-      useValue: { animation: { enterDuration: 600, exitDuration: 200 } },
-    },
-    {
-      provide: MAT_PAGINATOR_DEFAULT_OPTIONS,
-      useValue: {
-        pageSizeOptions: [5, 10, 25, 50, 100],
-        showFirstLastButtons: true,
-      },
-    },
-    {
-      provide: MatPaginatorIntl,
-      useClass: NgxMatPaginatorIntl,
-      deps: [TranslateService, TranslateParser],
-    },
+    importProvidersFrom(
+      TranslateModule.forRoot({
+        defaultLanguage: 'pt-BR',
+        loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient],
+        },
+      })
+    ),
   ],
 };
 
