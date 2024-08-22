@@ -7,19 +7,19 @@ import {
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { RouterModule } from '@angular/router';
 import { LanguageService } from '@app/services/language.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { SharedModule } from '../shared.module';
 
 @Component({
   selector: 'lang-select',
   standalone: true,
   imports: [
-    SharedModule,
+    RouterModule,
+    MatButtonModule,
+    TranslateModule,
     MatMenuModule,
     MatTooltipModule,
-    TranslateModule,
-    MatButtonModule,
   ],
   templateUrl: './lang-select.component.html',
   styleUrl: './lang-select.component.scss',

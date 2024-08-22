@@ -6,13 +6,22 @@ import {
   OnChanges,
   OnInit,
 } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { SharedModule } from '../shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { ActivatedRoute, RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'page-error',
   standalone: true,
-  imports: [SharedModule],
+  imports: [
+    RouterModule,
+    MatButtonModule,
+    TranslateModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+  ],
   templateUrl: './page-error.component.html',
   styleUrl: './page-error.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

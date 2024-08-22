@@ -1,4 +1,4 @@
-import { isPlatformServer } from '@angular/common';
+import { CommonModule, isPlatformServer } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -8,21 +8,32 @@ import {
   PLATFORM_ID,
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { MatPaginator } from '@angular/material/paginator';
+import { MatButtonModule } from '@angular/material/button';
+import { RouterModule } from '@angular/router';
 import {
   offcanvasTopAnimation,
   slideInAnimation,
 } from '@app/animations/route-animation';
+import { TranslateModule } from '@ngx-translate/core';
 import { tap } from 'rxjs';
 import { AuthService } from '../../services/auth.service';
 import { StorageService } from '../../services/storage.service';
 import { LangSelectComponent } from '../shared/lang-select/lang-select.component';
-import { SharedModule } from '../shared/shared.module';
+import { PageErrorComponent } from '../shared/page-error/page-error.component';
+import { PageLoadingComponent } from '../shared/page-loading/page-loading.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [SharedModule, LangSelectComponent, MatPaginator],
+  imports: [
+    CommonModule,
+    RouterModule,
+    MatButtonModule,
+    TranslateModule,
+    LangSelectComponent,
+    PageLoadingComponent,
+    PageErrorComponent,
+  ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
   animations: [slideInAnimation, offcanvasTopAnimation],
@@ -64,7 +75,7 @@ export class NavbarComponent implements OnInit {
           this.loading = false;
         },
         error: (error) => {
-          this.error = error?.status || 500;
+          // this.error = error?.status || 500;
           console.log(this.error);
           if (this.error === 401) {
             this.authService.logout();

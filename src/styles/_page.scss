@@ -1,7 +1,7 @@
 @import 'media';
 
 main.page {
-  min-height: calc(100vh);
+  min-height: calc(100vh - 48px - 1rem);
   background-color: var(--primary-bg);
   padding: 1rem;
 
