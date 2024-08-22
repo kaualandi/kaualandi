@@ -36,7 +36,9 @@ $max-font-size: 52;
   h4 {
     @extend .fd-14;
   }
-  h5 {
+  h5,
+  .mat-mdc-paginator-range-label,
+  .mat-mdc-paginator-page-size-label {
     @extend .fd-12;
   }
   h6 {

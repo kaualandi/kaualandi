@@ -26,5 +26,13 @@
       "diff_password": "As senhas não conferem",
       "poor_password": "Senha fraca"
     }
+  },
+  "paginator": {
+    "first_page": "Primeira página",
+    "items_per_page": "Itens por página",
+    "last_page": "Última página",
+    "next_page": "Próxima página",
+    "previous_page": "Página anterior",
+    "range": "{{start}} a {{end}} de {{length}}"
   }
 }

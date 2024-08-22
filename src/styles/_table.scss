@@ -1,0 +1,10 @@
+mat-paginator {
+  --mat-paginator-form-field-container-vertical-padding: 2px;
+  --mat-paginator-form-field-container-height: 36px;
+  --mat-paginator-container-size: 36px;
+  margin-top: 1rem;
+  .mat-mdc-icon-button.mat-mdc-button-base {
+    --mdc-icon-button-state-layer-size: 36px;
+    padding: 6px;
+  }
+}

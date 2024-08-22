@@ -1,0 +1,11 @@
+<div class="avatar" [ngClass]="{ dark: color === 'dark' }">
+  @if (src) {
+    <img alt="{{ name }}" [src]="src" [alt]="name" />
+  } @else {
+    <span
+      [initialLetters]="name"
+      [length]="length"
+      [style]="'background: ' + bg"
+    ></span>
+  }
+</div>

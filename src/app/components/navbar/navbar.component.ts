@@ -8,6 +8,7 @@ import {
   PLATFORM_ID,
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { MatPaginator } from '@angular/material/paginator';
 import {
   offcanvasTopAnimation,
   slideInAnimation,
@@ -21,7 +22,7 @@ import { SharedModule } from '../shared/shared.module';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [SharedModule, LangSelectComponent],
+  imports: [SharedModule, LangSelectComponent, MatPaginator],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
   animations: [slideInAnimation, offcanvasTopAnimation],
