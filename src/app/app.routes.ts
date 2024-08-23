@@ -14,6 +14,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'rescure-password',
+    loadComponent: () =>
+      import('./pages/rescure-password/rescure-password.component').then(
+        (m) => m.RescurePasswordComponent
+      ),
+  },
+  {
     path: '',
     loadComponent: () =>
       import('./components/navbar/navbar.component').then(
