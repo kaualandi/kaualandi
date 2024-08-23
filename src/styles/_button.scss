@@ -1,0 +1,23 @@
+a[role='button'] {
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  &.end {
+    justify-content: flex-end;
+  }
+  &.center {
+    justify-content: center;
+  }
+  &.wrap {
+    flex-wrap: wrap;
+  }
+  &.full {
+    button {
+      width: 100%;
+    }
+  }
+}

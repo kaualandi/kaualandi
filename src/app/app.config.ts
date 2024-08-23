@@ -20,6 +20,7 @@ import {
   DateAdapter,
   MAT_DATE_FORMATS,
   MAT_DATE_LOCALE,
+  MAT_RIPPLE_GLOBAL_OPTIONS,
 } from '@angular/material/core';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -85,6 +86,15 @@ export const appConfig: ApplicationConfig = {
     {
       provide: DEFAULT_CURRENCY_CODE,
       useValue: 'BRL',
+    },
+    {
+      provide: MAT_RIPPLE_GLOBAL_OPTIONS,
+      useValue: {
+        animation: {
+          enterDuration: 1000,
+          exitDuration: 1000,
+        },
+      },
     },
     importProvidersFrom(
       TranslateModule.forRoot({

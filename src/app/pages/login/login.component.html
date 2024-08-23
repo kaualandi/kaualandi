@@ -1,0 +1,97 @@
+<main id="login">
+  <div [@zoomInAnimation] class="row">
+    <div class="lang">
+      <lang-select />
+    </div>
+    <div class="col">
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="Logo" />
+      </div>
+    </div>
+    <div class="col">
+      <div class="form">
+        <form (ngSubmit)="loginSubmitHandler()" [formGroup]="form">
+          <h1>{{ 'login-register.login-title' | translate }}</h1>
+          <p>
+            {{ 'login-register.not-registered' | translate }}
+            <a routerLink="/register">{{
+              'login-register.go-register' | translate
+            }}</a>
+          </p>
+
+          <mat-form-field appearance="outline">
+            <mat-label>
+              {{ 'login-register.email' | translate }}
+            </mat-label>
+            <input
+              matInput
+              type="email"
+              formControlName="email"
+              autocomplete="username"
+            />
+            <mat-error>
+              {{ form.controls.email.errors | formError | translate }}
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>
+              {{ 'login-register.password' | translate }}
+            </mat-label>
+            <input
+              matInput
+              [type]="view_pass ? 'text' : 'password'"
+              formControlName="password"
+              autocomplete="current-password"
+            />
+
+            <button
+              type="button"
+              mat-icon-button
+              matSuffix
+              aria-label="Ver senha"
+              (click)="view_pass = !view_pass"
+            >
+              <i [icon]="view_pass ? 'hide_pass' : 'view_pass'"></i>
+            </button>
+
+            <mat-error>
+              {{ form.controls.password.errors | formError | translate }}
+            </mat-error>
+          </mat-form-field>
+
+          <div class="forgot-password">
+            <a
+              role="button"
+              aria-hidden="true"
+              class="f-12"
+              (click)="handleOpenForgotPasswordModal()"
+            >
+              {{ 'login-register.forgot-password' | translate }}
+            </a>
+          </div>
+
+          <mat-checkbox formControlName="remember">
+            {{ 'login-register.remember-me' | translate }}
+          </mat-checkbox>
+
+          <div class="buttons full">
+            <button
+              mat-raised-button
+              type="submit"
+              color="primary"
+              [disabled]="loading()"
+            >
+              {{ 'login-register.login-title' | translate }}
+              @if (loading()) {
+                <i icon="loading"></i>
+              }
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="version">v{{ version }}</div>
+  </div>
+</main>

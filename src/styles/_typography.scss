@@ -24,6 +24,9 @@ $max-font-size: 52;
 
 .mat-typography {
   --mdc-plain-tooltip-supporting-text-size: 0.65rem;
+  --mat-form-field-subscript-text-size: 0.6rem;
+  --mdc-outlined-text-field-label-text-size: calc(0.125vw + 13.6px);
+
   h1 {
     @extend .fd-24;
   }
@@ -55,9 +58,9 @@ $max-font-size: 52;
   button,
   span,
   label,
-  input,
   tt,
   pre,
+  mat-form-field,
   blockquote {
     @extend .fd-14;
   }
