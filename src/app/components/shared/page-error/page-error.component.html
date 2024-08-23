@@ -6,7 +6,7 @@
   <p>{{ 'errors.' + translated | translate }}</p>
   <div class="buttons center">
     @if (code !== 401) {
-      <a mat-button class="primary" routerLink="/">
+      <a mat-raised-button color="primary" routerLink="/">
         {{ 'navbar.home' | translate }}
       </a>
     }
