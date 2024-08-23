@@ -9,5 +9,12 @@
         </div>
       </div>
     </div>
+
+    <div class="icon">
+      @defer {
+        <i [icon]="(loading$ | async) ? 'loading' : 'arrow_right'"></i>
+        ícones reativos
+      }
+    </div>
   </div>
 </main>

@@ -12,6 +12,7 @@ import { from, map, mergeMap, Observable } from 'rxjs';
 export interface IInputFileEvent {
   name: string;
   base64: string;
+  file: File;
 }
 
 @Directive({
@@ -59,6 +60,7 @@ export class InputFileDirective {
         ob.next({
           name: file.name,
           base64: reader.result as string,
+          file,
         });
         ob.complete();
       };
@@ -78,6 +80,7 @@ export class InputFileDirective {
       this.upload.emit({
         name: res.array[res.index].name,
         base64: res.data,
+        file: res.array[res.index],
       });
     });
   }
