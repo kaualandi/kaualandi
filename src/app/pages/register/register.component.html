@@ -1,0 +1,194 @@
+<main id="register">
+  <div [@zoomInAnimation] class="row">
+    <div class="lang">
+      <lang-select />
+    </div>
+    <div class="col">
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="Logo" />
+      </div>
+    </div>
+    <div class="col">
+      <div class="form">
+        <form (ngSubmit)="loginSubmitHandler()" [formGroup]="form">
+          <h1>{{ 'login-register.register-title' | translate }}</h1>
+          <p>
+            {{ 'login-register.already-registered' | translate }}
+            <a routerLink="/login">
+              {{ 'login-register.go-login' | translate }}
+            </a>
+          </p>
+
+          <mat-form-field appearance="outline">
+            <mat-label>
+              {{ 'login-register.name' | translate }}
+            </mat-label>
+            <input matInput type="text" formControlName="name" />
+            <mat-error>
+              {{ form.controls.name.errors | formError | translate }}
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>
+              {{ 'login-register.email' | translate }}
+            </mat-label>
+            <input
+              matInput
+              type="email"
+              autocomplete="username"
+              formControlName="email"
+            />
+
+            <mat-error>
+              {{ form.controls.email.errors | formError | translate }}
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>
+              {{ 'login-register.cellphone' | translate }}
+            </mat-label>
+            <input
+              matInput
+              type="text"
+              mask="(00) 00000-0000"
+              formControlName="phone"
+            />
+            <mat-error>
+              {{ form.controls.phone.errors | formError | translate }}
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>
+              {{ 'login-register.cpf' | translate }}
+            </mat-label>
+            <input
+              matInput
+              type="text"
+              mask="000.000.000-00"
+              formControlName="cpf"
+            />
+            <mat-error>
+              {{ form.controls.cpf.errors | formError | translate }}
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>
+              {{ 'login-register.birth-date' | translate }}
+            </mat-label>
+            <input
+              matInput
+              type="text"
+              [matDatepicker]="picker"
+              formControlName="birth_date"
+              [max]="now"
+            />
+            <mat-datepicker-toggle matSuffix [for]="picker" />
+            <mat-datepicker matSuffix #picker />
+
+            <mat-error>
+              {{ form.controls.birth_date.errors | formError | translate }}
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>
+              {{ 'login-register.genre' | translate }}
+            </mat-label>
+            <mat-select matInput formControlName="genre">
+              <mat-option value="M">
+                {{ 'login-register.genres.male' | translate }}
+              </mat-option>
+              <mat-option value="F">
+                {{ 'login-register.genres.famale' | translate }}
+              </mat-option>
+              <mat-option value="N">
+                {{ 'login-register.genres.do-not-inform' | translate }}
+              </mat-option>
+            </mat-select>
+
+            <mat-error>
+              {{ form.controls.genre.errors | formError | translate }}
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>
+              {{ 'login-register.password' | translate }}
+            </mat-label>
+            <input
+              matInput
+              [type]="view_pass ? 'text' : 'password'"
+              autocomplete="new-password"
+              formControlName="password"
+            />
+            <button
+              type="button"
+              mat-icon-button
+              matSuffix
+              aria-label="Ver senha"
+              (click)="view_pass = !view_pass"
+            >
+              <i [icon]="view_pass ? 'hide_pass' : 'view_pass'"></i>
+            </button>
+
+            <mat-error [matTooltip]="this.password_warning">
+              {{
+                this.password_warning ||
+                  this.password_suggestions[0] ||
+                  (form.controls.password.errors | formError | translate)
+              }}
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>
+              {{ 'login-register.re-password' | translate }}
+            </mat-label>
+            <input
+              matInput
+              [type]="view_repass ? 'text' : 'password'"
+              autocomplete="new-password"
+              formControlName="re_password"
+            />
+            <button
+              type="button"
+              mat-icon-button
+              matSuffix
+              aria-label="Ver senha"
+              (click)="view_repass = !view_repass"
+            >
+              <i [icon]="view_repass ? 'hide_pass' : 'view_pass'"></i>
+            </button>
+
+            <mat-error>
+              {{ form.controls.re_password.errors | formError | translate }}
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>sdadasd</mat-label>
+            <textarea matInput></textarea>
+          </mat-form-field>
+
+          <div class="buttons full">
+            <button
+              mat-raised-button
+              type="submit"
+              color="primary"
+              [disabled]="loading()"
+            >
+              {{ 'login-register.register-title' | translate }}
+              @if (loading()) {
+                <i icon="loading"></i>
+              }
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>

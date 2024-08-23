@@ -9,9 +9,17 @@ mat-form-field {
     }
     .mat-mdc-form-field-infix {
       --mat-form-field-container-vertical-padding: 6px;
+      .mat-mdc-select {
+        --mat-select-trigger-text-line-height: 32px;
+      }
     }
     .mat-mdc-form-field-input-control {
-      height: 32px;
+      &:not(.mat-mdc-form-field-textarea-control) {
+        height: 32px;
+      }
+      &.mat-mdc-form-field-textarea-control {
+        padding: var(--mat-form-field-container-vertical-padding) 0;
+      }
     }
     &.mdc-text-field--outlined
       .mdc-notched-outline--upgraded
