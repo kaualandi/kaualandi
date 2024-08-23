@@ -1,4 +1,5 @@
-import { Directive, ElementRef, inject } from '@angular/core';
+import { isPlatformServer } from '@angular/common';
+import { Directive, ElementRef, inject, PLATFORM_ID } from '@angular/core';
 import mediumZoom from 'medium-zoom';
 
 @Directive({
@@ -7,7 +8,11 @@ import mediumZoom from 'medium-zoom';
 })
 export class ZoomableDirective {
   private el = inject(ElementRef);
+  private platformId = inject(PLATFORM_ID);
   public constructor() {
-    mediumZoom(this.el.nativeElement);
+    if (isPlatformServer(this.platformId)) return;
+    mediumZoom(this.el.nativeElement, {
+      background: 'var(--medium-zoom-overlay-bg)',
+    });
   }
 }
