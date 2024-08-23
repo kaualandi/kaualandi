@@ -33,6 +33,13 @@ export const routes: Routes = [
           import('./pages/home/home.component').then((m) => m.HomeComponent),
       },
       {
+        path: 'roadmap',
+        loadComponent: () =>
+          import('./pages/roadmap/roadmap.component').then(
+            (m) => m.RoadmapComponent
+          ),
+      },
+      {
         path: '**',
         loadComponent: () =>
           import('./components/shared/page-error/page-error.component').then(
