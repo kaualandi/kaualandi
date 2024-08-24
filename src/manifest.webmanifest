@@ -1,6 +1,6 @@
 {
   "name": "boilerplate-web-angular",
-  "short_name": "boilerplate-web-angular",
+  "short_name": "boilerplate",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",

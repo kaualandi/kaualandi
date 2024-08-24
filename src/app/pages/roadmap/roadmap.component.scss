@@ -1,0 +1,10 @@
+.content {
+  mat-checkbox {
+    .title {
+      font-weight: 500;
+    }
+    & + mat-checkbox {
+      margin-top: 1rem;
+    }
+  }
+}

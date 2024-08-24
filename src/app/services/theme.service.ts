@@ -14,7 +14,12 @@ export class ThemeService {
 
   public toggleUserTheme() {}
 
-  public loadCurrentTheme() {
+  public loadCurrentTheme(theme?: Themes) {
+    if (theme) {
+      this.setTheme(theme);
+      return;
+    }
+
     const inLocal = localStorage.getItem('theme') as Themes;
     if (inLocal) {
       this.userTheme.set(inLocal);

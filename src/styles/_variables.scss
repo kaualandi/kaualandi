@@ -24,8 +24,7 @@
   --avatar-br: 50%;
   --avatar-ratio: 1/1;
 
-  --fullpage-loading-bg: rgba(0, 0, 0, 0.333);
-  --medium-zoom-overlay-bg: rgba(255, 255, 255, 0.4);
+  --medium-zoom-overlay-bg: rgba(255, 255, 255, 0.32);
 
   --container: 1440px;
 
@@ -49,5 +48,5 @@
   --avatar-dark-color: #2a2a2a;
   --avatar-light-color: #4a4a4a;
 
-  --fullpage-loading-bg: rgba(255, 255, 255, 0.1);
+  --medium-zoom-overlay-bg: rgba(0, 0, 0, 0.32);
 }

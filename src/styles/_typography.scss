@@ -72,6 +72,22 @@ $max-font-size: 52;
     line-clamp: 2;
   }
 }
+p,
+a,
+li,
+label,
+tt,
+blockquote,
+i,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--mat-app-text-color);
+}
 
 @for $i from $min-font-size through $max-font-size {
   $class-name: '.f-#{$i}';
