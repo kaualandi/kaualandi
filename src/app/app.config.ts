@@ -66,6 +66,7 @@ export const appConfig: ApplicationConfig = {
     provideNgxMask(),
     provideToastr({
       progressBar: true,
+      extendedTimeOut: 5000000,
     }),
     {
       provide: IMAGE_CONFIG,

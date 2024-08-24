@@ -1,3 +1,5 @@
+@use '@angular/material' as mat;
+
 .medium-zoom-overlay {
   z-index: 1;
   backdrop-filter: blur(4px);
@@ -7,4 +9,11 @@
 }
 .cdk-overlay-dark-backdrop {
   backdrop-filter: blur(4px);
+}
+.toast-container .ngx-toastr {
+  @include mat.elevation(8);
+  @include mat.elevation-transition();
+  &:hover {
+    @include mat.elevation(2);
+  }
 }
