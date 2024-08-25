@@ -49,7 +49,7 @@ export const routes: Routes = [
           import('./components/shared/page-error/page-error.component').then(
             (m) => m.PageErrorComponent
           ),
-        data: { error: 404 },
+        data: { code: 404 },
       },
     ],
   },
