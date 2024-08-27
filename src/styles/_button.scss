@@ -2,6 +2,12 @@ a[role='button'] {
   cursor: pointer;
 }
 
+.mdc-button__label {
+  i {
+    color: inherit;
+  }
+}
+
 .buttons {
   display: flex;
   gap: 0.5rem;
