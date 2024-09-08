@@ -3,9 +3,10 @@
 main.page {
   min-height: calc(100vh - 48px - 1rem);
   background-color: var(--primary-bg);
-  padding: 1rem;
+  padding: 0 1rem;
 
   .container {
+    background-color: var(--secondary-bg);
     & > header {
       display: flex;
       align-items: center;

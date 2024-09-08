@@ -1,0 +1,69 @@
+@import '../../../styles/typography';
+@import '../../../styles/media';
+
+main {
+  height: 100dvh;
+  .container {
+    height: 100%;
+    .content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      padding: 0 8%;
+
+      .steps {
+        opacity: 0;
+        transform: translateY(-1rem);
+        transition: var(--ts);
+        position: absolute;
+        &.enter {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        &.leave {
+          transform: translateY(1rem);
+        }
+
+        h1 {
+          transition: var(--ts);
+          @extend .fd-120;
+          margin: 0;
+        }
+
+        p {
+          @extend .fd-24;
+          opacity: 0;
+          transform: translateX(-1rem);
+          transition: var(--ts);
+          &.enter {
+            opacity: 1;
+            transform: translateX(0.4rem);
+          }
+        }
+      }
+      &.tablet {
+        .steps {
+          h1 {
+            @extend .fd-80;
+          }
+          p {
+            @extend .fd-20;
+          }
+        }
+      }
+
+      &.phone {
+        .steps {
+          h1 {
+            @extend .fd-46;
+          }
+          p {
+            @extend .fd-16;
+          }
+        }
+      }
+    }
+  }
+}

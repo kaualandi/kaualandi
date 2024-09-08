@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
 
   public ngOnInit() {
     if (!isPlatformServer(this.platformId)) {
-      this.theme.loadCurrentTheme();
+      this.theme.loadCurrentTheme('dark');
     }
   }
 }

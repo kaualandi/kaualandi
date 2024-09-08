@@ -34,9 +34,11 @@
 }
 
 .dark:root {
-  --text-color: #f0f0f0;
-  --primary-bg: #1b1b1b;
-  --secondary-bg: #242424;
+  --title-color: #ffffff;
+  --text-color: #abb2bf;
+  --mat-app-text-color: var(--text-color);
+  --primary-bg: #292c32;
+  --secondary-bg: #ffffff0f;
   --tertiary-bg: #2e2e2e;
   --line-color: #444444;
 

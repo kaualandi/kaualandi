@@ -1,38 +1,22 @@
 import { Routes } from '@angular/router';
-import { unauthGuard } from './guards/unauth.guard';
 
 export const routes: Routes = [
   {
-    path: 'login',
-    canActivate: [unauthGuard],
+    path: '',
     loadComponent: () =>
-      import('./pages/login/login.component').then((m) => m.LoginComponent),
-  },
-  {
-    path: 'register',
-    canActivate: [unauthGuard],
-    loadComponent: () =>
-      import('./pages/register/register.component').then(
-        (m) => m.RegisterComponent
-      ),
-  },
-  {
-    path: 'rescure-password',
-    loadComponent: () =>
-      import('./pages/rescure-password/rescure-password.component').then(
-        (m) => m.RescurePasswordComponent
+      import('./pages/welcome/welcome.component').then(
+        (m) => m.WelcomeComponent
       ),
   },
   {
     path: '',
-    // canActivate: [authGuard],
     loadComponent: () =>
       import('./components/navbar/navbar.component').then(
         (m) => m.NavbarComponent
       ),
     children: [
       {
-        path: '',
+        path: 'home',
         loadComponent: () =>
           import('./pages/home/home.component').then((m) => m.HomeComponent),
       },

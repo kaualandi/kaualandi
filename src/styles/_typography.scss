@@ -10,7 +10,7 @@
 
 $base-font-size: 19;
 $min-font-size: 10;
-$max-font-size: 52;
+$max-font-size: 120;
 
 // ! AS CLASSES .fd-x NÃO DEVEM SER USADOS,
 // ! SERVEM APENAS PARA NORMALIZAR O ANGULAR MATERIAL.
@@ -79,14 +79,17 @@ label,
 tt,
 blockquote,
 i,
-div,
+div {
+  color: var(--mat-app-text-color);
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: var(--mat-app-text-color);
+  color: var(--title-color);
 }
 
 @for $i from $min-font-size through $max-font-size {
