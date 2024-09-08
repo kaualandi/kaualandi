@@ -1,8 +1,8 @@
 {
-  "name": "boilerplate-web-angular",
-  "short_name": "boilerplate",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Kauã Landi | Dev Full Stack",
+  "short_name": "Kauã Landi",
+  "theme_color": "#b177c9",
+  "background_color": "#2a2c31",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
