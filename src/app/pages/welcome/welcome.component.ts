@@ -40,15 +40,15 @@ export class WelcomeComponent implements AfterViewInit {
 
     setTimeout(() => {
       this.firstStepClass.set('leave');
-    }, 3000);
+    }, 2500);
 
     setTimeout(() => {
       this.secondStepClass.set('enter');
-    }, 3500);
+    }, 3000);
 
     setTimeout(() => {
       this.secondStepPClass.set('enter');
-    }, 4000);
+    }, 3500);
 
     setTimeout(() => {
       this.router.navigate(['/home']);
@@ -59,11 +59,11 @@ export class WelcomeComponent implements AfterViewInit {
   public onResize() {
     let responsiveClass = '';
 
-    if (window.innerWidth < 810) {
+    if (window.innerWidth < 970) {
       responsiveClass = 'tablet';
     }
 
-    if (window.innerWidth < 568) {
+    if (window.innerWidth < 650) {
       responsiveClass = 'phone';
     }
 
