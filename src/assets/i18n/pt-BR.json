@@ -9,39 +9,14 @@
     "confirm": "Confirmar"
   },
   "navbar": {
-    "home": "Início",
-    "about": "Sobre",
-    "contact": "Contato",
-    "login": "Entrar"
+    "home": "início",
+    "projects": "projetos",
+    "about-me": "sobre-mim",
+    "contacts": "contatos"
   },
-  "login-register": {
-    "login-title": "Entrar",
-    "register-title": "Cadastro",
-    "not-registered": "Não possui conta?",
-    "already-registered": "Já possui conta?",
-    "go-register": "cadastre-se",
-    "go-login": "entrar",
-    "forgot-password": "Esqueceu sua senha?",
-    "remember-me": "Lembrar-me",
-    "name": "Nome",
-    "email": "E-mail",
-    "password": "Senha",
-    "re-password": "Repetir senha",
-    "cellphone": "Celular",
-    "cpf": "CPF",
-    "birth-date": "Data de nascimento",
-    "genre": "Sexo",
-    "genres": {
-      "male": "Masculino",
-      "famale": "Feminino",
-      "do-not-inform": "Não informar"
-    }
-  },
-  "forgot-password": {
-    "title": "Recuperar senha",
-    "subtitle": "Informe seu e-mail para recuperar sua senha.",
-    "email": "E-mail",
-    "change-password": "Alterar senha"
+  "welcome": {
+    "hello": "Olá!",
+    "welcome": "Bem-vindo!"
   },
   "languages": {
     "pt-BR": "Português",

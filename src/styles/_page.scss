@@ -1,12 +1,15 @@
 @import 'media';
 
 main.page {
-  min-height: calc(100vh - 48px - 1rem);
+  min-height: 100dvh;
   background-color: var(--primary-bg);
   padding: 0 1rem;
 
   .container {
     background-color: var(--secondary-bg);
+    padding-top: calc(44px + 1.5rem + 2rem);
+    min-height: 100dvh;
+
     & > header {
       display: flex;
       align-items: center;

@@ -1,8 +1,8 @@
 <nav [@offcanvasTopAnimation] #navbar [ngClass]="{ scroll }">
   <div class="content">
-    <a class="logo" routerLink="/">
+    <a class="logo" routerLink="/home">
       <img src="../../../assets/images/logo.png" alt="logo" />
-      Boilerplate
+      Kauã Landi
     </a>
 
     <div class="hamburger" [ngClass]="{ active: !navbar_hidden }">
@@ -16,10 +16,16 @@
     </div>
 
     <div class="menu vertical" [ngClass]="{ hidden: navbar_hidden }">
-      <a mat-button routerLink="/">{{ 'navbar.home' | translate }}</a>
-      <a mat-button routerLink="/roadmap">Roadmap</a>
-      <a mat-button routerLink="/about">{{ 'navbar.about' | translate }}</a>
-      <a mat-button routerLink="/contact">{{ 'navbar.contact' | translate }}</a>
+      <a mat-button routerLink="/home">{{ 'navbar.home' | translate }}</a>
+      <a mat-button routerLink="/projects">
+        {{ 'navbar.projects' | translate }}
+      </a>
+      <a mat-button routerLink="/about-me">
+        {{ 'navbar.about-me' | translate }}
+      </a>
+      <a mat-button routerLink="/contacts">
+        {{ 'navbar.contacts' | translate }}
+      </a>
       <lang-select />
     </div>
   </div>
