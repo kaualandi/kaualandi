@@ -52,6 +52,14 @@ nav {
       overflow: hidden;
       display: flex;
       align-items: center;
+
+      a {
+        color: var(--text-color);
+        &.active {
+          color: var(--title-color);
+        }
+      }
+
       @include media('<=navbar-collapse') {
         transition: var(--ts);
         transition-duration: 0.5s;
