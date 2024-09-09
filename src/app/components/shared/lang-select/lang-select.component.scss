@@ -9,28 +9,16 @@
 
 ::ng-deep {
   .lang-menu {
-    --mat-menu-container-color: transparent;
+    --mat-menu-container-color: var(--secondary-bg);
+    --mat-menu-container-shape: 0;
+    border: 1px solid var(--line-color);
     box-shadow: none !important;
     min-width: auto !important;
     max-width: fit-content !important;
     .mat-mdc-menu-content {
       min-width: auto;
       max-width: fit-content;
-      padding: 0 0.45rem;
-      .mat-mdc-menu-item {
-        padding: 0;
-        min-height: auto;
-        .mat-mdc-menu-item-text {
-          line-height: 0;
-          img {
-            border-radius: 2px;
-          }
-        }
-
-        & + .mat-mdc-menu-item {
-          margin-top: 0.5rem;
-        }
-      }
+      padding: 0;
     }
   }
 }

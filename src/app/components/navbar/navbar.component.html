@@ -16,15 +16,17 @@
     </div>
 
     <div class="menu vertical" [ngClass]="{ hidden: navbar_hidden }">
-      <a mat-button routerLink="/home">{{ 'navbar.home' | translate }}</a>
+      <a mat-button routerLink="/home">
+        <strong>#</strong>{{ 'navbar.home' | translate }}
+      </a>
       <a mat-button routerLink="/projects">
-        {{ 'navbar.projects' | translate }}
+        <strong>#</strong>{{ 'navbar.projects' | translate }}
       </a>
       <a mat-button routerLink="/about-me">
-        {{ 'navbar.about-me' | translate }}
+        <strong>#</strong>{{ 'navbar.about-me' | translate }}
       </a>
       <a mat-button routerLink="/contacts">
-        {{ 'navbar.contacts' | translate }}
+        <strong>#</strong>{{ 'navbar.contacts' | translate }}
       </a>
       <lang-select />
     </div>

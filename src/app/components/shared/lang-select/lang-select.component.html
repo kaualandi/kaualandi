@@ -2,29 +2,17 @@
   <button
     type="button"
     title="Mudar idioma"
-    mat-icon-button
+    mat-button
     [matMenuTriggerFor]="menuRef"
-    [matTooltip]="'languages.' + selected | translate"
-    matTooltipPosition="after"
   >
-    <img
-      src="assets/images/flags/{{ selected }}.svg"
-      alt="{{ 'languages.' + selected | translate }}"
-    />
+    {{ currentViewer }}
+    <i icon="chevron_down"></i>
   </button>
 
   <mat-menu #menuRef="matMenu" class="lang-menu">
-    @for (lang of langs; track lang) {
-      <button
-        mat-menu-item
-        (click)="selectLang(lang)"
-        [matTooltip]="'languages.' + lang | translate"
-        matTooltipPosition="after"
-      >
-        <img
-          src="assets/images/flags/{{ lang }}.svg"
-          alt="{{ 'languages.' + lang | translate }}"
-        />
+    @for (lang of optionsLangs; track lang.value) {
+      <button mat-menu-item (click)="selectLang(lang.value)">
+        {{ lang.label }}
       </button>
     }
   </mat-menu>
