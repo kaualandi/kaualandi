@@ -15,7 +15,6 @@ import {
   slideInAnimation,
 } from '@app/animations/route-animation';
 import { TranslateModule } from '@ngx-translate/core';
-import { tap } from 'rxjs';
 import { AuthService } from '../../services/auth.service';
 import { StorageService } from '../../services/storage.service';
 import { LangSelectComponent } from '../shared/lang-select/lang-select.component';
@@ -53,36 +52,6 @@ export class NavbarComponent implements OnInit {
   public ngOnInit(): void {
     if (isPlatformServer(this.plataformId)) return;
     this.onWindowScroll();
-    this.getMe();
-
-    this.user$.subscribe({
-      next: () => {
-        this.getMe();
-      },
-    });
-  }
-
-  private getMe() {
-    this.authService
-      .getMe()
-      .pipe(
-        tap(() => {
-          this.loading = true;
-        })
-      )
-      .subscribe({
-        next: () => {
-          this.loading = false;
-        },
-        error: (error) => {
-          // this.error = error?.status || 500;
-          console.log(this.error);
-          if (this.error === 401) {
-            this.authService.logout();
-          }
-          this.loading = false;
-        },
-      });
   }
 
   public toggleNavbarVisibility() {
