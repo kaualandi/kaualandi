@@ -1,4 +1,4 @@
-<nav [@offcanvasTopAnimation] #navbar [ngClass]="{ scroll }">
+<nav [@offcanvasTopAnimation] #navbar [ngClass]="{ scroll: scroll > 200 }">
   <div class="content">
     <a class="logo" routerLink="/home">
       <img src="../../../assets/images/logo.png" alt="logo" />
@@ -31,15 +31,29 @@
   </div>
 </nav>
 
-@if (!loading && !error) {
-  <div [@routeAnimations]="outlet && outlet.activatedRouteData">
-    <router-outlet #outlet="outlet" />
-  </div>
-}
-@if (error) {
-  <page-error [code]="error" />
-}
+<div
+  class="social-links"
+  [ngStyle]="{
+    transform: 'translateY(' + scroll + 'px)',
+  }"
+>
+  <ul>
+    @for (link of socialLinks; track link.icon) {
+      <li>
+        <a
+          href="{{ link.url }}"
+          mat-icon-button
+          target="_blank"
+          rel="noopener noreferrer"
+          [attr.aria-label]="link.name"
+        >
+          <i [icon]="link.icon"></i>
+        </a>
+      </li>
+    }
+  </ul>
+</div>
 
-@if (loading) {
-  <page-loading />
-}
+<div [@routeAnimations]="outlet && outlet.activatedRouteData">
+  <router-outlet #outlet="outlet" />
+</div>

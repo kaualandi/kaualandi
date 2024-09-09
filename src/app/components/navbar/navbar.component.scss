@@ -158,3 +158,28 @@ nav {
     }
   }
 }
+
+.social-links {
+  position: absolute;
+  top: -1rem;
+  left: 0.5rem;
+  transition: var(--ts);
+  @include media('<=1570px') {
+    opacity: 0;
+    left: -5rem;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    &::before {
+      content: '';
+      height: 20vh;
+      width: 1px;
+      background-color: var(--text-color);
+    }
+  }
+}

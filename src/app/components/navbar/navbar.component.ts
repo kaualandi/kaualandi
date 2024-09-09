@@ -7,19 +7,16 @@ import {
   OnInit,
   PLATFORM_ID,
 } from '@angular/core';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
 import {
   offcanvasTopAnimation,
   slideInAnimation,
 } from '@app/animations/route-animation';
+import { SOCIAL_LINKS_NAVBAR } from '@app/constants/social';
+import { IconDirective } from '@app/directives/icon.directive';
 import { TranslateModule } from '@ngx-translate/core';
-import { AuthService } from '../../services/auth.service';
-import { StorageService } from '../../services/storage.service';
 import { LangSelectComponent } from '../shared/lang-select/lang-select.component';
-import { PageErrorComponent } from '../shared/page-error/page-error.component';
-import { PageLoadingComponent } from '../shared/page-loading/page-loading.component';
 
 @Component({
   selector: 'app-navbar',
@@ -30,8 +27,7 @@ import { PageLoadingComponent } from '../shared/page-loading/page-loading.compon
     MatButtonModule,
     TranslateModule,
     LangSelectComponent,
-    PageLoadingComponent,
-    PageErrorComponent,
+    IconDirective,
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
@@ -39,15 +35,11 @@ import { PageLoadingComponent } from '../shared/page-loading/page-loading.compon
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent implements OnInit {
-  private storage = inject(StorageService);
-  private authService = inject(AuthService);
   private plataformId = inject(PLATFORM_ID);
 
-  public scroll = false;
+  public scroll = 0;
   public navbar_hidden = true;
-  public loading = false;
-  public error = 0;
-  private user$ = this.storage.watchUser().pipe(takeUntilDestroyed());
+  public socialLinks = SOCIAL_LINKS_NAVBAR;
 
   public ngOnInit(): void {
     if (isPlatformServer(this.plataformId)) return;
@@ -60,7 +52,6 @@ export class NavbarComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event'])
   private onWindowScroll() {
-    const scroll = window.scrollY;
-    this.scroll = scroll > 200;
+    this.scroll = window.scrollY;
   }
 }
