@@ -31,7 +31,7 @@ $max-font-size: 120;
     @extend .fd-32;
   }
   h2 {
-    @extend .fd-18;
+    @extend .fd-30;
   }
   h3,
   .icon {
@@ -90,8 +90,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
+  font-weight: 500;
   color: var(--title-color);
+}
+
+h1 {
+  font-weight: 600;
 }
 
 strong {

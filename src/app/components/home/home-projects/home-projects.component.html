@@ -1,1 +1,10 @@
-<p>home-projects works!</p>
+<section>
+  <header>
+    <h2><strong>#</strong>projetos</h2>
+    <a mat-button routerLink="/projects">Ver todos ~~></a>
+  </header>
+
+  <div class="content">
+    <app-projects-list [projects]="projects" />
+  </div>
+</section>

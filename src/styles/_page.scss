@@ -30,3 +30,67 @@ main.page {
   max-width: var(--container);
   margin: 0 auto;
 }
+
+section {
+  & > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 3rem;
+
+    h2 {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 700px;
+      &::after {
+        content: '';
+        background-color: var(--primary-color);
+        display: inline-block;
+        margin-left: 1rem;
+        height: 1px;
+        width: 100%;
+        flex: 1;
+      }
+    }
+
+    a,
+    button {
+      flex: none;
+    }
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid var(--line-color);
+  figure {
+    margin: 0;
+    img {
+      border-bottom: 1px solid var(--line-color);
+      width: 100%;
+    }
+
+    .techs {
+      border-bottom: 1px solid var(--line-color);
+      padding: 0 0.4rem 0.4rem;
+    }
+
+    figcaption {
+      padding: 1rem;
+      h3 {
+        margin: 0 0 1rem;
+      }
+      p {
+        margin: 0 0 1rem;
+      }
+    }
+  }
+}

@@ -15,8 +15,8 @@ nav {
   z-index: 2;
   transition: var(--ts);
   width: 100%;
-  padding: 1rem 1rem 0.5rem;
   position: fixed;
+  padding: 0 1rem;
 
   .content {
     max-width: var(--container);
@@ -26,6 +26,8 @@ nav {
     flex-wrap: inherit;
     align-items: center;
     justify-content: space-between;
+    backdrop-filter: blur(10px);
+    padding: 1rem 0 0.5rem;
 
     @include media('<=navbar-collapse') {
       flex-wrap: wrap;
