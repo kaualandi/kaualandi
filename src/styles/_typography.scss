@@ -33,7 +33,8 @@ $max-font-size: 120;
   h2 {
     @extend .fd-18;
   }
-  h3 {
+  h3,
+  .icon {
     @extend .fd-16;
   }
   h4 {
