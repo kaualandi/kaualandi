@@ -1,22 +1,5 @@
 <main class="page">
   <div class="container">
-    <div class="skeleton">
-      <div class="flex">
-        <div class="s pic"></div>
-        <div>
-          <div class="s name"></div>
-          <div class="s bio"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="icon">
-      @defer {
-        <i [icon]="(loading$ | async) ? 'loading' : 'arrow_right'"></i>
-        ícones reativos
-      }
-    </div>
-
-    <img zoomable src="../../../assets/images/logo.png" alt="logo" />
+    <app-home-hero />
   </div>
 </main>

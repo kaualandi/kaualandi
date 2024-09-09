@@ -1,13 +1,11 @@
-import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { IconDirective } from '@app/directives/icon.directive';
-import { ZoomableDirective } from '@app/directives/zoomable.directive';
+import { HomeHeroComponent } from '@app/components/home/home-hero/home-hero.component';
 import { interval, map } from 'rxjs';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, IconDirective, ZoomableDirective],
+  imports: [HomeHeroComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

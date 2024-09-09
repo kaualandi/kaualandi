@@ -7,6 +7,16 @@ a[role='button'] {
     color: inherit;
   }
 }
+.mat-mdc-button,
+.dark .mat-mdc-button {
+  --mdc-text-button-container-shape: 0;
+  --mat-text-button-horizontal-padding: 1rem;
+
+  &.mat-primary {
+    --mdc-text-button-label-text-color: var(--title-color);
+    border: 1px solid var(--mat-text-button-state-layer-color);
+  }
+}
 
 .buttons {
   display: flex;

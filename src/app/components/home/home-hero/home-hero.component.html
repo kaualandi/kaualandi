@@ -1,0 +1,20 @@
+<section id="home-hero">
+  <div class="row">
+    <div class="col text">
+      <h1 [innerHTML]="'home.hero.title' | translate"></h1>
+      <p>
+        {{ 'home.hero.subtitle' | translate }}
+      </p>
+      <button mat-button color="primary">
+        <span>{{ 'home.hero.button' | translate }}</span>
+      </button>
+    </div>
+
+    <div class="col image">
+      <img src="../../../../assets/images/hero.png" alt="Foto do Kauã" />
+      <div class="portfolio-status">
+        <span>{{ 'home.hero.status' | translate }}</span>
+      </div>
+    </div>
+  </div>
+</section>

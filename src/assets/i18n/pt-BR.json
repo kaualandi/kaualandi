@@ -14,21 +14,29 @@
     "about-me": "sobre-mim",
     "contacts": "contatos"
   },
-  "welcome": {
-    "hello": "Olá!",
-    "welcome": "Bem-vindo!"
-  },
   "languages": {
     "pt-BR": "Português",
     "en": "Inglês"
   },
+  "welcome": {
+    "hello": "Olá!",
+    "welcome": "Bem-vindo!"
+  },
+  "home": {
+    "hero": {
+      "title": "Kauã é um <strong>desenvolvedor full-stack</strong>",
+      "subtitle": "Com habilidades técnicas e a experiência necessária para desenvolver soluções web completas e chatbots eficientes e intuitivos.",
+      "button": "Entrar em contato!",
+      "status": "Atualmente trabalhando nesse portfólio"
+    }
+  },
   "errors": {
-    "error": "Erro",
-    "500": "Erro interno em nossos servidores",
-    "404": "Está pagina que está tentando acessar não existe, foi removida ou está temporariamente indisponível",
-    "403": "Você não tem permissão para acessar esta pagina",
-    "401": "Você não está autenticado",
     "400": "Seu pedido não pode ser processado",
+    "401": "Você não está autenticado",
+    "403": "Você não tem permissão para acessar esta pagina",
+    "404": "Está pagina que está tentando acessar não existe, foi removida ou está temporariamente indisponível",
+    "500": "Erro interno em nossos servidores",
+    "error": "Erro",
     "default": "Um erro inesperado aconteceu",
     "form": {
       "required": "Campo obrigatório",
