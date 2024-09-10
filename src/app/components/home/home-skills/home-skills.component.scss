@@ -1,0 +1,48 @@
+section {
+  margin-top: 6rem;
+
+  .content {
+    & > .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+
+      .image {
+        width: 100%;
+        figure {
+          margin-top: -1.5rem;
+        }
+      }
+
+      .skills {
+        .row {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1rem;
+          .col {
+            .skill {
+              h3 {
+                margin: 0;
+                padding: 0.5rem;
+                border-bottom: 1px solid var(--line-color);
+              }
+              .items {
+                display: flex;
+                gap: 0.5rem 1rem;
+                flex-wrap: wrap;
+                padding: 0.5rem;
+                span {
+                  display: inline-block;
+                }
+              }
+
+              & + .skill {
+                margin-top: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
