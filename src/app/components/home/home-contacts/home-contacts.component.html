@@ -1,0 +1,26 @@
+<section>
+  <header>
+    <h2><strong>#</strong>contatos</h2>
+  </header>
+
+  <div class="content">
+    <div class="row">
+      <div class="col">
+        <p> {{ 'home.contacts.content' | translate }} </p>
+      </div>
+      <div class="col">
+        <div class="socials">
+          <div class="card">
+            <h3>Entre em contato comigo aqui</h3>
+            @for (link of socialLinks; track link.icon) {
+              <a [href]="link.url" target="_blank" rel="noopener">
+                <i [icon]="link.icon"></i>
+                {{ link.name }}
+              </a>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

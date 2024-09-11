@@ -34,6 +34,9 @@
       "p1": "Olá, sou o Kauã!",
       "p2": "Comecei a estudar programação com 13 anos de idade. Fiz cursos de desenvolvimento web onde lucrei um conhecimento razoável de lógica e front-end.",
       "button": "Ler mais"
+    },
+    "contacts": {
+      "content": "Estou sempre aberto para novas oportunidades, então, se você estiver procurando um Desenvolvedor Web, não hesite em entrar em contato comigo."
     }
   },
   "errors": {

@@ -1,0 +1,52 @@
+@import '../../../../styles/media';
+
+section {
+  margin-top: 6rem;
+  min-height: 512px;
+
+  .content {
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      @include media('<=tablet') {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .socials {
+        display: flex;
+        justify-content: flex-end;
+
+        .card {
+          padding: 1rem;
+          max-width: 350px;
+          h3 {
+            margin: 0 0 1rem;
+          }
+
+          a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: var(--ts);
+
+            &:hover {
+              color: var(--title-color);
+            }
+
+            i {
+              font-size: 1.8rem;
+              transition: var(--ts);
+            }
+
+            & + a {
+              margin-top: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

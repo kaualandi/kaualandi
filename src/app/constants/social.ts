@@ -1,22 +1,27 @@
-export const SOCIAL_LINKS_NAVBAR = [
-  {
-    name: 'LinkedIn',
-    url: 'https://linkedin.com/in/kaualandi',
-    icon: 'linkedin',
-  },
-  {
-    name: 'Github',
-    url: 'https://github.com/kaualandi',
-    icon: 'github',
-  },
-  {
-    name: 'WhatsApp',
-    url: 'https://wa.me/5521999222644',
-    icon: 'whatsapp',
-  },
-  {
-    name: 'E-mail',
-    url: 'mailto:kaualandi@hotmai.com',
-    icon: 'envelope',
-  },
-];
+const LINKEDIN = {
+  name: 'LinkedIn',
+  url: 'https://linkedin.com/in/kaualandi',
+  icon: 'linkedin',
+};
+
+const GITHUB = {
+  name: 'Github',
+  url: 'https://github.com/kaualandi',
+  icon: 'github',
+};
+
+const WHATSAPP = {
+  name: '(21) 99922-2644',
+  url: 'https://wa.me/5521999222644',
+  icon: 'whatsapp',
+};
+
+const EMAIL = {
+  name: 'eu@kaualf.com',
+  url: 'mailto:eu@kaualf.com',
+  icon: 'envelope',
+};
+
+export const SOCIAL_LINKS_NAVBAR = [LINKEDIN, GITHUB, WHATSAPP, EMAIL];
+
+export const SOCIAL_LINKS_HOME_CONTACTS = [WHATSAPP, EMAIL];
