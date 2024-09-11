@@ -2,12 +2,18 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { HomeHeroComponent } from '@app/components/home/home-hero/home-hero.component';
 import { HomeProjectsComponent } from '@app/components/home/home-projects/home-projects.component';
 import { interval, map } from 'rxjs';
+import { HomeAboutMeComponent } from '../../components/home/home-about-me/home-about-me.component';
 import { HomeSkillsComponent } from '../../components/home/home-skills/home-skills.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HomeHeroComponent, HomeProjectsComponent, HomeSkillsComponent],
+  imports: [
+    HomeHeroComponent,
+    HomeProjectsComponent,
+    HomeSkillsComponent,
+    HomeAboutMeComponent,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

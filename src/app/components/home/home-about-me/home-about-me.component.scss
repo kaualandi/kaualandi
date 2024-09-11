@@ -1,0 +1,38 @@
+@import '../../../../styles/media';
+
+section {
+  margin-top: 6rem;
+
+  .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .content {
+      p {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .image {
+      width: 100%;
+      figure {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        img {
+          max-width: 350px;
+          width: 100%;
+        }
+      }
+    }
+
+    @include media('<=tablet') {
+      grid-template-columns: 1fr;
+      .image {
+        figure {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

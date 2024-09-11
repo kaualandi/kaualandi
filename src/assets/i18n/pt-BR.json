@@ -29,6 +29,11 @@
       "button": "Entrar em contato!",
       "status": "Atualmente trabalhando nesse portfólio",
       "outher-version": "Há uma outra versão desse portfólio: "
+    },
+    "about-me": {
+      "p1": "Olá, sou o Kauã!",
+      "p2": "Comecei a estudar programação com 13 anos de idade. Fiz cursos de desenvolvimento web onde lucrei um conhecimento razoável de lógica e front-end.",
+      "button": "Ler mais"
     }
   },
   "errors": {

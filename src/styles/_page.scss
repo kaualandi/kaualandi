@@ -32,7 +32,8 @@ main.page {
 }
 
 section {
-  & > header {
+  & > header,
+  .header__section {
     display: flex;
     align-items: center;
     justify-content: space-between;
