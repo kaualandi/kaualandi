@@ -67,6 +67,10 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+
+  @include media('<=tablet') {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .card {
