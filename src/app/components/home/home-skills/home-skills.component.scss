@@ -1,3 +1,5 @@
+@import '../../../../styles/media';
+
 section {
   margin-top: 6rem;
 
@@ -9,9 +11,29 @@ section {
 
       .image {
         width: 100%;
+        max-width: 350px;
         figure {
-          margin-top: -1.5rem;
+          margin: -1.5rem 1rem 0;
+          width: 100%;
+          img {
+            width: 100%;
+          }
         }
+      }
+
+      @include media('<=tablet') {
+        grid-template-columns: 1fr;
+
+        .image {
+          max-width: 250px;
+          margin: 0 auto;
+        }
+        // .col {
+        // &:first-child {
+        // grid-row: 2 / 2;
+        // grid-column: 1 / -1;
+        // }
+        // }
       }
 
       .skills {
@@ -19,6 +41,7 @@ section {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 1rem;
+
           .col {
             .skill {
               h3 {
@@ -38,6 +61,26 @@ section {
 
               & + .skill {
                 margin-top: 1rem;
+              }
+            }
+          }
+          @include media('<=desktop') {
+            grid-template-columns: 1fr 1fr;
+            .col {
+              &:first-child {
+                grid-row: 2 / 2;
+                grid-column: 2 / -1;
+              }
+            }
+          }
+
+          @include media('<=tablet') {
+            grid-template-columns: 1fr;
+
+            .col {
+              &:first-child {
+                grid-row: 2 / 2;
+                grid-column: 1 / -1;
               }
             }
           }
