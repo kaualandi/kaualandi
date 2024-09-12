@@ -64,5 +64,10 @@
     "next_page": "Próxima página",
     "previous_page": "Página anterior",
     "range": "{{start}} a {{end}} de {{length}}"
+  },
+  "footer": {
+    "job-title": "Desenvolvedor full-stack",
+    "contact": "Contatos",
+    "copy": "&copy; Copyright {{year}}. Feito com <3 por Kauã Landi"
   }
 }

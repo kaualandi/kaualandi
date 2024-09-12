@@ -1,0 +1,40 @@
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="name-email">
+          <div class="name">
+            <img src="assets/images/logo.png" alt="logo" />
+            <p>Kauã Landi</p>
+          </div>
+          <p> {{ email.name }} </p>
+        </div>
+
+        <div class="job-title">
+          <p>
+            {{ 'footer.job-title' | translate }}
+          </p>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="contact">
+          <h3> {{ 'footer.contact' | translate }} </h3>
+          <ul>
+            @for (link of socialLinks; track link.icon) {
+              <li>
+                <a [href]="link.url" target="_blank" rel="noopener">
+                  <i [icon]="link.icon"></i>
+                </a>
+              </li>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="copy">
+      <p [innerHTML]="'footer.copy' | translate: { year }"></p>
+    </div>
+  </div>
+</footer>

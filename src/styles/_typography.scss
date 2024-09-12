@@ -33,8 +33,7 @@ $max-font-size: 120;
   h2 {
     @extend .fd-30;
   }
-  h3,
-  .icon {
+  h3 {
     @extend .fd-16;
   }
   h4 {
@@ -71,6 +70,10 @@ $max-font-size: 120;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     line-clamp: 2;
+  }
+
+  .icon {
+    font-size: inherit;
   }
 }
 p,
