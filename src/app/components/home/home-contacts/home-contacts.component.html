@@ -11,7 +11,7 @@
       <div class="col">
         <div class="socials">
           <div class="card">
-            <h3>Entre em contato comigo aqui</h3>
+            <h3>{{ 'home.contacts.get-in-touch' | translate }}</h3>
             @for (link of socialLinks; track link.icon) {
               <a [href]="link.url" target="_blank" rel="noopener">
                 <i [icon]="link.icon"></i>
