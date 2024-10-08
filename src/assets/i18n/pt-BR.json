@@ -6,7 +6,9 @@
     "edit": "Editar",
     "add": "Adicionar",
     "search": "Pesquisar",
-    "confirm": "Confirmar"
+    "confirm": "Confirmar",
+    "show-all": "Ver todos",
+    "view": "Ver"
   },
   "navbar": {
     "home": "início",
@@ -37,6 +39,20 @@
     },
     "contacts": {
       "content": "Estou sempre aberto para novas oportunidades, então, se você estiver procurando um Desenvolvedor Web, não hesite em entrar em contato comigo."
+    }
+  },
+  "projects": {
+    "blackskull-pharma": {
+      "title": "Blackskull Pharma",
+      "description": "Produtos de alta performance para atletas"
+    },
+    "tria-health": {
+      "title": "Tria Health",
+      "description": "Gerenciador de dados médicos"
+    },
+    "marica-filmes": {
+      "title": "Maricá Filmes",
+      "description": "Streaming de vídeo para a prefeitura de Maricá"
     }
   },
   "errors": {

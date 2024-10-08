@@ -2,8 +2,7 @@ import { IProject } from '@app/models/projects';
 
 export const PROJECTS: IProject[] = [
   {
-    title: 'Blackskull Pharma',
-    description: 'Produtos de alta performance para atletas',
+    translatePrefix: 'blackskull-pharma',
     image: 'assets/images/projects/blackskull-pharma.png',
     link: 'https://blackskullpharma.com.br/',
     favorite: true,
@@ -11,8 +10,7 @@ export const PROJECTS: IProject[] = [
     technologies: ['Shopify', 'NextJS'],
   },
   {
-    title: 'Tria Health',
-    description: 'Gerenciador de dados médicos',
+    translatePrefix: 'tria-health',
     image: 'assets/images/projects/tria-health.png',
     link: 'https://tria.health/',
     favorite: true,
@@ -20,8 +18,7 @@ export const PROJECTS: IProject[] = [
     technologies: ['Angular', 'SCSS'],
   },
   {
-    title: 'Maricá Filmes',
-    description: 'Streaming de vídeo para a prefeitura de Maricá',
+    translatePrefix: 'marica-filmes',
     image: 'assets/images/projects/marica-filmes.png',
     link: 'https://maricafilmes.com.br/',
     favorite: true,

@@ -1,8 +1,7 @@
 export type ProjectType = 'small' | 'complete';
 
 export interface IProject {
-  title: string;
-  description: string;
+  translatePrefix: string;
   image: string;
   link: string;
   favorite: boolean;
