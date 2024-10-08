@@ -13,6 +13,7 @@
   "navbar": {
     "home": "início",
     "projects": "projetos",
+    "skills": "habilidades",
     "about-me": "sobre-mim",
     "contacts": "contatos"
   },
@@ -54,6 +55,13 @@
       "title": "Maricá Filmes",
       "description": "Streaming de vídeo para a prefeitura de Maricá"
     }
+  },
+  "skills": {
+    "languages": "Linguagens",
+    "database": "Banco de dados",
+    "outher": "Outros",
+    "tools": "Ferramentas",
+    "frameworks": "Frameworks"
   },
   "errors": {
     "400": "Seu pedido não pode ser processado",
