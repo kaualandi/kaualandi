@@ -18,7 +18,7 @@ export class LanguageService {
       ? this.translate.getBrowserLang()?.toLocaleLowerCase()
       : '';
 
-    return this.translate.currentLang || storageLang || browserLang || 'pt-BR';
+    return this.translate.currentLang || storageLang || browserLang || 'pt-br';
   }
 
   public set current(value: string) {

@@ -99,7 +99,7 @@ export const appConfig: ApplicationConfig = {
     },
     importProvidersFrom(
       TranslateModule.forRoot({
-        defaultLanguage: 'pt-BR',
+        defaultLanguage: 'pt-br',
         loader: {
           provide: TranslateLoader,
           useFactory: HttpLoaderFactory,

@@ -29,10 +29,10 @@ export class LangSelectComponent implements OnInit {
   private translate = inject(TranslateService);
   private language = inject(LanguageService);
 
-  public langs = ['pt-BR', 'en'];
+  public langs = ['pt-br', 'en'];
   public selected = this.langs[0];
   public optionsLangs = [
-    { value: 'pt-BR', label: 'BR' },
+    { value: 'pt-br', label: 'BR' },
     { value: 'en', label: 'US' },
   ];
 
@@ -41,6 +41,8 @@ export class LangSelectComponent implements OnInit {
   }
 
   public selectLang(lang: string) {
+    console.log('lang', lang);
+
     this.translate.use(lang);
     this.language.current = lang;
     this.selected = lang;

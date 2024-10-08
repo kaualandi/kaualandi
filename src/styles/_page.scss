@@ -7,7 +7,7 @@ main.page {
 
   .container {
     background-color: var(--secondary-bg);
-    padding-top: calc(36px + 1.5rem + 2rem);
+    padding: calc(36px + 1.5rem + 2rem) 1rem 0;
     min-height: 100dvh;
 
     & > header {
