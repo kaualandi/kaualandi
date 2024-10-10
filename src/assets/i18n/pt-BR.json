@@ -44,6 +44,9 @@
     }
   },
   "projects": {
+    "subtitle": "Lista dos meus projetos",
+    "completed": "aplicativos-completos",
+    "small": "pequenos-projetos",
     "blackskull-pharma": {
       "title": "Blackskull Pharma",
       "description": "Produtos de alta performance para atletas"
@@ -55,6 +58,38 @@
     "marica-filmes": {
       "title": "Maricá Filmes",
       "description": "Streaming de vídeo para a prefeitura de Maricá"
+    },
+    "oficial-med": {
+      "title": "Oficial Med",
+      "description": "Farmácia de Manipulação e Indústria de Nutracêuticos"
+    },
+    "portfolio-ide": {
+      "title": "Portfólio IDE",
+      "description": "Portfólio em formato de IDE (editor de código) com jogo"
+    },
+    "nip": {
+      "title": "NIP",
+      "description": "Portal Imobiliário do Rio focado em venda e aluguel de imóveis"
+    },
+    "new-tab": {
+      "title": "New Tab",
+      "description": "Nova aba personalizada e simples para o seu navegador"
+    },
+    "bot-wpp-flow": {
+      "title": "Chatbot de WhatsApp com fluxo",
+      "description": "Chatbot de WhatsApp com fluxo para atendimento ao cliente automatizado"
+    },
+    "mae-estar": {
+      "title": "Mãe Estar",
+      "description": "Um aplicativo de saúde para mães, pais e cuidadores"
+    },
+    "bruce": {
+      "title": "Bruce - Chatbot",
+      "description": "O Bruce é um chatbot divertido que pode fazer figurinhas, auxiliar em grupos, converter moedas etc"
+    },
+    "conversation": {
+      "title": "Formuário em conversa",
+      "description": "Formulário de anamnese em formato intuitivo de conversa"
     }
   },
   "skills": {

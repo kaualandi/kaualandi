@@ -1,0 +1,26 @@
+<main class="page">
+  <div class="container">
+    <header>
+      <h1><strong>/</strong>{{ 'navbar.projects' | translate }}</h1>
+      <p> {{ 'projects.subtitle' | translate }} </p>
+    </header>
+
+    <div class="content">
+      <section class="completed-applications">
+        <header>
+          <h2> <strong>#</strong>{{ 'projects.completed' | translate }} </h2>
+        </header>
+        <app-projects-list [projects]="completedApplications" />
+      </section>
+
+      <section class="small-projects">
+        <header>
+          <h2> <strong>#</strong>{{ 'projects.small' | translate }} </h2>
+        </header>
+        <app-projects-list [projects]="smallProjects" />
+      </section>
+    </div>
+  </div>
+</main>
+
+<app-footer />
