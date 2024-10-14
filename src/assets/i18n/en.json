@@ -1,3 +1,140 @@
 {
-  "foo": "bar"
+  "global": {
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "search": "Search",
+    "confirm": "Confirm",
+    "show-all": "Show all",
+    "view": "View",
+    "coming-soon": "This page will be available soon"
+  },
+  "navbar": {
+    "home": "home",
+    "projects": "projects",
+    "skills": "skills",
+    "about-me": "about-me",
+    "contacts": "contacts"
+  },
+  "languages": {
+    "pt-BR": "Portuguese",
+    "en": "English"
+  },
+  "welcome": {
+    "hello": "Hello!",
+    "welcome": "Welcome!"
+  },
+  "home": {
+    "hero": {
+      "title": "Kauã is a <strong>full-stack developer</strong>",
+      "subtitle": "With the technical skills and experience to develop complete web solutions and efficient, intuitive chatbots.",
+      "button": "Get in touch!",
+      "status": "Currently working on this portfolio",
+      "outher-version": "There is another version of this portfolio: "
+    },
+    "about-me": {
+      "p1": "Hi, I'm Kauã!",
+      "p2": "I started learning programming at the age of 13. I took web development courses where I gained a reasonable knowledge of logic and front-end.",
+      "button": "Read more"
+    },
+    "contacts": {
+      "content": "I'm always open to new opportunities, so if you're looking for a Web Developer, feel free to get in touch with me.",
+      "get-in-touch": "Get in touch with me here"
+    }
+  },
+  "projects": {
+    "subtitle": "List of my projects",
+    "completed": "completed-apps",
+    "small": "small-projects",
+    "blackskull-pharma": {
+      "title": "Blackskull Pharma",
+      "description": "High-performance products for athletes"
+    },
+    "tria-health": {
+      "title": "Tria Health",
+      "description": "Medical data manager"
+    },
+    "marica-filmes": {
+      "title": "Maricá Filmes",
+      "description": "Video streaming for the Maricá City Hall"
+    },
+    "oficial-med": {
+      "title": "Oficial Med",
+      "description": "Compounding Pharmacy and Nutraceutical Industry"
+    },
+    "portfolio-ide": {
+      "title": "Portfolio IDE",
+      "description": "Portfolio in IDE (code editor) format with a game"
+    },
+    "nip": {
+      "title": "NIP",
+      "description": "Real estate portal in Rio focused on selling and renting properties"
+    },
+    "new-tab": {
+      "title": "New Tab",
+      "description": "A simple, customized new tab for your browser"
+    },
+    "bot-wpp-flow": {
+      "title": "WhatsApp Chatbot with flow",
+      "description": "WhatsApp chatbot with flow for automated customer service"
+    },
+    "mae-estar": {
+      "title": "Mãe Estar",
+      "description": "A health app for mothers, fathers, and caregivers"
+    },
+    "bruce": {
+      "title": "Bruce - Chatbot",
+      "description": "Bruce is a fun chatbot that can create stickers, help in groups, convert currencies, and more"
+    },
+    "conversation": {
+      "title": "Conversation Form",
+      "description": "Anamnese form in an intuitive conversation format"
+    }
+  },
+  "skills": {
+    "languages": "Languages",
+    "database": "Database",
+    "outher": "Other",
+    "tools": "Tools",
+    "frameworks": "Frameworks"
+  },
+  "about-me": {
+    "who-i-am": "Who am I?"
+  },
+  "contacts": {
+    "where-to-find-me": "Where to find me"
+  },
+  "errors": {
+    "400": "Your request could not be processed",
+    "401": "You are not authenticated",
+    "403": "You do not have permission to access this page",
+    "404": "The page you are trying to access does not exist, has been removed, or is temporarily unavailable",
+    "500": "Internal server error",
+    "error": "Error",
+    "default": "An unexpected error occurred",
+    "form": {
+      "required": "Required field",
+      "email": "Invalid email",
+      "mask": "Invalid value",
+      "cpf": "Invalid CPF",
+      "cnpj": "Invalid CNPJ",
+      "diff_password": "Passwords do not match",
+      "poor_password": "Weak password"
+    }
+  },
+  "paginator": {
+    "first_page": "First page",
+    "items_per_page": "Items per page",
+    "last_page": "Last page",
+    "next_page": "Next page",
+    "previous_page": "Previous page",
+    "range": "{{start}} to {{end}} of {{length}}"
+  },
+  "footer": {
+    "job-title": "Full-stack developer",
+    "contact": "Contacts",
+    "copy": "&copy; Copyright {{year}}. Made with <3 by Kauã Landi"
+  }
 }
