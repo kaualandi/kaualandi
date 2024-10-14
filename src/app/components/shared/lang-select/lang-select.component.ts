@@ -29,10 +29,10 @@ export class LangSelectComponent implements OnInit {
   private translate = inject(TranslateService);
   private language = inject(LanguageService);
 
-  public langs = ['pt-br', 'en'];
+  public langs = ['pt-BR', 'en'];
   public selected = this.langs[0];
   public optionsLangs = [
-    { value: 'pt-br', label: 'BR' },
+    { value: 'pt-BR', label: 'BR' },
     { value: 'en', label: 'US' },
   ];
 
