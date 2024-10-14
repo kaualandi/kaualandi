@@ -8,7 +8,8 @@
     "search": "Pesquisar",
     "confirm": "Confirmar",
     "show-all": "Ver todos",
-    "view": "Ver"
+    "view": "Ver",
+    "coming-soon": "Em breve essa página estará disponível"
   },
   "navbar": {
     "home": "início",
@@ -98,6 +99,12 @@
     "outher": "Outros",
     "tools": "Ferramentas",
     "frameworks": "Frameworks"
+  },
+  "about-me": {
+    "who-i-am": "Quem sou eu?"
+  },
+  "contacts": {
+    "where-to-find-me": "Onde me encontrar"
   },
   "errors": {
     "400": "Seu pedido não pode ser processado",

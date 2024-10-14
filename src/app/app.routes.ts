@@ -28,6 +28,20 @@ export const routes: Routes = [
           ),
       },
       {
+        path: 'about-me',
+        loadComponent: () =>
+          import('./pages/about-me/about-me.component').then(
+            (m) => m.AboutMeComponent
+          ),
+      },
+      {
+        path: 'contacts',
+        loadComponent: () =>
+          import('./pages/contacts/contacts.component').then(
+            (m) => m.ContactsComponent
+          ),
+      },
+      {
         path: '**',
         redirectTo: '',
       },
