@@ -91,6 +91,10 @@
     "conversation": {
       "title": "Conversation Form",
       "description": "Anamnese form in an intuitive conversation format"
+    },
+    "fw2svg": {
+      "title": "FW2SVG",
+      "description": "Transform the HTML tag of Font Awesome icons into SVG for use anywhere"
     }
   },
   "skills": {
