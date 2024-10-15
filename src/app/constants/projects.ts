@@ -89,4 +89,12 @@ export const PROJECTS: IProject[] = [
     type: 'small',
     technologies: ['NextJS', 'TailwindCSS', 'NextUI'],
   },
+  {
+    translatePrefix: 'FW2SVG',
+    image: 'assets/images/projects/fw2svg.png',
+    link: 'https://fw2svg.kaualf.com/',
+    favorite: false,
+    type: 'small',
+    technologies: ['HTML', 'CSS', 'Javascript', 'Bootstrap'],
+  },
 ];

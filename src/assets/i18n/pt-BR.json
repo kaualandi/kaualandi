@@ -91,6 +91,10 @@
     "conversation": {
       "title": "Formuário em conversa",
       "description": "Formulário de anamnese em formato intuitivo de conversa"
+    },
+    "fw2svg": {
+      "title": "FW2SVG",
+      "description": "Tranforma a tag HTML dos ícones do Font Awesome em SVG para serem usados em qualquer lugar"
     }
   },
   "skills": {
