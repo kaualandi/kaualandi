@@ -3,7 +3,7 @@
 ![Typing SVG](https://readme-typing-svg.herokuapp.com?color=00bfbf&size=35&center=true&vCenter=true&width=1000&lines=Ol%C3%A1%2C+me+chamo+Kau%C3%A3+Landi;Tenho+19+anos;Sou+Desenvolvedor+FullStack;Moro+no+Rio+de+Janeiro%2C+Brasil)<br>
 
 <div><br>
-<h2><a href="https://dev.kaualf.com" target="_blank">🧑‍💻 dev.kaualf.com</a></h2>
+<h2><a href="https://kaualf.com" target="_blank">🧑‍💻 kaualf.com</a></h2>
   <img align="center" alt="Vit-Ts" height="30" src="https://img.shields.io/badge/TypeScript-027ad0?style=for-the-badge&logo=typescript&logoColor=white">
   <img align="center" alt="Vit-SasS" height="30" src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white">
   <img align="center" alt="Vit-Angular" height="30" src="https://img.shields.io/badge/Angular-c3002f?style=for-the-badge&logo=angular&logoColor=white">
