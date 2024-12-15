@@ -3,17 +3,15 @@ import { inject, Injectable, PLATFORM_ID } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TranslationService {
-  defaultLang = 'pt-br';
-
   private translateService = inject(TranslateService);
   private platformId = inject(PLATFORM_ID);
   private keySavedLang = 'language';
+  private defaultLang = 'pt-br';
 
-  constructor(
-  ) {
+  public constructor() {
     if (isPlatformBrowser(this.platformId)) {
       const savedLang = localStorage.getItem(this.keySavedLang);
       if (savedLang) {
@@ -24,7 +22,7 @@ export class TranslationService {
     }
   }
 
-  changeLang(lang: string) {
+  public changeLang(lang: string) {
     this.translateService.use(lang);
     if (isPlatformBrowser(this.platformId)) {
       localStorage.setItem(this.keySavedLang, lang);

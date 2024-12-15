@@ -1,0 +1,13 @@
+:root {
+  color-scheme: light;
+  --primary-bg: #f5f5f5;
+  --paragraph-color: #333;
+  --title-color: #111;
+}
+
+.dark:root {
+  color-scheme: dark;
+  --primary-bg: #0e0d11;
+  --paragraph-color: #c0c4ce;
+  --title-color: #e2e4e9;
+}

@@ -1,3 +1,24 @@
+@use '@angular/material' as mat;
+@use 'assets/styles/m3-theme.scss';
+@use 'assets/styles/variables';
+
+@include mat.core();
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  @include mat.all-component-themes(m3-theme.$light-theme);
+  &.dark {
+    @include mat.all-component-themes(m3-theme.$dark-theme);
+  }
+}
+
+html,
+body {
+  @apply h-full;
+}
+body {
+  @apply bg-primary-bg m-0 font-sans;
+}

@@ -36,6 +36,7 @@
     "@angular/platform-browser": "^18.2.0",
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/platform-server": "^18.2.0",
+    "@angular/pwa": "^0.5.3",
     "@angular/router": "^18.2.0",
     "@angular/ssr": "^18.2.12",
     "@ngx-translate/core": "^16.0.3",
