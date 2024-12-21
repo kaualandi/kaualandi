@@ -1,6 +1,32 @@
 <section id="landing-page-hero" class="text-center">
   <div class="container mx-auto">
-    <div class="py-24">
+    <div class="py-12 md:py-24">
+      <div class="mx-auto mb-10 flex max-w-5xl items-center justify-between">
+        <div class="flex">
+          <div
+            class="flex items-center gap-3 rounded-full border border-gray-300 px-4 py-2"
+          >
+            <div class="relative flex size-3 rounded-full">
+              <div
+                class="center absolute left-0 top-0 size-3 animate-ping rounded-full bg-primary-50"
+              ></div>
+              <div
+                class="center absolute left-0 top-0 size-3 rounded-full bg-primary-50"
+              ></div>
+            </div>
+            <span class="text-sm text-paragraph"> Open to work </span>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <button mat-icon-button class="group">
+            <i icon="linkedin" class="text-2xl group-hover:text-primary-50"></i>
+          </button>
+          <button mat-icon-button class="group">
+            <i icon="github" class="text-2xl group-hover:text-primary-50"></i>
+          </button>
+        </div>
+      </div>
+
       <figure
         class="mx-auto mb-10 mt-0 flex size-32 items-center justify-center rounded-full border border-solid"
       >
@@ -11,20 +37,33 @@
         />
       </figure>
 
-      <h1 class="text-lg leading-loose tracking-wider text-paragraph">
+      <p class="text-lg tracking-wider text-paragraph">
         Hello World! Meu nome é
+        <br class="sm:hidden" />
         <strong class="text-primary-50"> Kauã Landi </strong> e sou
-        <br />
-        <span class="text-5xl font-bold text-title">
-          Desenvolvedor Fullstack
-        </span>
+      </p>
+      <h1 class="text-3xl font-bold text-title md:text-5xl">
+        Desenvolvedor Fullstack
       </h1>
 
       <p class="mx-auto mt-6 max-w-2xl text-paragraph">
-        Transformo necessidades em aplicações reais, evolventes e funcionais.
-        Desenvolvo sistemas através da minha paixão pela tecnologia,
-        contribuindo com soluções inovadoras e eficazes para desafios complexos.
+        Transformo ideias legais em aplicações reais, conectando tecnologia e
+        criatividade de forma prática e impactante. Com paixão pelo que faço,
+        adoro criar soluções inteligentes que simplificam desafios e trazem
+        resultados reais.
       </p>
+
+      <button
+        mat-flat-button
+        color="primary"
+        class="group mt-4 flex items-center"
+      >
+        Vamos conversar
+        <i
+          icon="arrow_right"
+          class="ml-2 inline-block transition-all duration-500 group-hover:ml-4 group-hover:rotate-[450deg]"
+        ></i>
+      </button>
     </div>
   </div>
 </section>
