@@ -1,0 +1,26 @@
+<section id="landing-page-technologies">
+  <div class="container">
+    <div class="mx-auto max-w-screen-lg">
+      <kaua-horizontal-scroll
+        [speed]="technologies.length * 3000"
+        [items]="technologies"
+        [itemTemplate]="techTemplate"
+        height="h-16"
+      >
+        <ng-template let-tech #techTemplate>
+          <a
+            [href]="tech.url"
+            mat-button
+            target="_blank"
+            class="!h-16 flex-none !px-6 !text-paragraph"
+          >
+            <div class="flex items-center gap-4">
+              <i [icon]="tech.logo" class="text-4xl"></i>
+              <span class="text-2xl"> {{ tech.name }} </span>
+            </div>
+          </a>
+        </ng-template>
+      </kaua-horizontal-scroll>
+    </div>
+  </div>
+</section>

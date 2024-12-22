@@ -1,0 +1,41 @@
+<div
+  class="horizontal-scroll mb-28"
+  [ngStyle]="{
+    '--speed': speed + 'ms',
+  }"
+>
+  <div class="horizontal-scroll__inner {{ height }}">
+    <div class="horizontal-scroll__wrapper">
+      <div class="horizontal-scroll__partial-wrapper">
+        @for (item of items; track $index) {
+          <ng-container
+            *ngTemplateOutlet="itemTemplate; context: { $implicit: item }"
+          />
+        }
+      </div>
+
+      <div class="horizontal-scroll__partial-wrapper">
+        @for (item of items; track $index) {
+          <ng-container
+            *ngTemplateOutlet="itemTemplate; context: { $implicit: item }"
+          />
+        }
+      </div>
+
+      <div class="horizontal-scroll__partial-wrapper">
+        @for (item of items; track $index) {
+          <ng-container
+            *ngTemplateOutlet="itemTemplate; context: { $implicit: item }"
+          />
+        }
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="absolute left-0 top-0 h-full w-32 bg-gradient-to-r from-primary-bg from-10%"
+  ></div>
+  <div
+    class="absolute right-0 top-0 h-full w-32 bg-gradient-to-l from-primary-bg from-10%"
+  ></div>
+</div>

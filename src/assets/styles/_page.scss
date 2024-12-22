@@ -1,3 +1,42 @@
 .container {
-  @apply px-6;
+  @apply mx-auto px-6;
+}
+
+.horizontal-scroll {
+  --speed: 5s;
+  position: relative;
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 5rem;
+
+    &:hover {
+      .horizontal-scroll__partial-wrapper {
+        animation-play-state: paused;
+      }
+    }
+  }
+
+  &__wrapper {
+    position: absolute;
+    display: flex;
+  }
+
+  &__partial-wrapper {
+    display: flex;
+    animation: horizontal-scroll var(--speed) linear infinite backwards;
+    flex: none;
+  }
+}
+
+@keyframes horizontal-scroll {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(-100%);
+  }
 }

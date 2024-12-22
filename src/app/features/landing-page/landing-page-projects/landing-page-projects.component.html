@@ -1,0 +1,49 @@
+<section id="landing-page-projects" class="py-12 md:py-24">
+  <div class="container">
+    <header class="text-center">
+      <p class="text-lg text-primary-50"> Meu Trabalho </p>
+      <h2 class="text-2xl font-medium"> Veja os projetos em destaque </h2>
+    </header>
+
+    <div class="mt-12">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        @for (project of projects; track $index) {
+          <article
+            class="group flex flex-col gap-4 rounded-xl border p-4 shadow-sm transition-all hover:shadow-md"
+          >
+            <figure class="relative overflow-hidden rounded-md transition-all">
+              <img
+                [src]="project.image"
+                alt=""
+                class="h-48 w-full object-cover transition-all duration-1000 group-hover:scale-110"
+              />
+              <figcaption
+                class="absolute inset-0 flex items-center justify-center gap-4 bg-gray-200/25 opacity-0 transition-all group-hover:opacity-100"
+              >
+                <a mat-flat-button [href]="project.link" class="">
+                  Ver Projeto
+                </a>
+              </figcaption>
+            </figure>
+
+            <h3 class="-mb-4 text-xl font-semibold"> {{ project.title }} </h3>
+
+            <p class="m-0 text-gray-500">
+              {{ project.description }}
+            </p>
+
+            <ul class="m-0 mt-auto flex list-none flex-wrap gap-2 p-0">
+              @for (tech of project.technologies; track $index) {
+                <li
+                  class="rounded-full border px-2 py-1 text-sm text-paragraph shadow-sm"
+                >
+                  {{ tech }}
+                </li>
+              }
+            </ul>
+          </article>
+        }
+      </div>
+    </div>
+  </div>
+</section>

@@ -18,6 +18,11 @@ html,
 body {
   @apply h-full;
 }
+
+html {
+  @apply bg-primary-bg;
+}
+
 body {
-  @apply m-0 bg-primary-bg font-sans;
+  @apply m-0 font-sans;
 }
