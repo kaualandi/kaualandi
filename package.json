@@ -1,5 +1,5 @@
 {
-  "name": "kaualandi-new",
+  "name": "kaualandi",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -22,7 +22,7 @@
     "release:mi": "standard-version --release-as minor && npm run post-release",
     "release:p": "standard-version --release-as patch && npm run post-release",
     "release:first": "standard-version --first-release && npm run post-release",
-    "serve:ssr:kaualandi-new": "node dist/server/server.mjs"
+    "serve:ssr:kaualandi": "node dist/server/server.mjs"
   },
   "private": true,
   "dependencies": {
@@ -38,6 +38,7 @@
     "@angular/platform-server": "^18.2.0",
     "@angular/pwa": "^0.5.3",
     "@angular/router": "^18.2.0",
+    "@angular/service-worker": "^18.2.13",
     "@angular/ssr": "^18.2.12",
     "@ngx-translate/core": "^16.0.3",
     "@ngx-translate/http-loader": "^16.0.0",
@@ -64,7 +65,7 @@
     "browserslist": "^4.24.3",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.57.0",
+    "eslint": "8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "husky": "^9.1.7",

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "kaualandi-new": {
+    "kaualandi": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -73,6 +73,7 @@
                 }
               ],
               "outputHashing": "all",
+              "serviceWorker": "ngsw-config.json",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -92,10 +93,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "kaualandi-new:build:production"
+              "buildTarget": "kaualandi:build:production"
             },
             "development": {
-              "buildTarget": "kaualandi-new:build:development"
+              "buildTarget": "kaualandi:build:development"
             }
           },
           "defaultConfiguration": "development"
