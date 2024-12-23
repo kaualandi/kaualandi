@@ -2,3 +2,9 @@
   @apply items-center justify-center;
   @apply flex p-0 #{!important};
 }
+
+.label-full {
+  .mdc-button__label {
+    @apply w-full;
+  }
+}

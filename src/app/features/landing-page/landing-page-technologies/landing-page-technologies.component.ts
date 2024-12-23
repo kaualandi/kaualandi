@@ -59,5 +59,10 @@ export class LandingPageTechnologiesComponent {
       logo: 'tailwindcss',
       url: 'https://tailwindcss.com/',
     },
+    {
+      name: 'Shopify',
+      logo: 'shopify',
+      url: 'https://shopify.dev/',
+    },
   ];
 }

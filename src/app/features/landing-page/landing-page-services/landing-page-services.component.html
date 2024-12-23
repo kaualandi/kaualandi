@@ -1,0 +1,22 @@
+<section id="landing-page-services" class="common-section bg-secondary-bg">
+  <div class="container">
+    <header>
+      <p> Meus Serviços </p>
+      <h2> Como posso ajudar o seu negócio? </h2>
+    </header>
+
+    <div class="content">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+        @for (service of services; track $index) {
+          <div
+            class="group rounded-lg border p-6 shadow-sm transition-all hover:shadow-md"
+          >
+            <i [icon]="service.icon" class="text-5xl text-primary-50"></i>
+            <h3 class="mt-4 text-lg font-bold"> {{ service.title }} </h3>
+            <p> {{ service.description }} </p>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

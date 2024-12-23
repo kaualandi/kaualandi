@@ -1,0 +1,35 @@
+<section id="landing-page-contact" class="common-section">
+  <div class="container">
+    <header>
+      <p> Contato </p>
+      <h2> Gostou do meu trabalho? </h2>
+      <small class="text-sm">
+        Entre em contato ou acompanhe as minhas redes sociais!
+      </small>
+    </header>
+
+    <div class="content">
+      <div class="mx-auto max-w-xs">
+        @for (contact of contacts; track $index; let i = $index) {
+          <a
+            mat-button
+            [href]="contact.link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="label-full !hover:shadow-md group !h-14 w-full !border-solid !border-gray-200 !px-6 !shadow-sm"
+            [ngClass]="{ 'mt-4': i !== 0 }"
+          >
+            <div class="flex w-full items-center gap-4 text-paragraph">
+              <i [icon]="contact.icon" class="text-2xl"></i>
+              <span class="inline-block w-full"> {{ contact.name }} </span>
+              <i
+                icon="arrow_right"
+                class="ml-2 inline-block transition-all duration-500 group-hover:ml-4 group-hover:rotate-[315deg]"
+              ></i>
+            </div>
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+</section>
