@@ -1,0 +1,8 @@
+<button
+  aria-label="Trocar tema"
+  mat-icon-button
+  (click)="toggleTheme($event)"
+  class="group shadow-sm"
+>
+  <div class="toggle" [ngClass]="{ light: !darkThemeControl.value }"></div>
+</button>

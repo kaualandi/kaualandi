@@ -9,7 +9,7 @@
       <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
         @for (service of services; track $index) {
           <div
-            class="group rounded-lg border p-6 shadow-sm transition-all hover:shadow-md"
+            class="border-line group rounded-lg border p-6 shadow-sm transition-all hover:shadow-md"
           >
             <i [icon]="service.icon" class="text-5xl text-primary-50"></i>
             <h3 class="mt-4 text-lg font-bold"> {{ service.title }} </h3>

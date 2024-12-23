@@ -8,6 +8,7 @@ module.exports = {
         'secondary-bg': 'var(--secondary-bg)',
         paragraph: 'var(--paragraph-color)',
         title: 'var(--title-color)',
+        line: 'var(--line-color)',
         primary: {
           0: '#000000',
           10: '#180065',
