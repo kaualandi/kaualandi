@@ -2,6 +2,7 @@ import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { ToggleThemeComponent } from '@app/shared/components/toggle-theme/toggle-theme.component';
+import { ScrollToDirective } from '@app/shared/directives/scroll-to.directive';
 import { IconDirective } from '../../../shared/directives/icon.directive';
 
 @Component({
@@ -12,6 +13,7 @@ import { IconDirective } from '../../../shared/directives/icon.directive';
     IconDirective,
     NgOptimizedImage,
     ToggleThemeComponent,
+    ScrollToDirective,
   ],
   templateUrl: './landing-page-hero.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,

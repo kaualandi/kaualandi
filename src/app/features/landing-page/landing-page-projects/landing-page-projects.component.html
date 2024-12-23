@@ -9,7 +9,7 @@
       <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         @for (project of projects; track $index) {
           <article
-            class="border-line group flex flex-col gap-4 rounded-xl border p-4 shadow-sm transition-all hover:shadow-md"
+            class="group flex flex-col gap-4 rounded-xl border border-line p-4 shadow-sm transition-all hover:shadow-md"
           >
             <figure class="relative overflow-hidden rounded-md transition-all">
               <img
@@ -20,7 +20,12 @@
               <figcaption
                 class="absolute inset-0 flex items-center justify-center gap-4 bg-gray-200/25 opacity-0 transition-all group-hover:opacity-100"
               >
-                <a mat-flat-button [href]="project.link" class="">
+                <a
+                  mat-flat-button
+                  [href]="project.link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Ver Projeto
                 </a>
               </figcaption>
@@ -35,7 +40,7 @@
             <ul class="m-0 mt-auto flex list-none flex-wrap gap-2 p-0">
               @for (tech of project.technologies; track $index) {
                 <li
-                  class="border-line rounded-full border px-2 py-1 text-sm text-paragraph shadow-sm"
+                  class="rounded-full border border-line px-2 py-1 text-sm text-paragraph shadow-sm"
                 >
                   {{ tech }}
                 </li>
