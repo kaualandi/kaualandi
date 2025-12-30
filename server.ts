@@ -22,7 +22,12 @@ export function app(): express.Express {
       contentSecurityPolicy: {
         directives: {
           defaultSrc: ["'self'"],
-          scriptSrc: ["'self'", "'unsafe-inline'"],
+          scriptSrc: [
+            "'self'",
+            "'unsafe-inline'",
+            'https://vercel.live',
+            'https://*.vercel.live',
+          ],
           styleSrc: [
             "'self'",
             "'unsafe-inline'",
@@ -30,7 +35,14 @@ export function app(): express.Express {
           ],
           fontSrc: ["'self'", 'https://fonts.gstatic.com', 'data:'],
           imgSrc: ["'self'", 'data:', 'https:', 'blob:'],
-          connectSrc: ["'self'", 'https://api.github.com'],
+          connectSrc: [
+            "'self'",
+            'https://api.github.com',
+            'https://vercel.live',
+            'https://*.vercel.live',
+            'wss://vercel.live',
+            'wss://*.vercel.live',
+          ],
           frameSrc: ["'none'"],
           objectSrc: ["'none'"],
           upgradeInsecureRequests: [],
