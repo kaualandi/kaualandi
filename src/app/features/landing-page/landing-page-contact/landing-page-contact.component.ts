@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+
 import { IconDirective } from '../../../shared/directives/icon.directive';
 
 interface Contact {
@@ -41,7 +42,15 @@ export class LandingPageContactComponent {
     {
       icon: 'envelope',
       name: 'E-mail',
-      link: 'mailto:eu@kaualf.com',
+      link: this.getEmailLink(),
     },
   ];
+
+  private getEmailLink(): string {
+    // Email obfuscation to prevent spam bots
+    const user = 'eu';
+    const domain = 'kaualf';
+    const tld = 'com';
+    return `mailto:${user}${'@'}${domain}${'.'}${tld}`;
+  }
 }
