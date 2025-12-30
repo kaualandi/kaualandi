@@ -43,7 +43,10 @@ export function app(): express.Express {
             'wss://vercel.live',
             'wss://*.vercel.live',
           ],
-          frameSrc: ["'none'"],
+          frameSrc: [
+            'https://vercel.live',
+            'https://*.vercel.live',
+          ],
           objectSrc: ["'none'"],
           upgradeInsecureRequests: [],
         },
