@@ -1,8 +1,7 @@
 import { afterNextRender, Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { environment } from '../environments/environment';
+import { inject as vercelAnalytics } from '@vercel/analytics';
 import { ThemeService } from './shared/services/theme.service';
-import { TranslationService } from './shared/services/translation.service';
 
 @Component({
   selector: 'kaua-root',
@@ -12,15 +11,11 @@ import { TranslationService } from './shared/services/translation.service';
 })
 export class AppComponent {
   private theme = inject(ThemeService);
-  private language = inject(TranslationService);
 
   public constructor() {
-    console.log(
-      `Angular is using ${environment.production ? 'production' : 'development'} variables`
-    );
-
     afterNextRender(() => {
       this.theme.loadCurrentTheme();
+      vercelAnalytics();
     });
   }
 }
