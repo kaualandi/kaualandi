@@ -1,6 +1,7 @@
 import { afterNextRender, Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { inject as vercelAnalytics } from '@vercel/analytics';
+import { injectSpeedInsights } from '@vercel/speed-insights';
 import { ThemeService } from './shared/services/theme.service';
 
 @Component({
@@ -16,6 +17,7 @@ export class AppComponent {
     afterNextRender(() => {
       this.theme.loadCurrentTheme();
       vercelAnalytics();
+      injectSpeedInsights();
     });
   }
 }
